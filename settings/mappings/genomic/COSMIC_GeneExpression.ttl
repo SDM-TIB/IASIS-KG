@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_GE>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -37,7 +37,7 @@
 	].
 
 <#Sample_GE>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -58,7 +58,7 @@
 	].
 
 <#Gexp_GE>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Gexp/{GENE_NAME}";
@@ -91,7 +91,7 @@
 	].
 
 <#Transcription_GE>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Transcription/{GENE_NAME}";
