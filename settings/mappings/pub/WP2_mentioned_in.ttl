@@ -11,27 +11,27 @@
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [		
 		rr:template "http://project-iasis.eu/Annotation/ADannotation{id}";	
-		rr:class iasis:ADAnnotation;	
+		rr:class iasis:ADAnnotation
 	];
 	rr:predicateObjectMap [		
 		rr:predicate iasis:annLabel;	
-		rr:objectMap [ rml:reference "label" ];
+		rr:objectMap [ rml:reference "label" ]
 	];
 	rr:predicateObjectMap [	
 		rr:predicate iasis:source;
-		rr:object iasis:UMLS_CUI;
+		rr:object iasis:UMLS_CUI
 	];
 	rr:predicateObjectMap [	
 		rr:predicate iasis:hasAnnotation;
-		rr:objectMap [ rr:parentTriplesMap <#RelationPublicationAnnotation> ];
+		rr:objectMap [ rr:parentTriplesMap <#RelationPublicationAnnotation> ]
 	];
 	rr:predicateObjectMap [	
 		rr:predicate iasis:semantic_types;
-		rr:objectMap [ rr:template "http://project-iasis.eu/vocab/{semantic_types}"];
+		rr:objectMap [ rr:template "http://project-iasis.eu/vocab/{semantic_types}"]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
-		rr:objectMap [ rr:template "http://project-iasis.eu/vocab/{id}" ];
+		rr:objectMap [ rr:template "http://project-iasis.eu/vocab/{id}" ]
 	].
 
 <#Publication>
@@ -39,48 +39,48 @@
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Publication/{pmid}";
-		rr:class iasis:Publication;
+		rr:class iasis:Publication
 	];
 	rr:predicateObjectMap [
 		rr:predicate dc:title;
-		rr:objectMap [ rml:reference "title" ];
+		rr:objectMap [ rml:reference "title" ]
 	];
 	rr:predicateObjectMap [
 		rr:predicate dc:pmid;
-		rr:objectMap [ rr:template "http://project-iasis.eu/vocab/{pmid}" ];
+		rr:objectMap [ rr:template "http://project-iasis.eu/vocab/{pmid}" ]
 	];
 	rr:predicateObjectMap [	
 		rr:predicate iasis:year;
-		rr:objectMap [ rml:reference "year" ];
+		rr:objectMap [ rml:reference "year" ]
 	];
 	rr:predicateObjectMap [
 		rr:predicate dc:journal;
-		rr:objectMap [ rml:reference "journal" ];
+		rr:objectMap [ rml:reference "journal" ]
 	];
 	rr:predicateObjectMap [	
 		rr:predicate iasis:authors;
-		rr:objectMap [ rml:reference "authors" ];
+		rr:objectMap [ rml:reference "authors" ]
 	].
 
 <#RelationPublicationAnnotation>
 	rml:logicalSource [ rml:source "neo4j_query_annotation/query_mentioned_in.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [		
-		rr:template "http://project-iasis.eu/Relation/{predicate}{object}{subject}";
+		rr:template "http://project-iasis.eu/Relation/{predicate}{object}{subject}"
 	];
 	rr:predicateObjectMap [		
 		rr:predicate rdf:type;	
-		rr:objectMap [ rr:template "http://project-iasis.eu/Relation/{predicate}" ];
+		rr:objectMap [ rr:template "http://project-iasis.eu/Relation/{predicate}" ]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:annotates;
-		rr:objectMap [ rr:parentTriplesMap <#Publication> ];
+		rr:objectMap [ rr:parentTriplesMap <#Publication> ]
 	];
 	rr:predicateObjectMap [		
 		rr:predicate iasis:precTool;	
-		rr:object iasis:ODPT;
+		rr:object iasis:ODPT
 	];
 	rr:predicateObjectMap [		
 		rr:predicate iasis:confidence;	
-		rr:objectMap [ rml:reference "confidence"];
+		rr:objectMap [ rml:reference "confidence"]
 	].

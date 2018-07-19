@@ -13,10 +13,10 @@
 
 <#LCPatient>
 	rml:logicalSource [ rml:source "/app/Data/WP2/ecog_wp2-1523023412772.csv";
-						rml:referenceFormulation ql:CSV;
+						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCPatient/{id_patient}";
+		rr:template "http://project-iasis.eu/LCPatient/{id_patient}"
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasEcog;
@@ -27,11 +27,11 @@
 
 <#Ecog>
 	rml:logicalSource [ rml:source "/app/Data/WP2/ecog_wp2-1523023412772.csv";
-						rml:referenceFormulation ql:CSV;
+						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Ecog/{id}";
-		rr:class iasis:Ecog;
+		rr:class iasis:Ecog
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasObservation;
@@ -42,27 +42,27 @@
 
 <#EcogObservation>	
 	rml:logicalSource [ rml:source "/app/Data/WP2/ecog_wp2-1523023412772.csv";
-						rml:referenceFormulation ql:CSV;
+						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/EcogObservation/{id_patient}_{id}";
-		rr:class iasis:EcogObservation;
+		rr:class iasis:EcogObservation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:identifier;
 		rr:objectMap [ 
-			rml:reference "id";
+			rml:reference "id"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:value;
 		rr:objectMap [
-			rml:reference "ecog";
+			rml:reference "ecog"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:date;
 		rr:objectMap [
-			rml:reference "date";
+			rml:reference "date"
 		]
 	].

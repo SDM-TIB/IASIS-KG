@@ -1,0 +1,53 @@
+version: "3"
+services:
+  semantic-enrichment:
+    image: kemele/semantic_enrichment:1.0
+    hostname: semantic-enrichment
+    container_name: iasis_semantic_enrichment
+    domainname: iasiskg
+    volumes:
+      - ./data:/data/input
+      - ./output:/data/output
+      - ./settings/configs:/data/configs
+      - ./settings/mappings:/data/mappings
+    env-file:
+      - ./settings/envfile.env
+    networks:
+      - iasiskg
+
+  iasiskgstore:
+    image: kemele/virtuoso:6-stable
+    hostname: iasiskgstore
+    container_name: iasis_kgstore
+    domainname: iasiskg
+    volumes:
+      - ./output:/data
+    ports:
+      - "11381:8890"
+      - "1112:1111"
+    environment:
+      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_PORT=5672
+      - SPARQL_UPDATE:true
+    networks:
+      - iasiskg
+
+  ontario:
+    image: kemele/mulder:1.0
+    hostname: ontario
+    container_name: iasis_ontario
+    domainname: iasiskg
+    volumes:
+      - ./settings/ontario:/data
+    ports:
+      - "5000:5000"
+    environment:
+      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_PORT=5672
+    networks:
+      - iasiskg
+
+
+networks:
+  iasiskg:
+    external: true

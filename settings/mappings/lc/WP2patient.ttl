@@ -21,79 +21,79 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:gender;
 		rr:objectMap [
-			rml:reference "gender";
+			rml:reference "gender"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:birthDate;
 		rr:objectMap [
-			rml:reference "birthDate";
+			rml:reference "birthDate"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:ageStart;
 		rr:objectMap [	
-			rml:reference "ageStart";
+			rml:reference "ageStart"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:toxicHabit;
 		rr:objectMap [
-			rml:reference "smoking";
+			rml:reference "smoking"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:diagnosisAge;
 		rr:objectMap [
-			rml:reference "diagnosisAge";
+			rml:reference "diagnosisAge"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:diagnosisAgeGroup;
 		rr:objectMap [
-			rml:reference "diagnosisAgeGroup";
+			rml:reference "diagnosisAgeGroup"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:diagnosisDate;
 		rr:objectMap [
-			rml:reference "diagnosisDate";
+			rml:reference "diagnosisDate"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:egfrMutation;
 		rr:objectMap [
-			rml:reference "egfr_mutated";
+			rml:reference "egfr_mutated"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:ecogList;
 		rr:objectMap [
-			rml:reference "ecog_list";
+			rml:reference "ecog_list"
 		]
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:tumorStageList;
 		rr:objectMap [
-			rml:reference "stage_list";
+			rml:reference "stage_list"
 		]
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:biopsyList;
 		rr:objectMap [
-			rml:reference "biopsia_list";
+			rml:reference "biopsia_list"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:monthsInTreatment;
 		rr:objectMap [
-			rml:reference "monthsInTreatment";
+			rml:reference "monthsInTreatment"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:weeksInTreatment;
 		rr:objectMap [
-			rml:reference "weeksInTreatment";
+			rml:reference "weeksInTreatment"
 		]
 	].
 

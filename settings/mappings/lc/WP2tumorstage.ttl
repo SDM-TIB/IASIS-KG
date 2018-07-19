@@ -29,7 +29,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/TumorStage/{id}";
-		rr:class iasis:TumorStage;
+		rr:class iasis:TumorStage
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasObservation;
@@ -45,23 +45,23 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/TumorStageObservation/{id_patient}_{id}";
-		rr:class iasis:TumorStageObservation;
+		rr:class iasis:TumorStageObservation
 	];		
 	rr:predicateObjectMap [
 		rr:predicate iasis:identifier;
 		rr:objectMap [ 
-			rml:reference "id"; 
+			rml:reference "id"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:tumorStage;
 		rr:objectMap [ 
-			rml:reference "tumorStage"; 
+			rml:reference "tumorStage"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:date;
 		rr:objectMap [ 
-			rml:reference "date"; 
+			rml:reference "date"
 		]
 	].

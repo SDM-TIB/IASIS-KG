@@ -1,0 +1,8 @@
+{
+  "MoleculeTemplates": [
+    {
+       "type": "filepath",
+       "path":"/data/dbpedia-template.json"
+     }
+  ]
+}

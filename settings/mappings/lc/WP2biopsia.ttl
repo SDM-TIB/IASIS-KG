@@ -11,10 +11,10 @@
 
 <#LCPatient>
 	rml:logicalSource [ rml:source "/app/Data/WP2/biopsia_wp2-1523023412772.csv";
-						rml:referenceFormulation ql:CSV;
+						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCPatient/{id_patient}";
+		rr:template "http://project-iasis.eu/LCPatient/{id_patient}"
 	];
 	rr:objectMap [
 		rr:predicate iasis:hasBiopsy;
@@ -25,7 +25,7 @@
 
 <#LiquidBiopsy>
 	rml:logicalSource [ rml:source "/app/Data/WP2/biopsia_wp2-1523023412772.csv";
-						rml:referenceFormulation ql:CSV;
+						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/LiquidBiopsy/{id}";
@@ -40,7 +40,7 @@
 
 <#LiquidBiopsyObservation>
 	rml:logicalSource [ rml:source "/app/Data/WP2/biopsia_wp2-1523023412772.csv";
-						rml:referenceFormulation ql:CSV;
+						rml:referenceFormulation ql:CSV
 						]; 
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/LiquidBiopsyObservation/{id_patient}_{id}";
@@ -49,42 +49,42 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:identifier;
 		rr:objectMap [ 
-			rml:reference "id";
+			rml:reference "id"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:sampleDate;
 		rr:objectMap [ 
-			rml:reference "sampleDate";
+			rml:reference "sampleDate"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:resultDate;
 		rr:objectMap [ 
-			rml:reference "resultsDate";
+			rml:reference "resultsDate"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutationName;
 		rr:objectMap [ 
-			rml:reference "mutation"; 
+			rml:reference "mutation"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:targetTotal;
 		rr:objectMap [ 
-			rml:reference "targetTotal";
+			rml:reference "targetTotal"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:copiesMicroliterFam;
 		rr:objectMap [ 
-			rml:reference "copiesMicroliterFam";
+			rml:reference "copiesMicroliterFam"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:copiesMicroliterVic;
 		rr:objectMap [ 
-			rml:reference "copiesMicroliterVic";
+			rml:reference "copiesMicroliterVic"
 		]
 	].	
