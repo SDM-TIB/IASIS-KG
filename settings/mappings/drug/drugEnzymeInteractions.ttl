@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DrugEnzyme_DEI>
-	rml:logicalSource [ rml:source "/app/Data/Drug/Drug-Enzyme/drug_enzyme_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/Drug/drug_enzyme_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
