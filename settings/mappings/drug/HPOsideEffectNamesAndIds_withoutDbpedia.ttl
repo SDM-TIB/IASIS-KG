@@ -20,12 +20,12 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "HPOID";
+			rml:reference "HPOID"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "HPOName";
+			rml:reference "HPOName"
 		]
 	].
