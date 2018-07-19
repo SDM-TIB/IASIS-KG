@@ -11,7 +11,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <#Drug_DTI>
-	rml:logicalSource [ rml:source "/app/Data/Drug/DrugBankIDsAndNames_withoutDbpedia.csv";
+	rml:logicalSource [ rml:source "/data/data/Drug/DrugBankIDsAndNames_withoutDbpedia.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
