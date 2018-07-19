@@ -8,9 +8,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix base: <http://tib.de/ontario/mapping#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <#Drug_DTI>
-	rml:logicalSource [ rml:source "/app/Data/Drug/DrugBankIDsAndNames_includingDbpedia.csv";
+	rml:logicalSource [ rml:source "/data/data/Drug/DrugBankIDsAndNames_includingDbpedia.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -36,19 +37,19 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:externalLink;
+		rr:predicate iasis:sameAs;
 		rr:objectMap [
 			rr:template "http://bio2rdf.org/drugbank:{DrugID}";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:externalLink;
+		rr:predicate iasis:sameAs;
 		rr:objectMap [
 			rr:template "http://wifo5-04.informatik.uni-mannheim.de/drugbank/page/drugs/{DrugID}";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:externalLink;
+		rr:predicate iasis:sameAs;
 		rr:objectMap [
 			rr:template "{DBpediaURL}";
 		]
