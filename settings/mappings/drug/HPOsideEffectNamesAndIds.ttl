@@ -11,7 +11,7 @@
 @prefix owl: <https://www.w3.org/2002/07/owl#> .
 
 <#HPO>
-	rml:logicalSource [ rml:source "/data/data/Drug/SideEffetcsIDsAndNames_includingDbpedia.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/SideEffetcsIDsAndNames_includingDbpedia.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
