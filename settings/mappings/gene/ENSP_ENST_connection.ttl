@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Transcript/{enst}";
+		rr:template "http://project-iasis.eu/Transcript/{enst}"
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:translates_as;
