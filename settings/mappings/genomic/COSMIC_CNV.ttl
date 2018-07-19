@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_CNV>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -31,7 +31,7 @@
 	].
 
 <#Sample_CNV>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -82,7 +82,7 @@
 	].
 
 <#Tumor_CNV>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -97,7 +97,7 @@
 	].
 
 <#CNV_CNV>
-	rml:logicalSource [ rml:source "/app/Data/COSMIC/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/Preprocessed_MayJune/COSMIC_cnv_preprocessing.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
