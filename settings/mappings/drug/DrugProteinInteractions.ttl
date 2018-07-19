@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_DTI>
-	rml:logicalSource [ rml:source "/data/data/Drug/drug_target_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drug_target_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -39,7 +39,7 @@
 
 	
 <#Protein_DTI>
-	rml:logicalSource [ rml:source "/data/data/Drug/drug_target_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drug_target_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
