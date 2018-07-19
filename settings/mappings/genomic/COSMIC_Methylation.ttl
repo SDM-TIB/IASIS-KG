@@ -20,7 +20,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "GENE_NAME";
+			rml:reference "GENE_NAME"
 		]
 	];
 	rr:predicateObjectMap [
@@ -41,36 +41,36 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "ID_SAMPLE";
+			rml:reference "ID_SAMPLE"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "SAMPLE_NAME"];
+			rml:reference "SAMPLE_NAME"]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:primaryTissue;
 		rr:objectMap [ 
-			rml:reference "PRIMARY_SITE"; 
+			rml:reference "PRIMARY_SITE" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:tissueSubtype1;
 		rr:objectMap [ 
-			rml:reference "SITE_SUBTYPE_1";
+			rml:reference "SITE_SUBTYPE_1"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:primaryHistology;
 		rr:objectMap [ 
-			rml:reference "PRIMARY_HISTOLOGY"; 
+			rml:reference "PRIMARY_HISTOLOGY" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:histologySubtype1;
 		rr:objectMap [ 
-			rml:reference "HISTOLOGY_SUBTYPE_1"; 
+			rml:reference "HISTOLOGY_SUBTYPE_1" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -85,12 +85,12 @@
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Tumor/{ID_TUMOUR}";
-		rr:class iasis:Tumor;
+		rr:class iasis:Tumor
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [ 
-			rml:reference "ID_TUMOUR"; 
+			rml:reference "ID_TUMOUR" 
 		]
 	].
 
@@ -99,54 +99,54 @@
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/CGI/{FRAGMENT_ID}";
-		rr:class iasis:CGI;
+		rr:class iasis:CGI
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [ 
-			rml:reference "FRAGMENT_ID";
+			rml:reference "FRAGMENT_ID"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:methylation;
 		rr:objectMap [ 
-			rml:reference "Methylation";
+			rml:reference "Methylation"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:beta_value;
 		rr:objectMap [ 
-			rml:reference "BETA_VALUE";
+			rml:reference "BETA_VALUE"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:avg_beta_value;
 		rr:objectMap [ 
-			rml:reference "AVG_BETA_VALUE_NORMAL";
+			rml:reference "AVG_BETA_VALUE_NORMAL"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:two_sided_p-value;
 		rr:objectMap [ 
-			rml:reference "TWO_SIDED_P_VALUE";
+			rml:reference "TWO_SIDED_P_VALUE"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:genomic_position;
 		rr:objectMap [ 
-			rml:reference "POSITION"; 
+			rml:reference "POSITION" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:cgi_chromosome;
 		rr:objectMap [ 
-			rml:reference "CHROMOSOME"; 
+			rml:reference "CHROMOSOME" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:cgi_study_id;
 		rr:objectMap [ 
-			rml:reference "STUDY_ID"; 
+			rml:reference "STUDY_ID" 
 		]
 	];
 	rr:predicateObjectMap [
