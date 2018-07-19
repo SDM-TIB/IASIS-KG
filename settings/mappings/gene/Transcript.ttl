@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Transcript>	
-	rml:logicalSource [ rml:source "/data/data/COSMICandWP3/transcript_all_withoutDuplicates_onlyENST_withHeader.csv";
+	rml:logicalSource [ rml:source "/data/data/WP3/transcript_all_withoutDuplicates_onlyENST_withHeader.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
