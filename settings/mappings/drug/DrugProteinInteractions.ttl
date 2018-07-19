@@ -20,13 +20,13 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "Drug name";
+			rml:reference "Drug name"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "Drug accession number";
+			rml:reference "Drug accession number"
 		]
 	];
 
@@ -49,18 +49,18 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "Target ensembl id";
+			rml:reference "Target ensembl id"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "Target name";
+			rml:reference "Target name"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:source;
 		rr:objectMap [
-			rr:constant "http://project-iasis.eu/SourceName/ENSEMBL";
+			rr:constant "http://project-iasis.eu/SourceName/ENSEMBL"
 		]
 	].
