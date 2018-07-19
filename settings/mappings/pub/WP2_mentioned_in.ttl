@@ -7,7 +7,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 <#ADAnnotation>
-	rml:logicalSource [ rml:source "neo4j_query_annotation/query_annotation.csv";
+	rml:logicalSource [ rml:source "/app/query_annotation.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [		
 		rr:template "http://project-iasis.eu/Annotation/ADannotation{id}";	
@@ -35,7 +35,7 @@
 	].
 
 <#Publication>
-	rml:logicalSource [ rml:source "neo4j_query_annotation/query_publication.csv";
+	rml:logicalSource [ rml:source "/app/query_publication.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Publication/{pmid}";
@@ -63,7 +63,7 @@
 	].
 
 <#RelationPublicationAnnotation>
-	rml:logicalSource [ rml:source "neo4j_query_annotation/query_mentioned_in.csv";
+	rml:logicalSource [ rml:source "/app/query_mentioned_in.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [		
 		rr:template "http://project-iasis.eu/Relation/{predicate}{object}{subject}"

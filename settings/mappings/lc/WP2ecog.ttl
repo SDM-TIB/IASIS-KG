@@ -12,7 +12,7 @@
 
 
 <#LCPatient>
-	rml:logicalSource [ rml:source "/app/Data/WP2/ecog_wp2-1523023412772.csv";
+	rml:logicalSource [ rml:source "/data/data/WP2/ecog_wp2-1523023412772.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -26,7 +26,7 @@
 	].
 
 <#Ecog>
-	rml:logicalSource [ rml:source "/app/Data/WP2/ecog_wp2-1523023412772.csv";
+	rml:logicalSource [ rml:source "/data/data/WP2/ecog_wp2-1523023412772.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -41,7 +41,7 @@
 	].					
 
 <#EcogObservation>	
-	rml:logicalSource [ rml:source "/app/Data/WP2/ecog_wp2-1523023412772.csv";
+	rml:logicalSource [ rml:source "/data/data/WP2/ecog_wp2-1523023412772.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
