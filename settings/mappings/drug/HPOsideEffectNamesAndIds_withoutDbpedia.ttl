@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#HPO>
-	rml:logicalSource [ rml:source "/data/data/Drug/SideEffectsIDsAndNames_withoutDbpedia.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/SideEffectsIDsAndNames_withoutDbpedia.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
