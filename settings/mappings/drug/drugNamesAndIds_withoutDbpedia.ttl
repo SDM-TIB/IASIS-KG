@@ -21,30 +21,30 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "DrugName";
+			rml:reference "DrugName"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "DrugID";
+			rml:reference "DrugID"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:externalLink;
 		rr:objectMap [
-			rr:template "https://www.drugbank.ca/drugs/{DrugID}";
+			rr:template "https://www.drugbank.ca/drugs/{DrugID}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:sameAs;
 		rr:objectMap [
-			rr:template "http://bio2rdf.org/drugbank:{DrugID}";
+			rr:template "http://bio2rdf.org/drugbank:{DrugID}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:sameAs;
 		rr:objectMap [
-			rr:template "http://wifo5-04.informatik.uni-mannheim.de/drugbank/page/drugs/{DrugID}";
+			rr:template "http://wifo5-04.informatik.uni-mannheim.de/drugbank/page/drugs/{DrugID}"
 		]
 	].
