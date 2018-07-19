@@ -20,13 +20,13 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "EnzymeName";
+			rml:reference "EnzymeName"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "EnzimeKEGGID";
+			rml:reference "EnzimeKEGGID"
 		]
 	].
 
