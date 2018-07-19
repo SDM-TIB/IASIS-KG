@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services:
   semantic-enrichment:
     image: kemele/semantic_enrichment:1.0
@@ -6,11 +6,11 @@ services:
     container_name: iasis_semantic_enrichment
     domainname: iasiskg
     volumes:
-      - ./data:/data/input
-      - ./output:/data/output
+      - ./data:/data/data
+      - ./rdf/output:/data/output
       - ./settings/configs:/data/configs
       - ./settings/mappings:/data/mappings
-    env-file:
+    env_file:
       - ./settings/envfile.env
     networks:
       - iasiskg
@@ -21,7 +21,7 @@ services:
     container_name: iasis_kgstore
     domainname: iasiskg
     volumes:
-      - ./output:/data
+      - ./rdf:/data
     ports:
       - "11381:8890"
       - "1112:1111"

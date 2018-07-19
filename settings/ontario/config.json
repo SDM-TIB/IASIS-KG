@@ -3,6 +3,10 @@
     {
        "type": "filepath",
        "path":"/data/dbpedia-template.json"
+     },
+    {
+       "type": "filepath",
+       "path":"/data/iasiskg-templates.json"
      }
   ]
 }
