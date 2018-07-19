@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Enzyme>
-	rml:logicalSource [ rml:source "/data/data/Drug/enzyme_names.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/enzyme_names.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
