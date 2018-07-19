@@ -11,7 +11,7 @@
 
 
 <#LCPatient>
-	rml:logicalSource [ rml:source "/data/data/WP2/patient_wp2-1523023412772_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/patient_wp2-1523023412772_preprocessed.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
