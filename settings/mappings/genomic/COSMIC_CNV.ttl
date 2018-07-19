@@ -20,7 +20,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "gene_name";
+			rml:reference "gene_name"
 		]
 	];
 	rr:predicateObjectMap [
@@ -36,42 +36,42 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Sample/{ID_SAMPLE}";
-		rr:class iasis:Sample;
+		rr:class iasis:Sample
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "ID_SAMPLE";
+			rml:reference "ID_SAMPLE"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "SAMPLE_NAME";
+			rml:reference "SAMPLE_NAME"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:primaryTissue;
 		rr:objectMap [ 
-			rml:reference "Primary site";
+			rml:reference "Primary site"
 		]
 	];
 		rr:predicateObjectMap [
 		rr:predicate iasis:tissueSubtype1;
 		rr:objectMap [ 
-			rml:reference "Site subtype 1";
+			rml:reference "Site subtype 1"
 		]
 	];
 		rr:predicateObjectMap [
 		rr:predicate iasis:primaryHistology;
 		rr:objectMap [ 
-			rml:reference "Primary histology";
+			rml:reference "Primary histology"
 		]
 	];
 		rr:predicateObjectMap [
 		rr:predicate iasis:histologySubtype1;
 		rr:objectMap [ 
-			rml:reference "Histology subtype 1";
+			rml:reference "Histology subtype 1"
 		]
 	];
 		rr:predicateObjectMap [
@@ -87,12 +87,12 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Tumor/{ID_TUMOUR}";
-		rr:class iasis:Tumor;
+		rr:class iasis:Tumor
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "ID_TUMOUR";
+			rml:reference "ID_TUMOUR"
 		]
 	].
 
@@ -102,54 +102,54 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/CNV/{CNV_ID}";
-		rr:class iasis:CNV;
+		rr:class iasis:CNV
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [
-			rml:reference "CNV_ID";
+			rml:reference "CNV_ID"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:total_cn;
 		rr:objectMap [ 
-			rml:reference "TOTAL_CN";
+			rml:reference "TOTAL_CN"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:minor_allele;
 		rr:objectMap [ 
-			rml:reference "MINOR_ALLELE";
+			rml:reference "MINOR_ALLELE"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:cnv_chromosome;
 		rr:objectMap [ 
-			rml:reference "Chromosome";
+			rml:reference "Chromosome"
 		]
 	];
 	rr:predicateObjectMap [ 
 		rr:predicate iasis:cnv_start;
 		rr:objectMap [ 
-			rml:reference "Start";
+			rml:reference "Start"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:cnv_end;
 		rr:objectMap [ 
-			rml:reference "End"; 
+			rml:reference "End" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:cnv_study_id;
 		rr:objectMap [ 
-			rml:reference "ID_STUDY"; 
+			rml:reference "ID_STUDY" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutationType;
 		rr:objectMap [
-			rml:reference "MUT_TYPE";
+			rml:reference "MUT_TYPE"
 		]
 	];
 	rr:predicateObjectMap [
