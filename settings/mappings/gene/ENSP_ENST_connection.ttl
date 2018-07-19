@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Transcript_connection>	
-	rml:logicalSource [ rml:source "/data/data/WP3/gencode_gff3_cds_sample.csv";
+	rml:logicalSource [ rml:source "/data/data/gene/gencode_gff3_cds_sample.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
