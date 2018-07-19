@@ -35,42 +35,42 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "Sample Name"];
+			rml:reference "Sample Name"]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:primaryTissue;
 		rr:objectMap [ 
-			rml:reference "Primary Tissue"; 
+			rml:reference "Primary Tissue" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:tissueSubtype1;
 		rr:objectMap [ 
-			rml:reference "Tissue Subtype 1";
+			rml:reference "Tissue Subtype 1"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:tissueSubtype2;
 		rr:objectMap [ 
-			rml:reference "Tissue Subtype 2";
+			rml:reference "Tissue Subtype 2"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:primaryHistology;
 		rr:objectMap [ 
-			rml:reference "Histology"; 
+			rml:reference "Histology" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:histologySubtype1;
 		rr:objectMap [ 
-			rml:reference "Histology Subtype 1"; 
+			rml:reference "Histology Subtype 1" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:sampleSource;
 		rr:objectMap [ 
-			rml:reference "Sample Source";
+			rml:reference "Sample Source"
 		]
 	].
 
@@ -78,12 +78,12 @@
 	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/COSMIC/Preprocessed_MayJune/COSMIC_resistanceMutation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Transcript/{Transcript}";
+		rr:template "http://project-iasis.eu/Transcript/{Transcript}"
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:transcript_isRelatedTo_transcription;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Transcription/{Gene Name}";
+			rr:template "http://project-iasis.eu/Transcription/{Gene Name}"
 		]
 	].
 
@@ -92,66 +92,66 @@
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Mutation/{ID Mutation}";
-		rr:class iasis:Mutation;
+		rr:class iasis:Mutation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:id;
 		rr:objectMap [ 
-			rml:reference "ID Mutation";
+			rml:reference "ID Mutation"
 		]
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_aa;
 		rr:objectMap [ 
-			rml:reference "AA Mutation";
+			rml:reference "AA Mutation"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_cds;
 		rr:objectMap [ 
-			rml:reference "CDS Mutation";
+			rml:reference "CDS Mutation"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_somatic_status;
 		rr:objectMap [ 
-			rml:reference "Somatic Status";
+			rml:reference "Somatic Status"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:zygosity;
 		rr:objectMap [ 
-			rml:reference "Zygosity";
+			rml:reference "Zygosity"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_pepSeq;
 		rr:objectMap [ 
-			rml:reference "Mutation PepSeq"; 
+			rml:reference "Mutation PepSeq" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_chromosome;
 		rr:objectMap [ 
-			rml:reference "Chromosome"; 
+			rml:reference "Chromosome" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_start;
 		rr:objectMap [ 
-			rml:reference "Start"; 
+			rml:reference "Start" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_end;
 		rr:objectMap [ 
-			rml:reference "End"; 
+			rml:reference "End" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_mentionedIn_publication;
 		rr:objectMap [ 
-			rml:reference "Pubmed Id"; 
+			rml:reference "Pubmed Id" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -184,7 +184,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:label;
 		rr:objectMap [
-			rml:reference "Drug Name";
+			rml:reference "Drug Name"
 		]
 	].
 
