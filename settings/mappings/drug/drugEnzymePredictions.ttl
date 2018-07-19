@@ -14,12 +14,12 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{DrugId}";
+		rr:template "http://project-iasis.eu/Drug/{DrugId}"
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:drug_isPredictedToInteractsWith_enzyme;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Enzyme/{EnzimeKEGGID}";
+			rr:template "http://project-iasis.eu/Enzyme/{EnzimeKEGGID}"
 		]
 	].
 
