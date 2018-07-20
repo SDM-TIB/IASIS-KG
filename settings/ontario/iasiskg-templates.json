@@ -1,625 +1,674 @@
 [
   {
-    "rootType": "http://project-iasis.eu/vocab/CosSim",
-    "linkedTo": [
-      "http://project-iasis.eu/vocab/Drug"
-    ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/CosSim_similarity_value",
-          "http://project-iasis.eu/vocab/CosSim_isRelatedTo_drug",
-          "http://project-iasis.eu/vocab/cosSim_isRelatedTo_drug",
-          "http://project-iasis.eu/vocab/similarity_value"
-        ]
-      }
-    ],
     "predicates": [
       {
         "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
         "range": []
       },
       {
-        "predicate": "http://project-iasis.eu/vocab/CosSim_similarity_value",
+        "predicate": "http://project-iasis.eu/vocab/identifier",
+        "operator": "PR",
         "range": []
       },
       {
-        "predicate": "http://project-iasis.eu/vocab/CosSim_isRelatedTo_drug",
-        "range": [
-          "http://project-iasis.eu/vocab/Drug"
-        ]
+        "predicate": "http://project-iasis.eu/vocab/date",
+        "operator": "PR",
+        "range": []
       },
       {
-        "predicate": "http://project-iasis.eu/vocab/cosSim_isRelatedTo_drug",
-        "range": [
-          "http://project-iasis.eu/vocab/Drug"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/similarity_value",
+        "predicate": "http://project-iasis.eu/vocab/tumorStage",
+        "operator": "PR",
         "range": []
       }
-    ]
+    ],
+    "rootType": "http://project-iasis.eu/vocab/TumorStageObservation",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 5556,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/identifier",
+          "http://project-iasis.eu/vocab/date",
+          "http://project-iasis.eu/vocab/tumorStage"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
   },
   {
-    "rootType": "http://project-iasis.eu/vocab/Drug",
-    "linkedTo": [
-      "http://project-iasis.eu/vocab/HPO",
-      "http://project-iasis.eu/vocab/Protein",
-      "http://project-iasis.eu/vocab/Enzyme",
-      "http://project-iasis.eu/vocab/Drug"
-    ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/label",
-          "http://project-iasis.eu/vocab/id",
-          "http://project-iasis.eu/vocab/mentioned_in",
-          "http://project-iasis.eu/vocab/drug_interactsWith_drug",
-          "http://project-iasis.eu/vocab/hasSideEffect",
-          "http://project-iasis.eu/vocab/drug_interactsWith_protein",
-          "http://project-iasis.eu/vocab/drug_interactsWith_enzyme"
-        ]
-      }
-    ],
     "predicates": [
       {
         "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
         "range": []
       },
       {
-        "predicate": "http://project-iasis.eu/vocab/label",
+        "predicate": "http://project-iasis.eu/vocab/copiesMicroliterVic",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/sampleDate",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/targetTotal",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/mutationName",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/copiesMicroliterFam",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/resultDate",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/identifier",
+        "operator": "PR",
+        "range": []
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/LiquidBiopsyObservation",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 282,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/copiesMicroliterVic",
+          "http://project-iasis.eu/vocab/sampleDate",
+          "http://project-iasis.eu/vocab/targetTotal",
+          "http://project-iasis.eu/vocab/mutationName",
+          "http://project-iasis.eu/vocab/copiesMicroliterFam",
+          "http://project-iasis.eu/vocab/resultDate",
+          "http://project-iasis.eu/vocab/identifier"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/hasEcog",
+        "operator": "PR",
+        "range": [
+          "http://project-iasis.eu/vocab/Ecog"
+        ]
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/toxicHabit",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/ecogList",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/diagnosisAgeGroup",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/diagnosisAge",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/weeksInTreatment",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/egfrMutation",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/biopsyList",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/birthDate",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/gender",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/tumorStageList",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/monthsInTreatment",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/ageStart",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/diagnosisDate",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/hasTumorStage",
+        "operator": "PR",
+        "range": [
+          "http://project-iasis.eu/vocab/TumorStage"
+        ]
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/LCPatient",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 534,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/hasEcog",
+          "http://project-iasis.eu/vocab/toxicHabit",
+          "http://project-iasis.eu/vocab/ecogList",
+          "http://project-iasis.eu/vocab/diagnosisAgeGroup",
+          "http://project-iasis.eu/vocab/diagnosisAge",
+          "http://project-iasis.eu/vocab/weeksInTreatment",
+          "http://project-iasis.eu/vocab/egfrMutation",
+          "http://project-iasis.eu/vocab/biopsyList",
+          "http://project-iasis.eu/vocab/birthDate",
+          "http://project-iasis.eu/vocab/gender",
+          "http://project-iasis.eu/vocab/tumorStageList",
+          "http://project-iasis.eu/vocab/monthsInTreatment",
+          "http://project-iasis.eu/vocab/ageStart",
+          "http://project-iasis.eu/vocab/diagnosisDate",
+          "http://project-iasis.eu/vocab/hasTumorStage"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [
+      "http://project-iasis.eu/vocab/Ecog",
+      "http://project-iasis.eu/vocab/TumorStage"
+    ],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
         "range": []
       },
       {
         "predicate": "http://project-iasis.eu/vocab/id",
+        "operator": "PR",
         "range": []
       },
       {
-        "predicate": "http://project-iasis.eu/vocab/mentioned_in",
+        "predicate": "http://project-iasis.eu/vocab/translates_as",
+        "operator": "PR",
+        "range": [
+          "http://project-iasis.eu/vocab/Protein"
+        ]
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/Transcript",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 102549,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/id",
+          "http://project-iasis.eu/vocab/translates_as"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [
+      "http://project-iasis.eu/vocab/Protein"
+    ],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/dse_AvgFrequency",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/dse_StandardDeviation",
+        "operator": "PR",
+        "range": []
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/DrugSideEffect",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 4455,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/dse_AvgFrequency",
+          "http://project-iasis.eu/vocab/dse_StandardDeviation"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/identifier",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/date",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/value",
+        "operator": "PR",
+        "range": []
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/EcogObservation",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 771,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/identifier",
+          "http://project-iasis.eu/vocab/date",
+          "http://project-iasis.eu/vocab/value"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/qvalue",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/dbsnp",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/gexpChanges_occuredIn_gene",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/tissue",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/variation_isLocatedIn_gene",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/eqtl_position",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/eqtl_chromosome",
+        "operator": "PR",
+        "range": []
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/EQTL",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 42877,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/qvalue",
+          "http://project-iasis.eu/vocab/dbsnp",
+          "http://project-iasis.eu/vocab/gexpChanges_occuredIn_gene",
+          "http://project-iasis.eu/vocab/tissue",
+          "http://project-iasis.eu/vocab/variation_isLocatedIn_gene",
+          "http://project-iasis.eu/vocab/type",
+          "http://project-iasis.eu/vocab/eqtl_position",
+          "http://project-iasis.eu/vocab/eqtl_chromosome"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/hasObservation",
+        "operator": "PR",
+        "range": [
+          "http://project-iasis.eu/vocab/TumorStageObservation"
+        ]
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/TumorStage",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 5556,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/hasObservation"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [
+      "http://project-iasis.eu/vocab/TumorStageObservation"
+    ],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/hasObservation",
+        "operator": "PR",
+        "range": [
+          "http://project-iasis.eu/vocab/EcogObservation"
+        ]
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/Ecog",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 771,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/hasObservation"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [
+      "http://project-iasis.eu/vocab/EcogObservation"
+    ],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/id",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/label",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "https://www.w3.org/2002/07/owl#sameAs",
+        "operator": "PR",
+        "range": []
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/SideEffect",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 453,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/id",
+          "http://project-iasis.eu/vocab/label",
+          "https://www.w3.org/2002/07/owl#sameAs"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/id",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/source",
+        "operator": "PR",
+        "range": []
+      }
+    ],
+    "rootType": "http://project-iasis.eu/vocab/Protein",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 1,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/id",
+          "http://project-iasis.eu/vocab/source"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
+  },
+  {
+    "predicates": [
+      {
+        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
         "range": []
       },
       {
         "predicate": "http://project-iasis.eu/vocab/drug_interactsWith_drug",
+        "operator": "PR",
         "range": [
           "http://project-iasis.eu/vocab/Drug"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/hasSideEffect",
-        "range": [
-          "http://project-iasis.eu/vocab/HPO"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/drug_interactsWith_protein",
-        "range": [
-          "http://project-iasis.eu/vocab/Protein"
         ]
       },
       {
         "predicate": "http://project-iasis.eu/vocab/drug_interactsWith_enzyme",
+        "operator": "PR",
         "range": [
           "http://project-iasis.eu/vocab/Enzyme"
         ]
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Protein",
-    "linkedTo": [],
-    "wrappers": [
+      },
       {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/id",
-          "http://project-iasis.eu/vocab/source",
-          "http://project-iasis.eu/vocab/label"
+        "predicate": "http://project-iasis.eu/vocab/drug_isPredictedToInteractsWith_enzyme",
+        "operator": "PR",
+        "range": [
+          "http://project-iasis.eu/vocab/Enzyme"
         ]
-      }
-    ],
-    "predicates": [
+      },
       {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "predicate": "http://project-iasis.eu/vocab/sameAs",
+        "operator": "PR",
+        "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/externalLink",
+        "operator": "PR",
         "range": []
       },
       {
         "predicate": "http://project-iasis.eu/vocab/id",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/source",
+        "operator": "PR",
         "range": []
       },
       {
         "predicate": "http://project-iasis.eu/vocab/label",
+        "operator": "PR",
         "range": []
+      },
+      {
+        "predicate": "http://project-iasis.eu/vocab/drug_isRelatedTo_dse",
+        "operator": "PR",
+        "range": [
+          "http://project-iasis.eu/vocab/DrugSideEffect"
+        ]
       }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/HPO",
-    "linkedTo": [],
+    ],
+    "rootType": "http://project-iasis.eu/vocab/Drug",
     "wrappers": [
       {
-        "url": "http://iasiskgstore:8890/sparql",
         "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
+        "cardinality": 968,
         "predicates": [
           "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/drug_interactsWith_drug",
+          "http://project-iasis.eu/vocab/drug_interactsWith_enzyme",
+          "http://project-iasis.eu/vocab/drug_isPredictedToInteractsWith_enzyme",
+          "http://project-iasis.eu/vocab/sameAs",
+          "http://project-iasis.eu/vocab/externalLink",
+          "http://project-iasis.eu/vocab/id",
           "http://project-iasis.eu/vocab/label",
-          "http://project-iasis.eu/vocab/id"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/label",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/id",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Tumor",
-    "linkedTo": [],
-    "wrappers": [
-      {
+          "http://project-iasis.eu/vocab/drug_isRelatedTo_dse"
+        ],
         "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/id",
-          "http://project-iasis.eu/vocab/tumor_origin"
-        ]
+        "wrapperType": "SPARQLEndpoint"
       }
     ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/id",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/tumor_origin",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Mutation",
     "linkedTo": [
-      "http://project-iasis.eu/vocab/Sample",
-      "http://project-iasis.eu/vocab/Tumor",
-      "http://project-iasis.eu/vocab/Gene",
-      "http://project-iasis.eu/vocab/Transcript",
-      "http://project-iasis.eu/vocab/MutationType"
-    ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/id",
-          "http://project-iasis.eu/vocab/mutation_NucleotideSeq",
-          "http://project-iasis.eu/vocab/mutation_cds",
-          "http://project-iasis.eu/vocab/mutation_aa",
-          "http://project-iasis.eu/vocab/mutation_strand",
-          "http://project-iasis.eu/vocab/mutation_chromosome",
-          "http://project-iasis.eu/vocab/mutation_end",
-          "http://project-iasis.eu/vocab/fathmm_prediction",
-          "http://project-iasis.eu/vocab/mutation_somatic_status",
-          "http://project-iasis.eu/vocab/mutation_isLocatedIn_transcript",
-          "http://project-iasis.eu/vocab/mutation_pepSeq",
-          "http://project-iasis.eu/vocab/fathmm_score",
-          "http://project-iasis.eu/vocab/mutation_isLocatedIn_gene",
-          "http://project-iasis.eu/vocab/mutation_start",
-          "http://project-iasis.eu/vocab/mutation_isLocatedIn_tumor",
-          "http://project-iasis.eu/vocab/mutation_study_id",
-          "http://project-iasis.eu/vocab/mutation_isClassifiedAs_mutationType",
-          "http://project-iasis.eu/vocab/mutation_isLocatedIn_sample",
-          "http://project-iasis.eu/vocab/mentioned_in"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/id",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_NucleotideSeq",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_cds",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_aa",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_strand",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_chromosome",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_end",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/fathmm_prediction",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_somatic_status",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_isLocatedIn_transcript",
-        "range": [
-          "http://project-iasis.eu/vocab/Transcript"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_pepSeq",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/fathmm_score",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_isLocatedIn_gene",
-        "range": [
-          "http://project-iasis.eu/vocab/Gene"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_start",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_isLocatedIn_tumor",
-        "range": [
-          "http://project-iasis.eu/vocab/Tumor"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_study_id",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_isClassifiedAs_mutationType",
-        "range": [
-          "http://project-iasis.eu/vocab/MutationType"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mutation_isLocatedIn_sample",
-        "range": [
-          "http://project-iasis.eu/vocab/Sample"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/mentioned_in",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Sample",
-    "linkedTo": [
-      "http://project-iasis.eu/vocab/Tumor"
-    ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/label",
-          "http://project-iasis.eu/vocab/id",
-          "http://project-iasis.eu/vocab/source",
-          "http://project-iasis.eu/vocab/tissueSubtype1",
-          "http://project-iasis.eu/vocab/primaryHistology",
-          "http://project-iasis.eu/vocab/sample_isTakenFrom_tumor",
-          "http://project-iasis.eu/vocab/age",
-          "http://project-iasis.eu/vocab/primaryTissue",
-          "http://project-iasis.eu/vocab/histologySubtype1"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/label",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/id",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/source",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/tissueSubtype1",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/primaryHistology",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/sample_isTakenFrom_tumor",
-        "range": [
-          "http://project-iasis.eu/vocab/Tumor"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/age",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/primaryTissue",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/histologySubtype1",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Gene",
-    "linkedTo": [
-      "http://project-iasis.eu/vocab/Sample"
-    ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/label",
-          "http://project-iasis.eu/vocab/id",
-          "http://project-iasis.eu/vocab/source",
-          "http://project-iasis.eu/vocab/gene_isRelatedTo_sample",
-          "http://project-iasis.eu/vocab/cds_length"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/label",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/id",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/source",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/gene_isRelatedTo_sample",
-        "range": [
-          "http://project-iasis.eu/vocab/Sample"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/cds_length",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/MutationType",
-    "linkedTo": [],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/label"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/label",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Transcript",
-    "linkedTo": [
-      "http://project-iasis.eu/vocab/Gene",
-      "http://project-iasis.eu/vocab/Protein"
-    ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/transcript_isRelatedTo_transcription",
-          "http://project-iasis.eu/vocab/transcript_isRelatedTo_gene",
-          "http://project-iasis.eu/vocab/translates_as"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/transcript_isRelatedTo_transcription",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/transcript_isRelatedTo_gene",
-        "range": [
-          "http://project-iasis.eu/vocab/Gene"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/translates_as",
-        "range": [
-          "http://project-iasis.eu/vocab/Protein"
-        ]
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Sicomp",
-    "linkedTo": [
-      "http://project-iasis.eu/vocab/Drug"
-    ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/sicomp_isRelatedTo_drug",
-          "http://project-iasis.eu/vocab/simcomp_similarity_value"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/sicomp_isRelatedTo_drug",
-        "range": [
-          "http://project-iasis.eu/vocab/Drug"
-        ]
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/simcomp_similarity_value",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/Enzyme",
-    "linkedTo": [],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/label",
-          "http://project-iasis.eu/vocab/id"
-        ]
-      }
-    ],
-    "predicates": [
-      {
-        "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/label",
-        "range": []
-      },
-      {
-        "predicate": "http://project-iasis.eu/vocab/id",
-        "range": []
-      }
-    ]
-  },
-  {
-    "rootType": "http://project-iasis.eu/vocab/SmithWatermanSim",
-    "linkedTo": [
+      "http://project-iasis.eu/vocab/DrugSideEffect",
+      "http://project-iasis.eu/vocab/Drug",
       "http://project-iasis.eu/vocab/Enzyme"
     ],
-    "wrappers": [
-      {
-        "url": "http://iasiskgstore:8890/sparql",
-        "urlparam": "",
-        "wrapperType": "SPARQLEndpoint",
-        "predicates": [
-          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
-          "http://project-iasis.eu/vocab/smithWaterman_similarity_value",
-          "http://project-iasis.eu/vocab/smithWatermanSim_isRelatedTo_enzyme"
-        ]
-      }
-    ],
+    "subClassOf": []
+  },
+  {
     "predicates": [
       {
         "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "operator": "PR",
         "range": []
       },
       {
-        "predicate": "http://project-iasis.eu/vocab/smithWaterman_similarity_value",
+        "predicate": "http://project-iasis.eu/vocab/id",
+        "operator": "PR",
         "range": []
       },
       {
-        "predicate": "http://project-iasis.eu/vocab/smithWatermanSim_isRelatedTo_enzyme",
-        "range": [
-          "http://project-iasis.eu/vocab/Enzyme"
-        ]
+        "predicate": "http://project-iasis.eu/vocab/label",
+        "operator": "PR",
+        "range": []
       }
-    ]
+    ],
+    "rootType": "http://project-iasis.eu/vocab/Enzyme",
+    "wrappers": [
+      {
+        "urlparam": "",
+        "cardinality": 531,
+        "predicates": [
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "http://project-iasis.eu/vocab/id",
+          "http://project-iasis.eu/vocab/label"
+        ],
+        "url": "http://iasiskgstore:8890/sparql",
+        "wrapperType": "SPARQLEndpoint"
+      }
+    ],
+    "linkedTo": [],
+    "subClassOf": []
   }
 ]

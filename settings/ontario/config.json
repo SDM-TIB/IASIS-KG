@@ -7,6 +7,11 @@
     {
        "type": "filepath",
        "path":"/data/iasiskg-templates.json"
+     },
+    {
+       "type": "filepath",
+       "path":"/data/bio2rdf-subset-templates.json"
      }
   ]
 }
+
