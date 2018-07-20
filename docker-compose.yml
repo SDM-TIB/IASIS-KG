@@ -1,7 +1,7 @@
 version: "2"
 services:
   semantic-enrichment:
-    image: kemele/semantic_enrichment:1.0
+    image: iasistest.atc.gr/semantic_enrichment:latest
     hostname: semantic-enrichment
     container_name: iasis_semantic_enrichment
     domainname: iasiskg
@@ -11,7 +11,7 @@ services:
       - ./settings/configs:/data/configs
       - ./settings/mappings:/data/mappings
     env_file:
-      - ./settings/envfile.env
+      - ./envfile.env
     depends_on:
       - iasiskgstore
     networks:
@@ -34,7 +34,7 @@ services:
       - iasiskg
 
   ontario:
-    image: kemele/mulder:1.0
+    image: iasistest.atc.gr/ontario:latest
     hostname: ontario
     container_name: iasis_ontario
     domainname: iasiskg
@@ -51,7 +51,7 @@ services:
       - iasiskg
 
   semepnode:
-    image: palma/semepnode:1.0
+    image: iasistest.atc.gr/semep:latest
     hostname: semepnode
     container_name: iasis_semepnode
     domainname: iasiskg
@@ -65,7 +65,7 @@ services:
       - iasiskg
 
   drugexploration:
-    image: palma/drug_exploration:1.0
+    image: iasistest.atc.gr/drug_exploration:latest
     hostname: drugexploration
     container_name: iasis_drugexploration
     domainname: iasiskg
