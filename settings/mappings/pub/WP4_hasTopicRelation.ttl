@@ -37,7 +37,7 @@
 	].
 
 <#Connection>
-	rml:logicalSource [ rml:source "/app/has_topic_3.csv";
+	rml:logicalSource [ rml:source "/app/query_has_topic.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
