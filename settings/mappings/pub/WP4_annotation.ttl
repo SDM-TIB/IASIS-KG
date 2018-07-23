@@ -36,7 +36,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:annSource;
+		rr:predicate iasis:provenance;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/SourceName/UMLS"
 		]
