@@ -44,7 +44,7 @@
 		rr:template "http://project-iasis.eu/Annotation/{subject}"
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:cui_hasTopic_publication;
+		rr:predicate iasis:cui_mentionedIn_publication;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Publication/{object}"
 		]
