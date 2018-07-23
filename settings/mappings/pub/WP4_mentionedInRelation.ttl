@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Relation/{subject}HAS_TOPIC{object}";
+		rr:template "http://project-iasis.eu/Relation/{subject}MENTIONED_IN{object}";
 		rr:class iasis:MentionedIn
 	];
 	rr:predicateObjectMap [
