@@ -7,6 +7,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix base: <http://tib.de/ontario/mapping#> .
+@prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_DTI>
 	rml:logicalSource [ rml:source "/data/data/drug/drug_target_interactions.csv";
