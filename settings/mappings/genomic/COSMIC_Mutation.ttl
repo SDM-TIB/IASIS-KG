@@ -69,7 +69,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:source;
+		rr:predicate iasis:sampleSource;
 		rr:objectMap [
 			rml:reference "Sample source"
 		]
