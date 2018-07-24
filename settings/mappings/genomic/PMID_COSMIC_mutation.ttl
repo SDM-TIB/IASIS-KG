@@ -11,7 +11,7 @@
 @prefix owl: <https://www.w3.org/2002/07/owl#> .
 
 <#PMID>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/COSMIC/Preprocessed_MayJune/COSMIC_mutation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
