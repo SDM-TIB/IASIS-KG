@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#LCPatient>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/WP2/biopsia_wp2-1523023412772.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/biopsia_wp2-1523023412772.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -24,7 +24,7 @@
 	].
 
 <#LiquidBiopsy>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/WP2/biopsia_wp2-1523023412772.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/biopsia_wp2-1523023412772.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
