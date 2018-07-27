@@ -37,13 +37,13 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:sameAs;
+		rr:predicate owl:sameAs;
 		rr:objectMap [
 			rr:template "http://bio2rdf.org/drugbank:{DrugID}"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:sameAs;
+		rr:predicate owl:sameAs;
 		rr:objectMap [
 			rr:template "http://wifo5-04.informatik.uni-mannheim.de/drugbank/page/drugs/{DrugID}"
 		]
