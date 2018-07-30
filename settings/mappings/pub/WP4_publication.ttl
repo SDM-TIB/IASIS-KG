@@ -8,6 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix base: <http://tib.de/ontario/mapping#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 <#Publication>
 	rml:logicalSource [ rml:source "/app/query_publication.csv";
@@ -18,7 +19,7 @@
 		rr:class iasis:Publication
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:title;
+		rr:predicate dcterms:title;
 		rr:objectMap [ 
 			rml:reference "title" 
 		]
