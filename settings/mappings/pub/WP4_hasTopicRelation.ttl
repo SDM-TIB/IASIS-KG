@@ -35,17 +35,3 @@
 			rr:template "http://project-iasis.eu/Publication/{subject}"
 		]
 	].
-
-<#Connection>
-	rml:logicalSource [ rml:source "/app/query_has_topic.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Publication/{subject}"
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:publication_hasTopic_cui;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Annotation/{object}"
-		]
-	].
