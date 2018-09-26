@@ -15,7 +15,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Relation/{subject}MENTIONED_IN{object}";
-		rr:class iasis:MentionedIn
+		rr:class iasis:MENTIONED_IN
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:confidence;
@@ -31,20 +31,6 @@
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:annotates;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Publication/{object}"
-		]
-	].
-
-<#Connection>
-	rml:logicalSource [ rml:source "/app/query_mentioned_in.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Annotation/{subject}"
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:cui_mentionedIn_publication;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Publication/{object}"
 		]
