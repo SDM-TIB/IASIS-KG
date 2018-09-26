@@ -15,13 +15,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Relation/{subject}{predicate}{object}";
-		rr:class iasis:MentionedIn
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:type;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Relation/{predicate}"
-		]
+		rr:class iasis:Relation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:confidence;
