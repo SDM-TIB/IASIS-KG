@@ -26,13 +26,13 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasAnnotation;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Annotation/{subject}"
+			rr:template "http://project-iasis.eu/Annotation/{object}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:annotates;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Publication/{object}"
+			rr:template "http://project-iasis.eu/Publication/{subject}"
 		]
 	].
 
