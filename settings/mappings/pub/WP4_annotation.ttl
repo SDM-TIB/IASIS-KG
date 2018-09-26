@@ -18,7 +18,7 @@
 		rr:class iasis:Annotation
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:id;
+		rr:predicate iasis:cuiID;
 		rr:objectMap [ 
 			rml:reference "id" 
 		]
