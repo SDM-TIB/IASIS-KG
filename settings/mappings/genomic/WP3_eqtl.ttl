@@ -1,0 +1,82 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix base: <http://tib.de/ontario/mapping#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix iasis: <http://project-iasis.eu/vocab/> .
+
+<#eqtl>
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/WP3/eqtl.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/EQTL/{upstream}eqtl{downstream}";
+		rr:class iasis:EQTL
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:tissue;
+		rr:objectMap [ 
+			rml:reference "tissue" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_isLocatedIn_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{upstream}"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:gexpChanges_occuredIn_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{downstream}"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:type;
+		rr:objectMap [ 
+			rml:reference "type" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:qvalue;
+		rr:objectMap [ 
+			rml:reference "log10q" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:dbsnp;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/dbsnp/{rsid}"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:eqtl_chromosome;
+		rr:objectMap [ 
+			rml:reference "chromo" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:eqtl_position;
+		rr:objectMap [ 
+			rml:reference "pos" 
+		]
+	].
+
+<#link>
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/WP3/eqtl.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/dbsnp/{rsid}"
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:sameAs;
+		rr:objectMap [
+			rr:template "http://bio2rdf.org/dbsnp:{rsid}"
+		]
+	].
