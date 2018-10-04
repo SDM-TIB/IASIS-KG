@@ -32,13 +32,13 @@
 		rr:class iasis:PerformanceStatus;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:PerformanceStatusValue;
+		rr:predicate iasis:performanceStatusValue;
 		rr:objectMap [ 
 			rml:reference "value" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:PerformanceStatusDate;
+		rr:predicate iasis:performanceStatusDate;
 		rr:objectMap [ 
 			rml:reference "date" 
 		]
