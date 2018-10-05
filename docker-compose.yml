@@ -78,6 +78,20 @@ services:
     networks:
       - iasiskg
 
+  lc_exploration:
+    image: iasistest.atc.gr/lc_exploration:latest
+    hostname: lc_exploration
+    container_name: iasis_lc_exploration
+    domainname: iasiskg
+    ports:
+      - "5003:5003"
+    environment:
+      - IASISKG_ENDPOINT=http://iasiskgstore:8890/sparql
+    depends_on:
+      - iasiskgstore
+    networks:
+      - iasiskg
+
 
 networks:
   iasiskg:
