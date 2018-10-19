@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gender>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/Gender.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/Gender.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -32,7 +32,7 @@
 	].				
 
 <#Gender_Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/Gender.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/Gender.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

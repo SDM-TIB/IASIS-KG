@@ -10,7 +10,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 <#LCPatient>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/Patient_Drugs.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/Patient_Drugs.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

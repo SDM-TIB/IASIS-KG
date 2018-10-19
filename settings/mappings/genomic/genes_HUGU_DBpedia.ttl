@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/DBpedia/genes_HUGO_withoutDuplicates_DBpedia.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/genes_HUGO_withoutDuplicates_DBpedia.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

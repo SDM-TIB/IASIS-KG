@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#HasTopic>
-	rml:logicalSource [ rml:source "/app/query_has_topic.csv";
+	rml:logicalSource [ rml:source "/data/data/pub/query_has_topic.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

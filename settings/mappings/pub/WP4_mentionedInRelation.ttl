@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#MentionedIn>
-	rml:logicalSource [ rml:source "/app/query_mentioned_in.csv";
+	rml:logicalSource [ rml:source "/data/data/pub/query_mentioned_in.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

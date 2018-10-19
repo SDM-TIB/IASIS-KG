@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#ImmunotherapyDrug>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/ImmunotherapyList.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/ImmunotherapyList.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -32,7 +32,7 @@
 	].				
 
 <#ImmunotherapyDrug_Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/ImmunotherapyList.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/ImmunotherapyList.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

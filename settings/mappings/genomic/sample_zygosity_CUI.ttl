@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Zygosity>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/CUI/sample_zygosity.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/sample_zygosity.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Zygosity/{Zygosity}";
@@ -30,7 +30,7 @@
 	].
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/CUI/sample_zygosity.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/sample_zygosity.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

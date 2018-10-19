@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_GE>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/COSMIC_geneExpression_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -31,7 +31,7 @@
 	].
 
 <#Sample_GE>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/COSMIC_geneExpression_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -52,7 +52,7 @@
 	].
 
 <#Gexp_GE>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/COSMIC_geneExpression_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Gexp/{SAMPLE_ID}_{GENE_NAME}";

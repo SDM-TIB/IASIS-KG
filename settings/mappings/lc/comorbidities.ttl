@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Comorbidity>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/Comorbidities.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/Comorbidities.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -31,7 +31,7 @@
 		]
 	].
 <#Comorbidity_Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/Comorbidities.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/Comorbidities.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#TkiDrug>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/TkiList.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/TkiList.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -32,7 +32,7 @@
 	].				
 
 <#TkiDrug_Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Clinical/TkiList.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/TkiList.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

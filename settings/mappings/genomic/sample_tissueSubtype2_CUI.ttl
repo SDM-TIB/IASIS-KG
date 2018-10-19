@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#SubTissue>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/CUI/sample_tissueSubtype2.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/sample_tissueSubtype2.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/SubTissue/{Tissue Subtype 2}";
@@ -30,7 +30,7 @@
 	].
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/CUI/sample_tissueSubtype2.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/sample_tissueSubtype2.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

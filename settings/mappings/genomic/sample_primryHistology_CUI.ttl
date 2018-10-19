@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#TissueType>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/CUI/sample_primaryHistology.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/sample_primaryHistology.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/TissueType/{Histology}";
@@ -30,7 +30,7 @@
 	].
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/COSMIC/CUI/sample_primaryHistology.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/sample_primaryHistology.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

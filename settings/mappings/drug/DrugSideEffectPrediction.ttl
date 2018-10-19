@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DrugSideEffect_DSEPrediction>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/Drug/oldData/drug_sideEffects_predictions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drug_sideEffects_predictions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
