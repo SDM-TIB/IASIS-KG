@@ -97,7 +97,7 @@
 	].
 
 <#CNV_CNV>
-	rml:logicalSource [ rml:source ""/data/data/genomic/COSMIC_cnv_preprocessing.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_cnv_preprocessing.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
