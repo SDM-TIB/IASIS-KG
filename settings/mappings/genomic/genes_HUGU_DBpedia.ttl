@@ -20,6 +20,6 @@
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "{DBpediaURL}";
+			rr:template "{DbpediaURL}";
 		]
 	].
