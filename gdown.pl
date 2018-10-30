@@ -19,7 +19,7 @@ sub execute_command();
 my $URL='https://drive.google.com/file/d/1sxj_M2-q33ccH9I9D60lew8ZZUQzmGuL/view?usp=sharing';
 die "\n./gdown.pl 'gdrive file url' [desired file name]\n\n" if $URL eq '';
 
-my $FILENAME='/data/data.tar.gz;
+my $FILENAME='/data/data.tar.gz';
 $FILENAME='gdown' if $FILENAME eq '';
 
 if ($URL=~m#^https?://drive.google.com/file/d/([^/]+)#) {
