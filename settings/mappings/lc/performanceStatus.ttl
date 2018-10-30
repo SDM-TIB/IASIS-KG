@@ -29,7 +29,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/LCPatient/PerformanceObservation/{p_id}_{date}";
-		rr:class iasis:Observation;
+		rr:class iasis:PerformanceObservation;
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasPerformanceStatus;
