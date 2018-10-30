@@ -42,7 +42,7 @@ services:
     volumes:
       - ./settings/ontario:/data
     ports:
-      - "5000:5000"
+      - "5025:5000"
     environment:
       - RABBITMQ_IP=10.115.83.18
       - RABBITMQ_PORT=5672
@@ -57,7 +57,7 @@ services:
     container_name: iasis_semepnode
     domainname: iasiskg
     ports:
-      - "5001:5001"
+      - "5026:5001"
     environment:
       - IASISKG_ENDPOINT=http://iasiskgstore:8890/sparql
     depends_on:
@@ -71,7 +71,7 @@ services:
     container_name: iasis_drugexploration
     domainname: iasiskg
     ports:
-      - "5002:5002"
+      - "5027:5002"
     environment:
       - IASISKG_ENDPOINT=http://iasiskgstore:8890/sparql
     depends_on:
@@ -85,7 +85,7 @@ services:
     container_name: iasis_lc_exploration
     domainname: iasiskg
     ports:
-      - "5003:5003"
+      - "5028:5003"
     environment:
       - IASISKG_ENDPOINT=http://iasiskgstore:8890/sparql
     depends_on:
