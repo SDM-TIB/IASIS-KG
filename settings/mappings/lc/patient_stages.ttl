@@ -29,7 +29,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/LCPatient/TumorObservation/{p_id}_{stage_date}";
-		rr:class iasis:Observation;
+		rr:class iasis:TumorObservation;
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasTumorStage;
