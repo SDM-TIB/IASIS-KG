@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#City>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/cities.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/cities.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
