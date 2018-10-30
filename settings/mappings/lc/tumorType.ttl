@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#TumorType>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/TumorType.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/TumorType.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -37,7 +37,7 @@
 	].				
 
 <#TumorType_Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/TumorType.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/TumorType.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
