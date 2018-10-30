@@ -12,7 +12,7 @@
 
 
 <#LCPatient>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/Patient_TkiList.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/Patient_TkiList.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
