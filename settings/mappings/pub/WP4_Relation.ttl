@@ -19,7 +19,7 @@
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/{predicate}"
+			rr:template "http://project-iasis.eu/vocab/{predicate}"
 		]
 	];
 	rr:predicateObjectMap [
