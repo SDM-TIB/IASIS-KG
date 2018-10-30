@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#ChemotherapyDrug>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/ChemotherapyList.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/ChemotherapyList.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -38,7 +38,7 @@
 	].				
 
 <#ChemotherapyDrug_Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/ChemotherapyList.csv";
+	rml:logicalSource [ rml:source "/data/data/lc/ChemotherapyList.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
