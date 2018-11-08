@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#TumorType>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/lc_notes/tumorTypes.csv";
+	rml:logicalSource [ rml:source "/data/data/lc_notes/tumorTypes.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
