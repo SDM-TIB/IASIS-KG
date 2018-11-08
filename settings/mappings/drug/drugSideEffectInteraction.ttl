@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DrugSideEffect_DSE>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_side_effects.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -31,7 +31,7 @@
 	].
 
 <#Drug_DSE>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_side_effects.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -45,7 +45,7 @@
 	].
 
 <#SideEffect_DSE>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_side_effects.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
