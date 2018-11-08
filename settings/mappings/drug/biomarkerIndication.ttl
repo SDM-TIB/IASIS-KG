@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_Biomarker>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/biomarkers_drugs.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/biomarkers_drugs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
