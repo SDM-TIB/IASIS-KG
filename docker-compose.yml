@@ -18,10 +18,10 @@ services:
     networks:
       - iasiskg
 
-  iasiskgstore:
-    image: kemele/virtuoso:6-stable
-    hostname: iasiskgstore
-    container_name: iasis_kgstore
+  iasis_genomic_kgstore:
+    image: kemele/virtuoso:7-stable
+    hostname: iasis_genomic_kgstore
+    container_name: iasis_genomic_kgstore
     domainname: iasiskg
     volumes:
       - ./rdf:/data
@@ -34,6 +34,39 @@ services:
     networks:
       - iasiskg
 
+
+  iasis_lc_notes_kgstore:
+    image: kemele/virtuoso:7-stable
+    hostname: iasis_lc_notes_kgstore
+    container_name: iasis_lc_notes_kgstore
+    domainname: iasiskg
+    volumes:
+      - ./rdf:/data
+    ports:
+      - "11382:8890"
+      - "1113:1111"
+    environment:
+      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_PORT=5672
+    networks:
+      - iasiskg
+      
+  iasis_drug_pub_kgstore:
+    image: kemele/virtuoso:6-stable
+    hostname: iasis_drug_pub_kgstore
+    container_name: iasis_drug_pub_kgstore
+    domainname: iasiskg
+    volumes:
+      - ./rdf:/data
+    ports:
+      - "11383:8890"
+      - "1114:1111"
+    environment:
+      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_PORT=5672
+    networks:
+      - iasiskg
+      
   ontario:
     image: iasistest.atc.gr/ontario:latest
     hostname: ontario
@@ -59,9 +92,9 @@ services:
     ports:
       - "5026:5001"
     environment:
-      - IASISKG_ENDPOINT=http://iasiskgstore:8890/sparql
+      - IASISKG_ENDPOINT=http://iasis_lc_notes_kgstore:8890/sparql
     depends_on:
-      - iasiskgstore
+      - iasis_lc_notes_kgstore
     networks:
       - iasiskg
 
@@ -73,9 +106,9 @@ services:
     ports:
       - "5027:5002"
     environment:
-      - IASISKG_ENDPOINT=http://iasiskgstore:8890/sparql
+      - IASISKG_ENDPOINT=http://iasis_drug_pub_kgstore:8890/sparql
     depends_on:
-      - iasiskgstore
+      - iasis_drug_pub_kgstore
     networks:
       - iasiskg
 
@@ -87,9 +120,9 @@ services:
     ports:
       - "5028:5003"
     environment:
-      - IASISKG_ENDPOINT=http://iasiskgstore:8890/sparql
+      - IASISKG_ENDPOINT=http://iasis_drug_pub_kgstore:8890/sparql
     depends_on:
-      - iasiskgstore
+      - iasis_drug_pub_kgstore
     networks:
       - iasiskg
 
