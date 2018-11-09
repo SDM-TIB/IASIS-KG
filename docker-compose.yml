@@ -81,8 +81,6 @@ services:
     environment:
       - RABBITMQ_IP=10.115.83.18
       - RABBITMQ_PORT=5672
-    depends_on:
-      - iasiskgstore
     networks:
       - iasiskg
 
