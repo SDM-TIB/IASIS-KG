@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#TumorStage>
-	rml:logicalSource [ rml:source "/data/data/data/lc_notes/stages.csv";
+	rml:logicalSource [ rml:source "/data/data/lc_notes/stages.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
