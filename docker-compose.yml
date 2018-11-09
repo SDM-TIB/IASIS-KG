@@ -14,7 +14,9 @@ services:
     env_file:
       - ./envfile.env
     depends_on:
-      - iasiskgstore
+      - iasis_genomic_kgstore
+      - iasis_lc_notes_kgstore
+      - iasis_drug_pub_kgstore
     networks:
       - iasiskg
 
