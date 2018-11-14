@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Diagnosis>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc/lc_images/diagnose.csv";
+	rml:logicalSource [ rml:source "/data/data/lc_images/diagnose.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
