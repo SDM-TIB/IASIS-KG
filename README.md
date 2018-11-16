@@ -3,4 +3,11 @@
 
 
 To start the pipeline:
-    `docker-compose up -d`
+```bash 
+docker network create iasiskg
+```
+    
+  then run
+```bash
+docker-compose up -d
+```
