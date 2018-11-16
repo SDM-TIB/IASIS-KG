@@ -26,7 +26,8 @@ services:
     container_name: iasis_genomic_kgstore
     domainname: iasiskg
     volumes:
-      - ./rdf/output/genomic:/data
+      - ./rdf/genomic:/data
+      - ./rdf/output/genomic:/data/output/genomic
     ports:
       - "11381:8890"
       - "1112:1111"
@@ -43,7 +44,8 @@ services:
     container_name: iasis_lc_notes_kgstore
     domainname: iasiskg
     volumes:
-      - ./rdf/output/lc_notes:/data
+      - ./rdf/lc_notes:/data
+      - ./rdf/output/lc_notes:/data/output/lc_notes
     ports:
       - "11382:8890"
       - "1113:1111"
@@ -59,7 +61,8 @@ services:
     container_name: iasis_drug_pub_kgstore
     domainname: iasiskg
     volumes:
-      - ./rdf/output/drug_pub:/data
+      - ./rdf/drug_pub:/data
+      - ./rdf/output/drug_pub:/data/output/drug_pub
     ports:
       - "11383:8890"
       - "1114:1111"
