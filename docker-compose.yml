@@ -54,7 +54,7 @@ services:
       - iasiskg
       
   iasis_drug_pub_kgstore:
-    image: kemele/virtuoso:6-stable
+    image: kemele/virtuoso:7-stable
     hostname: iasis_drug_pub_kgstore
     container_name: iasis_drug_pub_kgstore
     domainname: iasiskg
