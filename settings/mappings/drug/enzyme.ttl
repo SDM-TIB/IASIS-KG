@@ -45,7 +45,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:externalLink;
 		rr:objectMap [
-			rr:template "https://www.uniprot.org/uniprot/{Uni_ID}";
+			rr:template "http://www.uniprot.org/uniprot/{Uni_ID}";
 		]
 	];
 	rr:predicateObjectMap [
