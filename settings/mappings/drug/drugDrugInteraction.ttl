@@ -73,7 +73,7 @@
 		]
 	].	
 <#Effectiveness>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
