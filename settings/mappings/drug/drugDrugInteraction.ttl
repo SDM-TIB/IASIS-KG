@@ -72,4 +72,16 @@
 			rr:template "http://project-iasis.eu/Impact/{property}"
 		]
 	].	
-
+<#Effectiveness>
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_interactions.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Drug/{Drug1}";
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:drugDrugInteraction_effectiveness;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{Drug2}" 
+		]
+	].
