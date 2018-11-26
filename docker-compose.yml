@@ -37,7 +37,7 @@ services:
     networks:
       - iasiskg
       
-  iasis_lc_images_kgstore
+  iasis_lc_images_kgstore:
     image: kemele/virtuoso:7-stable
     hostname: iasis_lc_images_kgstore
     container_name: iasis_lc_images_kgstore
