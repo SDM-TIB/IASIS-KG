@@ -36,8 +36,24 @@ services:
       - RABBITMQ_PORT=5672
     networks:
       - iasiskg
-
-
+      
+  iasis_lc_images_kgstore
+    image: kemele/virtuoso:7-stable
+    hostname: iasis_lc_images_kgstore
+    container_name: iasis_lc_images_kgstore
+    domainname: iasiskg
+    volumes:
+      - ./rdf/lc_images:/data
+      - ./rdf/output/lc_images:/data/output/lc_images
+    ports:
+      - "11382:8890"
+      - "1113:1111"
+    environment:
+      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_PORT=5672
+    networks:
+      - iasiskg
+      
   iasis_lc_notes_kgstore:
     image: kemele/virtuoso:7-stable
     hostname: iasis_lc_notes_kgstore
@@ -47,8 +63,8 @@ services:
       - ./rdf/lc_notes:/data
       - ./rdf/output/lc_notes:/data/output/lc_notes
     ports:
-      - "11382:8890"
-      - "1113:1111"
+      - "11383:8890"
+      - "1114:1111"
     environment:
       - RABBITMQ_IP=10.115.83.18
       - RABBITMQ_PORT=5672
@@ -64,8 +80,8 @@ services:
       - ./rdf/drug_pub:/data
       - ./rdf/output/drug_pub:/data/output/drug_pub
     ports:
-      - "11383:8890"
-      - "1114:1111"
+      - "11384:8890"
+      - "1115:1111"
     environment:
       - RABBITMQ_IP=10.115.83.18
       - RABBITMQ_PORT=5672
