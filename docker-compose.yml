@@ -17,6 +17,7 @@ services:
       - iasis_genomic_kgstore
       - iasis_lc_notes_kgstore
       - iasis_drug_pub_kgstore
+      - iasis_lc_images_kgstore
     networks:
       - iasiskg
 
