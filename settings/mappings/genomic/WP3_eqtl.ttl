@@ -75,7 +75,7 @@
 		rr:template "http://project-iasis.eu/dbsnp/{rsid}"
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:sameAs;
+		rr:predicate owl:sameAs;
 		rr:objectMap [
 			rr:template "http://bio2rdf.org/dbsnp:{rsid}"
 		]
