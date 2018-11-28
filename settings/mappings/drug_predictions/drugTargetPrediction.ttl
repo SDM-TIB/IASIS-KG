@@ -18,7 +18,7 @@
 		rr:template "http://project-iasis.eu/Drug/{DrugID}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drug_isPredictedToInteractsWith_target;
+		rr:predicate iasis:drug_isPredictedToInteractWith_target;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Target/{Target_name}" 
 		]
