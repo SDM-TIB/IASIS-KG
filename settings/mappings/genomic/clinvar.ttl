@@ -1,0 +1,162 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix base: <http://tib.de/ontario/mapping#> .
+@prefix iasis: <http://project-iasis.eu/vocab/> .
+
+<#NucleotideSequence>
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/clinvar_processed.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/NucleotideSequence/{ncbiidshort}";
+		rr:class iasis:NucleotideSequence
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nucleotideSequenceID;
+		rr:objectMap [
+			rml:reference "ncbiidshort"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nucleotideSequenceLabel;
+		rr:objectMap [
+			rml:reference "name"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_chromosome;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Chromosome/{chr}"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_site;
+		rr:objectMap [
+			rml:reference "site"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_origin;
+		rr:objectMap [
+			rml:reference "origin"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_genomicPosition;
+		rr:objectMap [
+			rml:reference "pos"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_isRelatedTo_protein;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Protein/{acc}"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_isRelatedTo_transcript;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Transcript/{enst}"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_has_variation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Variation>
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:nts_isRelatedTo_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{symbol}"
+		]
+	].
+
+<#Variation>
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/clinvar_processed.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{dbsnp}";
+		rr:class iasis:Variation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:dbsnpID;
+		rr:objectMap [
+			rml:reference "dbsnp"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:originalNT;
+		rr:objectMap [
+			rml:reference "original"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variantNT;
+		rr:objectMap [
+			rml:reference "variant"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:originalBase;
+		rr:objectMap [
+			rml:reference "originalbase"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variantBase;
+		rr:objectMap [
+			rml:reference "variantbase"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:clinicalSignificance;
+		rr:objectMap [
+			rml:reference "clinsig"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:clinicalSignificanceLabel;
+		rr:objectMap [
+			rml:reference "clin"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:geneticTest;
+		rr:objectMap [
+			rml:reference "genetictest"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:geneticTest;
+		rr:objectMap [
+			rml:reference "genetictest"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_has_phenotype;
+		rr:objectMap [
+			rr:parentTriplesMap <#Phenotype>
+		]
+	].
+
+<#Phenotype>
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/clinvar_processed.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Phenotype/{phenotype_label}"; 	
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:phenotypeLabel;
+		rr:objectMap [
+			rml:reference "phenotype_label"
+		]
+	].	
