@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DrugSideEffectPrediction>
-	rml:logicalSource [ rml:source "/data/data/drug_predictions/drugs_side_effects_predictions.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug_predictions/drug_sideeffect_prediction_names.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -19,7 +19,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:drug_isPredictedToHave_sideEffect;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/SideEffect/{CUI}";
+			rr:template "http://project-iasis.eu/Phenotype/{name}";
 		]
 	].
 
