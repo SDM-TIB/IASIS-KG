@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DrugEnzymePrediction>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug_predictions/drug_enzyme_interaction_prediction.csv";
+	rml:logicalSource [ rml:source "/data/data/drug_predictions/drug_enzyme_interaction_prediction.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
