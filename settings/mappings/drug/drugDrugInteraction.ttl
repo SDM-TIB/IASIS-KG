@@ -45,7 +45,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/EffectInteraction/{Drug1}EffectInteraction{Drug2}";
+		rr:template "http://project-iasis.eu/EffectInteraction/{Drug1}_interactsWith_{Drug2}";
 		rr:class iasis:EffectInteraction
 	];
 	rr:predicateObjectMap [
@@ -71,17 +71,10 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Impact/{property}"
 		]
-	].	
-<#Effectiveness>
-	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{Drug1}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drugDrugInteraction_effectiveness;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{Drug2}" 
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/DrugBank"
 		]
-	].
+	].	
