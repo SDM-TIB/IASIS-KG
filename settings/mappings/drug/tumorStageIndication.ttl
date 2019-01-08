@@ -11,14 +11,14 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_TumorStage>
-	rml:logicalSource [ rml:source "/data/data/drug/stages_drugs.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/stages_drugs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/TumorStage/{stage_CUI}";
+		rr:template "http://project-iasis.eu/TumorStage/stage{stage}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasIndication;
+		rr:predicate iasis:tumorStage_has_indication;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Drug/{drugID}";
 		]

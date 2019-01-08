@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_DTI>
-	rml:logicalSource [ rml:source "/data/data/drug/drugs_dbpedia.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_dbpedia.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -57,7 +57,7 @@
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/{DrugBankID}";
+			rr:template "http://wifo5-04.informatik.uni-mannheim.de/drugbank/page/drugs/{DrugBankID}";
 		]
 	].
 

@@ -11,30 +11,17 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_Biomarker>
-	rml:logicalSource [ rml:source "/data/data/drug/biomarkers_drugs.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/biomarkers_drugs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Biomarker/{biomarker_CUI}";
-		rr:class iasis:Biomarker
+		rr:template "http://project-iasis.eu/Biomarker/{biomarker}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:biomarkerLabel;
-		rr:objectMap [ 
-			rml:reference "biomarker" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:biomarkerCuiID;
-		rr:objectMap [ 
-			rml:reference "biomarker_CUI" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasIndication;
+		rr:predicate iasis:biomarker_has_indication;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Drug/{drugID}";
 		]
 	].
-
+	
 

@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Enzyme>
-	rml:logicalSource [ rml:source "/data/data/drug/enzyme.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/enzyme.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -45,7 +45,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:externalLink;
 		rr:objectMap [
-			rr:template "http://www.uniprot.org/uniprot/{Uni_ID}";
+			rr:template "https://www.uniprot.org/uniprot/{Uni_ID}";
 		]
 	];
 	rr:predicateObjectMap [
@@ -62,7 +62,7 @@
 	].
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/data/data/drug/enzyme.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/enzyme.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

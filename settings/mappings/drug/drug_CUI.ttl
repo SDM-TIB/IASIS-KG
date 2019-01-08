@@ -11,28 +11,36 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_DTI>
-	rml:logicalSource [ rml:source "/data/data/drug/CUI_DrugBank.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/CUI_DrugBank.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{CUI_ID}";
-		rr:class iasis:Drug
+		rr:template "http://project-iasis.eu/Drug/{DrugBankID}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drugLabel;
-		rr:objectMap [ 
-			rml:reference "DrugName" 
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
 		]
+	].
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/CUI_DrugBank.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{CUI_ID}";
+		rr:class iasis:Annotation
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drugCuiID;
+		rr:predicate iasis:annID;
 		rr:objectMap [ 
 			rml:reference "CUI_ID" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
+		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Drug/{DrugBankID}";
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
 		]
 	].

@@ -11,15 +11,15 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#SideEffect>
-	rml:logicalSource [ rml:source "/data/data/drug/hpo_with_cui_dbpedia.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/SideEffect/{CUI}";
-		rr:class iasis:SideEffect
+		rr:template "http://project-iasis.eu/Phenotype/{Name}";
+		rr:class iasis:Phenotype
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:sideEffectLabel;
+		rr:predicate iasis:phenotypeLabel;
 		rr:objectMap [
 			rml:reference "Name";
 		]
@@ -31,20 +31,20 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasAnnotation;
+		rr:predicate iasis:hasCUIAnnotation;
 		rr:objectMap [
 			rr:parentTriplesMap <#Annotation1>
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasAnnotation;
+		rr:predicate iasis:hasHPOAnnotation;
 		rr:objectMap [
 			rr:parentTriplesMap <#Annotation2>
 		]
 	].
 
 <#Annotation1>
-	rml:logicalSource [ rml:source "/data/data/drug/hpo_with_cui_dbpedia.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -65,7 +65,7 @@
 	].	
 
 <#Annotation2>
-	rml:logicalSource [ rml:source "/data/data/drug/hpo_with_cui_dbpedia.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
