@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Enzyme>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/enzyme.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/enzyme.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -62,7 +62,7 @@
 	].
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/enzyme.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/enzyme.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

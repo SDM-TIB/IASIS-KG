@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_Disorder>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_indications.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_indications.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

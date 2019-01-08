@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Protein>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/protein.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/protein.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [

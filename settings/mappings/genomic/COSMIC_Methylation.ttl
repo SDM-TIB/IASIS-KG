@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_Meth>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_methylation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_methylation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -31,7 +31,7 @@
 	].
 
 <#Sample_Meth>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_methylation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_methylation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -81,7 +81,7 @@
 	].
 
 <#Tumor_Meth>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_methylation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_methylation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Tumor/{ID_TUMOUR}";
@@ -95,7 +95,7 @@
 	].
 
 <#CGI_Meth>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_methylation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_methylation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/CGI/{FRAGMENT_ID}";

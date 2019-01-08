@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Effect>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -26,7 +26,7 @@
 	].
 
 <#Impact>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -41,7 +41,7 @@
 	].	
 
 <#EffectInteraction>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -73,7 +73,7 @@
 		]
 	].	
 <#Effectiveness>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/drugs_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

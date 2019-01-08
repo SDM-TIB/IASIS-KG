@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#SideEffect>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -44,7 +44,7 @@
 	].
 
 <#Annotation1>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -65,7 +65,7 @@
 	].	
 
 <#Annotation2>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/hpo_with_cui_dbpedia_cleaned.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

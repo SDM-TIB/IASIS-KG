@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Drug_DTI>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/CUI_DrugBank.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/CUI_DrugBank.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -25,7 +25,7 @@
 	].
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/drug/CUI_DrugBank.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/CUI_DrugBank.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

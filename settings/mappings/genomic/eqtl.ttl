@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#eqtl>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/eqtl.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/eqtl.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -68,7 +68,7 @@
 	].
 
 <#link>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/eqtl.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/eqtl.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

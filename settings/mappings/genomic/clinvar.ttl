@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#NucleotideSequence>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/clinvar_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/clinvar_processed.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -79,7 +79,7 @@
 	].
 
 <#Variation>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/clinvar_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/clinvar_processed.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -148,7 +148,7 @@
 	].
 
 <#Phenotype>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/clinvar_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/clinvar_processed.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [

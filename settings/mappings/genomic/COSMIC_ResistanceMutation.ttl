@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_ResistanceMu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -25,7 +25,7 @@
 	].
 
 <#Sample_ResistanceMu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -76,7 +76,7 @@
 
 
 <#Mutation_ResistanceMu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Mutation/{Gene Name}_{Mutation PepSeq}";
@@ -168,7 +168,7 @@
 	].
 
 <#Publication_ResistanceMu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

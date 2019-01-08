@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_Mu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_mutation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -49,7 +49,7 @@
 	].
 
 <#Sample_Mu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_mutation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -112,7 +112,7 @@
 	].
 
 <#Tumor_Mu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_mutation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Tumor/{ID_tumour}";
@@ -132,7 +132,7 @@
 	].
 
 <#Mutation_Mu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_mutation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Mutation/{Gene name}_{Mutation PepSeq}";
@@ -266,7 +266,7 @@
 	].
 
 <#Publication_Mu>
-	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/genomic/COSMIC_mutation_preprocessed.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_preprocessed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
