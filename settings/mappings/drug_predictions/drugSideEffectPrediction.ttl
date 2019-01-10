@@ -9,17 +9,45 @@
 @prefix base: <http://tib.de/ontario/mapping#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#DrugSideEffectPrediction>
+<#PredictedDrugSideEffect_PDSE>
 	rml:logicalSource [ rml:source "/data/data/drug_predictions/drug_sideeffect_prediction_names.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{DrugID}";
+		rr:template "http://project-iasis.eu/PredictedDrugSideEffect/{DrugID}_{name}";
+		rr:class iasis:PredictedDrugSideEffect
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drug_isPredictedToHave_sideEffect;
+		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Phenotype/{name}";
+			rr:template "http://project-iasis.eu/SourceName/semEP"
+		]
+	].	
+
+<#Drug_DSE>
+	rml:logicalSource [ rml:source "/data/data/drug_predictions/drug_sideeffect_prediction_names.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Drug/{DrugID}"
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:drug_isRelatedTo_pdse;
+		rr:objectMap [
+			rr:parentTriplesMap <#PredictedDrugSideEffect_PDSE>
 		]
 	].
 
+<#SideEffect_DSE>
+	rml:logicalSource [ rml:source "/data/data/drug_predictions/drug_sideeffect_prediction_names.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Phenotype/{name}"
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:sideEffect_isRelatedTo_pdse;
+		rr:objectMap [
+			rr:parentTriplesMap <#PredictedDrugSideEffect_PDSE>
+		]
+	].	
