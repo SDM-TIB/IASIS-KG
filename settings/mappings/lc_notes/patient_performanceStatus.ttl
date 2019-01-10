@@ -17,7 +17,7 @@
 		rr:template "http://project-iasis.eu/LCPatient/{patient_id}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasObservation;
+		rr:predicate iasis:hasPerformanceObservation;
 		rr:objectMap [ 
 			rr:parentTriplesMap <#PerformanceObservation>
 		]
