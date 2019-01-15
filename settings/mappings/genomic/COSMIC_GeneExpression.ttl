@@ -55,8 +55,8 @@
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_geneExpression_preprocessed.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Gexp/{SAMPLE_ID}_{GENE_NAME}";
-		rr:class iasis:Gexp;
+		rr:template "http://project-iasis.eu/GExp/{SAMPLE_ID}_{GENE_NAME}";
+		rr:class iasis:GExp;
 	];
 
 	rr:predicateObjectMap [
