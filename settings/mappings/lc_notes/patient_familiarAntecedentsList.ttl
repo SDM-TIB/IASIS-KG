@@ -19,6 +19,6 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasFamiliarAntecedent;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/FamiliarAntecedent/{CUI}"
+			rr:template "http://project-iasis.eu/FamiliarAntecedent/{name}"
 		]
 	].

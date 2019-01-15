@@ -15,25 +15,13 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Disorder/{CUI_ID}";
+		rr:template "http://project-iasis.eu/Disorder/{ENG_CUI_Name}";
 		rr:class iasis:Disorder;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:disorderLabel;
+		rr:predicate iasis:disorderLabel_ENG;
 		rr:objectMap [ 
 			rml:reference "ENG_CUI_Name" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:disorderLabel_SPA;
-		rr:objectMap [ 
-			rml:reference "name" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:disorderID;
-		rr:objectMap [ 
-			rml:reference "CUI_ID" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -41,5 +29,37 @@
 		rr:objectMap [
 			rr:template "{DBpediaURL}";
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
+		]
+	].	
 
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_notes/comorbidities.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{CUI_ID}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "CUI_ID" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annLabel_SPA;
+		rr:objectMap [ 
+			rml:reference "name" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].

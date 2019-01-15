@@ -15,19 +15,13 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Gender/{CUI_ID}";
+		rr:template "http://project-iasis.eu/Gender/{name}";
 		rr:class iasis:Gender;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:genderLabel;
+		rr:predicate iasis:genderLabel_ENG;
 		rr:objectMap [ 
 			rml:reference "name" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:genderID;
-		rr:objectMap [ 
-			rml:reference "CUI_ID" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -35,4 +29,31 @@
 		rr:objectMap [
 			rr:template "{DBpediaURL}";
 		]
-	].				
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
+		]
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_notes/gender.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{CUI_ID}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "CUI_ID" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].						

@@ -15,25 +15,13 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{CUI_ID}";
+		rr:template "http://project-iasis.eu/Drug/{ENG_CUI_Name}";
 		rr:class iasis:Drug;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drugLabel;
+		rr:predicate iasis:drugLabel_ENG;
 		rr:objectMap [ 
 			rml:reference "ENG_CUI_Name" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:drugLabel_SPA;
-		rr:objectMap [ 
-			rml:reference "name" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:drugCuiID;
-		rr:objectMap [ 
-			rml:reference "CUI_ID" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -41,5 +29,38 @@
 		rr:objectMap [
 			rr:template "{DBpediaURL}";
 		]
-	].				
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
+		]
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_notes/immunotherapyList.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{CUI_ID}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "CUI_ID" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annLabel_SPA;
+		rr:objectMap [ 
+			rml:reference "name" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].					
 

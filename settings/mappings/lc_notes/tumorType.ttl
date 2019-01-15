@@ -15,25 +15,13 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/TumorType/{CUI_ID}";
+		rr:template "http://project-iasis.eu/TumorType/{ENG_CUI_Name}";
 		rr:class iasis:TumorType;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:tumorTypeLabel;
+		rr:predicate iasis:tumorTypeLabel_ENG;
 		rr:objectMap [ 
 			rml:reference "ENG_CUI_Name" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:tumorTypeLabel_SPA;
-		rr:objectMap [ 
-			rml:reference "Name" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:tumorTypeID;
-		rr:objectMap [ 
-			rml:reference "CUI_ID" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -41,4 +29,37 @@
 		rr:objectMap [
 			rr:template "{DBpediaURL}";
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
+		]
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_notes/tumorTypes.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{CUI_ID}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "CUI_ID" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annLabel_SPA;
+		rr:objectMap [ 
+			rml:reference "Name" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].	

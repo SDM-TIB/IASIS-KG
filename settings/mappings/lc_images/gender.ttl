@@ -15,18 +15,39 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Gender/{cui}";
+		rr:template "http://project-iasis.eu/Gender/{concept}";
 		rr:class iasis:Gender;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:genderLabel;
+		rr:predicate iasis:genderLabel_ENG;
 		rr:objectMap [ 
 			rml:reference "concept" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:genderID;
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
+		]
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_images/gender.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{cui}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
 		rr:objectMap [ 
 			rml:reference "cui" 
 		]
-	].				
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].		

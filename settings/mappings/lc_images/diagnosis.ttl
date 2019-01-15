@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCPatient/Diagnosis/{cui}";
+		rr:template "http://project-iasis.eu/LCPatient/Diagnosis/{ENG_CUI_Name}";
 		rr:class iasis:Diagnosis;
 	];
 	rr:predicateObjectMap [
@@ -24,14 +24,35 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:diagnosisLabel_SPA;
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
+		]
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_images/diagnose.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{cui}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "cui" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annLabel_SPA;
 		rr:objectMap [ 
 			rml:reference "concept" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:diagnosisID;
-		rr:objectMap [ 
-			rml:reference "cui" 
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
 		]
-	].
+	].	

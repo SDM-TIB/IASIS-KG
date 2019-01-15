@@ -20,6 +20,6 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasChemotherapy;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{CUI}"
+			rr:template "http://project-iasis.eu/Drug/{drugName}"
 		]
 	].

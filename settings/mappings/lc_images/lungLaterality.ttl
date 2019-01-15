@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCPatient/LungLaterality/{cui}";
+		rr:template "http://project-iasis.eu/LCPatient/LungLaterality/{concept}";
 		rr:class iasis:LungLaterality;
 	];
 	rr:predicateObjectMap [
@@ -24,8 +24,29 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:lungLateralityCuiID;
+		rr:predicate iasis:hasCUIAnnotation;
 		rr:objectMap [
-			rml:reference "cui";
+			rr:parentTriplesMap <#Annotation>
 		]
-	].
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_images/lungLaterality.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{cui}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "cui" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].	

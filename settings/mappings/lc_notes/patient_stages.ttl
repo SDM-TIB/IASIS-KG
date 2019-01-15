@@ -34,7 +34,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasTumorStage;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/TumorStage/{CUI}"
+			rr:template "http://project-iasis.eu/TumorStage/Stage{name}"
 		]
 	];
 	rr:predicateObjectMap [

@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/BodyPartExamined/{cui}";
+		rr:template "http://project-iasis.eu/BodyPartExamined/{concept}";
 		rr:class iasis:BodyPartExamined;
 	];
 	rr:predicateObjectMap [
@@ -24,8 +24,29 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:bodyPartExaminedCuiID;
+		rr:predicate iasis:hasCUIAnnotation;
 		rr:objectMap [
-			rml:reference "cui";
+			rr:parentTriplesMap <#Annotation>
 		]
-	].
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_images/bodyPartExamined.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{cui}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "cui" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].	

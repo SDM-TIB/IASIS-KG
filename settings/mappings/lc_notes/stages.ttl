@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/TumorStage/{CUI}";
+		rr:template "http://project-iasis.eu/TumorStage/Stage{name}";
 		rr:class iasis:TumorStage;
 	];
 	rr:predicateObjectMap [
@@ -25,8 +25,29 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:tumorStageID;
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
+			rr:parentTriplesMap <#Annotation>
+		]
+	].	
+
+<#Annotation>
+	rml:logicalSource [ rml:source "/data/data/lc_notes/stages.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{CUI}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
 		rr:objectMap [ 
 			rml:reference "CUI" 
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].	
