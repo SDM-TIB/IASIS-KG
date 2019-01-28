@@ -11,7 +11,7 @@
 
 
 <#LCPatient>
-	rml:logicalSource [ rml:source "/data/data/lc_similarity/list.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_notes/list.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [

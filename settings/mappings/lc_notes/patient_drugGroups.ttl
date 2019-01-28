@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#LCPatient>
-	rml:logicalSource [ rml:source "/data/data/lc_notes/patient_drugGroups.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_notes/patient_drugGroups.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

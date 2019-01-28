@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#LCPatient>
-	rml:logicalSource [ rml:source "/data/data/lc_notes/patient_stages.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_notes/patient_stages.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -24,7 +24,7 @@
 		]
 	].	
 <#TumorObservation>
-	rml:logicalSource [ rml:source "/data/data/lc_notes/patient_stages.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_notes/patient_stages.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -34,7 +34,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasTumorStage;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/TumorStage/Stage{name}"
+			rr:template "http://project-iasis.eu/TumorStage/Stage{stage}"
 		]
 	];
 	rr:predicateObjectMap [
