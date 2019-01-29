@@ -28,7 +28,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCPatient/TumorObservation/{patient_id}_{stage_id}";
+		rr:template "http://project-iasis.eu/TumorObservation/{patient_id}_{stage_id}";
 		rr:class iasis:TumorObservation;
 	];
 	rr:predicateObjectMap [
@@ -40,6 +40,6 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasDate;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/LCPatient/Date/{date}"
+			rr:template "http://project-iasis.eu/Date/{date}"
 		]
 	].
