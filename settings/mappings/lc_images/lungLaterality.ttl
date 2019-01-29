@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCPatient/LungLaterality/{concept}";
+		rr:template "http://project-iasis.eu/LungLaterality/{concept}";
 		rr:class iasis:LungLaterality;
 	];
 	rr:predicateObjectMap [
