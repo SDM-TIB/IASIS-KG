@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Modality>
-	rml:logicalSource [ rml:source "/data/data/lc_images/modality.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_images/modality.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -31,7 +31,7 @@
 	].	
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/data/data/lc_images/modality.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_images/modality.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

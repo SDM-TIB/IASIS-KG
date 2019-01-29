@@ -10,11 +10,11 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#ImageOrgan>
-	rml:logicalSource [ rml:source "/data/data/lc_images/patient_images_organs.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_images/patient_images_organs.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCImage/{imageId}";
+		rr:template "http://project-iasis.eu/LCImage/{patientId}_{imageId}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasOrgans;
@@ -23,7 +23,7 @@
 		]
 	].
 <#Organ>
-	rml:logicalSource [ rml:source "/data/data/lc_images/patient_images_organs.csv";
+	rml:logicalSource [ rml:source "/home/jozashoori/External/Data/Deliverable/data/lc_images/patient_images_organs.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
