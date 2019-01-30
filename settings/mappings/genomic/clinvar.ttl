@@ -32,7 +32,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:nts_chromosome;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Chromosome/{chr}"
+			rml:reference "chr"
 		]
 	];
 	rr:predicateObjectMap [
