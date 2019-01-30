@@ -24,7 +24,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasDiagnosis;
+		rr:predicate iasis:hasDiagnosis_imageBased;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Diagnosis/{diagnose}";
 		]
