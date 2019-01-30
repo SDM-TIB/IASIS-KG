@@ -24,7 +24,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasCUIAnnotation;
+		rr:predicate iasis:hasAnnotation;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Annotation/{object}"
 		]
