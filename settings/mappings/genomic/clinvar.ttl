@@ -135,12 +135,6 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:geneticTest;
-		rr:objectMap [
-			rml:reference "genetictest"
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:variation_has_phenotype;
 		rr:objectMap [
 			rr:parentTriplesMap <#Phenotype>
