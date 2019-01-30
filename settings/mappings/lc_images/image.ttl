@@ -31,7 +31,7 @@
 		rr:class iasis:LCImage
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:type;
+		rr:predicate iasis:imageType;
 		rr:objectMap [
 			rml:reference "type";
 		]
