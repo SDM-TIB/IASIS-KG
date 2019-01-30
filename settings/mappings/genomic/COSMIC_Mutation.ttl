@@ -235,7 +235,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_study_id;
+		rr:predicate iasis:mutation_studyID;
 		rr:objectMap [ 
 			rml:reference "ID_STUDY" 
 		]
