@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/TumorStage/stage{stage}";
+		rr:template "http://project-iasis.eu/TumorStage/Stage{stage}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:tumorStage_has_indication;
