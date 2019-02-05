@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Relation/{subject}{predicate}{object}";
+		rr:template "http://project-iasis.eu/{predicate}/{subject}{predicate}{object}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
