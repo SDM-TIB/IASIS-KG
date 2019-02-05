@@ -25,7 +25,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:confidence;
 		rr:objectMap [ 
-			rml:reference "confidence" 
+			rml:reference "Confidence" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -37,12 +37,12 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:relation_isRelatedTo_annotation;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Annotation/{subject}"
+			rr:template "http://project-iasis.eu/Annotation/{First_id}"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:relation_isRelatedTo_annotation;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Annotation/{object}"
+			rr:template "http://project-iasis.eu/Annotation/{Second_id}"
 		]
 	].
