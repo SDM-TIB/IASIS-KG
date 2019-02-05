@@ -9,29 +9,16 @@
 @prefix base: <http://tib.de/ontario/mapping#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#MentionedIn>
-	rml:logicalSource [ rml:source "/data/data/pub/query_mentioned_in.csv";
+<#Relation_Publication>
+	rml:logicalSource [ rml:source "/data/data/pub/relation_publication.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/MENTIONED_IN/{subject}_MENTIONED_IN_{object}";
-		rr:class iasis:MENTIONED_IN
+		rr:template "http://project-iasis.eu/{Relationship_Type}/{CUI_1}_{Relationship_Type}_{CUI_2}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:confidence;
-		rr:objectMap [ 
-			rml:reference "confidence" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasAnnotation;
+		rr:predicate iasis:relation_isRelatedTo_publication;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Annotation/{subject}"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:annotates;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Publication/{object}"
+			rr:template "http://project-iasis.eu/Publication/{Resources}"
 		]
 	].
