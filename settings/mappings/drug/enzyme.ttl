@@ -33,7 +33,7 @@
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/BioSystem/{Enzyme_ID}";
+			rr:template "http://project-iasis.eu/Protein/{Uni_ID}";
 		]
 	];
 	rr:predicateObjectMap [
