@@ -24,15 +24,9 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:source;
+		rr:predicate iasis:provenance;
 		rr:objectMap [
 			rr:constant "http://project-iasis.eu/SourceName/Uniprots";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:type;
-		rr:objectMap [
-			rr:constant "http://project-iasis.eu/Type/RBP";
 		]
 	].
 

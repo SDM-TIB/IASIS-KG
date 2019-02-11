@@ -136,19 +136,19 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCPatient/Diagnosis/{id}";
+		rr:template "http://project-iasis.eu/Diagnosis/{id}";
 		rr:class iasis:Diagnosis;
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasDiagnosisTumorStage;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/LCPatient/TumorStage/Stage{tumorType}";
+			rr:template "http://project-iasis.eu/TumorStage/Stage{tumorType}";
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasDiagnosisDate;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/LCPatient/Date/{diagnosisDate}";
+			rr:template "http://project-iasis.eu/Date/{diagnosisDate}";
 		]
 	];
 	rr:predicateObjectMap [

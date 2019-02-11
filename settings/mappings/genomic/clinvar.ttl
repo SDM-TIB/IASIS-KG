@@ -32,7 +32,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:nts_chromosome;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Chromosome/{chr}"
+			rml:reference "chr"
 		]
 	];
 	rr:predicateObjectMap [
@@ -126,12 +126,6 @@
 		rr:predicate iasis:clinicalSignificanceLabel;
 		rr:objectMap [
 			rml:reference "clin"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:geneticTest;
-		rr:objectMap [
-			rml:reference "genetictest"
 		]
 	];
 	rr:predicateObjectMap [

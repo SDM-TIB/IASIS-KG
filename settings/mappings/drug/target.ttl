@@ -33,12 +33,6 @@
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/BioSystem/{Target_ID}";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
 			rr:template "http://project-iasis.eu/Protein/{Uni_ID}";
 		]
 	];
@@ -61,7 +55,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasAnnotation;
+		rr:predicate iasis:hasCUIAnnotation;
 		rr:objectMap [
 			rr:parentTriplesMap <#Annotation>
 		]

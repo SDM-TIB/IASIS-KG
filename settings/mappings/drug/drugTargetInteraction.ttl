@@ -10,8 +10,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#Interaction>
-	rml:logicalSource [ rml:source "/data/drug/drug_target_interaction.csv";
+<#DrugTarget>
+	rml:logicalSource [ rml:source "/data/data/drug/drug_target_interaction.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

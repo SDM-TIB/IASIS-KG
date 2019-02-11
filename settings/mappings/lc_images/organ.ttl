@@ -14,7 +14,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LCImage/{imageId}";
+		rr:template "http://project-iasis.eu/LCImage/{patientId}_{imageId}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasOrgans;

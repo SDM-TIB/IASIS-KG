@@ -1,7 +1,7 @@
 version: "2"
 services:
   semantic-enrichment:
-    image: iasistest.atc.gr/semantic_enrichment:latest
+    image: asakor/semantic_enrichment:latest
     hostname: semantic-enrichment
     container_name: iasis_semantic_enrichment
     domainname: iasiskg
@@ -33,7 +33,7 @@ services:
       - "11381:8890"
       - "1112:1111"
     environment:
-      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_IP=10.114.113.14
       - RABBITMQ_PORT=5672
     networks:
       - iasiskg
@@ -50,7 +50,7 @@ services:
       - "11382:8890"
       - "1113:1111"
     environment:
-      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_IP=10.114.113.14
       - RABBITMQ_PORT=5672
     networks:
       - iasiskg
@@ -67,7 +67,7 @@ services:
       - "11383:8890"
       - "1114:1111"
     environment:
-      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_IP=10.114.113.14
       - RABBITMQ_PORT=5672
     networks:
       - iasiskg
@@ -84,13 +84,13 @@ services:
       - "11384:8890"
       - "1115:1111"
     environment:
-      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_IP=10.114.113.14
       - RABBITMQ_PORT=5672
     networks:
       - iasiskg
       
   ontario:
-    image: iasistest.atc.gr/ontario:latest
+    image: iasistest.atc.gr:444/ontario:latest
     hostname: ontario
     container_name: iasis_ontario
     domainname: iasiskg
@@ -99,52 +99,11 @@ services:
     ports:
       - "5025:5000"
     environment:
-      - RABBITMQ_IP=10.115.83.18
+      - RABBITMQ_IP=10.114.113.14
       - RABBITMQ_PORT=5672
     networks:
       - iasiskg
 
-  semepnode:
-    image: iasistest.atc.gr/semep:latest
-    hostname: semepnode
-    container_name: iasis_semepnode
-    domainname: iasiskg
-    ports:
-      - "5026:5001"
-    environment:
-      - IASISKG_ENDPOINT=http://iasis_lc_notes_kgstore:8890/sparql
-    depends_on:
-      - iasis_lc_notes_kgstore
-    networks:
-      - iasiskg
-
-  drugexploration:
-    image: iasistest.atc.gr/drug_exploration:latest
-    hostname: drugexploration
-    container_name: iasis_drugexploration
-    domainname: iasiskg
-    ports:
-      - "5027:5002"
-    environment:
-      - IASISKG_ENDPOINT=http://iasis_drug_pub_kgstore:8890/sparql
-    depends_on:
-      - iasis_drug_pub_kgstore
-    networks:
-      - iasiskg
-
-  lc_exploration:
-    image: iasistest.atc.gr/lc_exploration:latest
-    hostname: lc_exploration
-    container_name: iasis_lc_exploration
-    domainname: iasiskg
-    ports:
-      - "5028:5003"
-    environment:
-      - IASISKG_ENDPOINT=http://iasis_drug_pub_kgstore:8890/sparql
-    depends_on:
-      - iasis_drug_pub_kgstore
-    networks:
-      - iasiskg
 
 
 networks:

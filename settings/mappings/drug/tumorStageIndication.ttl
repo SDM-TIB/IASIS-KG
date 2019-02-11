@@ -10,12 +10,12 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#Drug_TumorStage>
+<#DrugTumorStage>
 	rml:logicalSource [ rml:source "/data/data/drug/stages_drugs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/TumorStage/stage{stage}";
+		rr:template "http://project-iasis.eu/TumorStage/Stage{stage}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:tumorStage_has_indication;

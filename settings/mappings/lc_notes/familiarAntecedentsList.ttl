@@ -38,7 +38,7 @@
 	].	
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/data/data/lc_notes/familialAntecedentsList.csv"";
+	rml:logicalSource [ rml:source "/data/data/lc_notes/familialAntecedentsList.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

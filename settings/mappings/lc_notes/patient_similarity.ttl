@@ -10,8 +10,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#Similarity>
-	rml:logicalSource [ rml:source "/data/data/lc_similarity/patient_similarity.csv";
+<#PatientSimilarity>
+	rml:logicalSource [ rml:source "/data/data/lc_notes/patient_similarity.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
