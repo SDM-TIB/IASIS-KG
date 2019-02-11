@@ -1,7 +1,7 @@
 version: "2"
 services:
   semantic-enrichment:
-    image: asakor/semantic_enrichment:latest
+    image: iasistest.atc.gr:444/semantic_enrichment:latest
     hostname: semantic-enrichment
     container_name: iasis_semantic_enrichment
     domainname: iasiskg
