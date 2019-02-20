@@ -142,7 +142,13 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasDiagnosisTumorStage;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/TumorStage/Stage{tumorType}";
+			rr:template "http://project-iasis.eu/TumorStage/Stage{stageAtDiagnosis}";
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasDiagnosisTumorType;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/TumorType/{tumorType}";
 		]
 	];
 	rr:predicateObjectMap [
