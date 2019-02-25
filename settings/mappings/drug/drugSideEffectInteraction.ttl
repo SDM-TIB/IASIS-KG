@@ -24,12 +24,6 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:dse_StandardDeviation;
-		rr:objectMap [
-			rml:reference "StandardDeviation"
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/SourceName/SIDER"
