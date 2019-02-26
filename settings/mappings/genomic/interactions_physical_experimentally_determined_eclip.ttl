@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Protein>	
-	rml:logicalSource [ rml:source "/data/data/genomic/catrapid_human_basic_gerstberger_rbps_omixcore_eclip_zscore_greater_than_1.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/interactions_physical_experimentally_determined_eclip.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -24,7 +24,7 @@
 		]
 	].
 <#Transcript>	
-	rml:logicalSource [ rml:source "/data/data/genomic/catrapid_human_basic_gerstberger_rbps_omixcore_eclip_zscore_greater_than_1.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/interactions_physical_experimentally_determined_eclip.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -37,7 +37,7 @@
 		]
 	].
 <#PhysicalInteraction>	
-	rml:logicalSource [ rml:source "/data/data/genomic/catrapid_human_basic_gerstberger_rbps_omixcore_eclip_zscore_greater_than_1.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/interactions_physical_experimentally_determined_eclip.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
