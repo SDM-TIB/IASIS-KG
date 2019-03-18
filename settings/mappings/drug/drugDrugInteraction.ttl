@@ -78,3 +78,16 @@
 			rr:template "http://project-iasis.eu/SourceName/DrugBank"
 		]
 	].	
+<#DDI>
+	rml:logicalSource [ rml:source "/data/data/drug/NCRD.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Drug/{Drug1}";
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:drugDrugInteraction;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Drug/{Drug2}";
+		]
+	].
