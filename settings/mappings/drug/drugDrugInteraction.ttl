@@ -79,7 +79,7 @@
 		]
 	].	
 <#DDI>
-	rml:logicalSource [ rml:source "/data/data/drug/NCRD.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
