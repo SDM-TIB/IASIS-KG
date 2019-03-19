@@ -86,7 +86,7 @@
 		rr:template "http://project-iasis.eu/Drug/{Drug1}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drugDrugInteraction;
+		rr:predicate iasis:drugDrugInteraction_drugBank;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Drug/{Drug2}";
 		]
