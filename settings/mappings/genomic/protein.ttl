@@ -26,7 +26,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:constant "http://project-iasis.eu/SourceName/Uniprots";
+			rr:constant "http://project-iasis.eu/SourceName/Uniprot";
 		]
 	].
 
