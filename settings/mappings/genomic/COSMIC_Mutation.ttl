@@ -40,12 +40,6 @@
 		rr:objectMap [ 
 			rr:parentTriplesMap <#Sample_Mu> 
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:gene_isTranscribedAs_transcript;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Transcript/{Accession Number}";
-		]
 	].
 
 <#Sample_Mu>
@@ -128,6 +122,27 @@
 		rr:predicate iasis:tumor_origin;
 		rr:objectMap [ 
 			rml:reference "Tumour origin"
+		]
+	].
+
+<#Transcript_Mu>	
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_preprocessed.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Transcript/{Accession Number}";
+		rr:class iasis:Transcript
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcriptID;
+		rr:objectMap [
+			rml:reference "Accession Number"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcript_isRelatedTo_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{Gene name}"
 		]
 	].
 
@@ -261,7 +276,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_isLocatedIn_transcript;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Transcript/{Accession Number}";
+			rr:parentTriplesMap <#Transcript_Mu>
 		]
 	].
 

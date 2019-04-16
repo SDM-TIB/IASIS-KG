@@ -30,30 +30,6 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:nts_chromosome;
-		rr:objectMap [
-			rml:reference "chr"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:nts_site;
-		rr:objectMap [
-			rml:reference "site"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:nts_origin;
-		rr:objectMap [
-			rml:reference "origin"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:nts_genomicPosition;
-		rr:objectMap [
-			rml:reference "pos"
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:nts_isRelatedTo_protein;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Protein/{acc}"
@@ -62,7 +38,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:nts_isRelatedTo_transcript;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Transcript/{enst}"
+			rr:parentTriplesMap <#Transcript>
 		]
 	];
 	rr:predicateObjectMap [
@@ -90,6 +66,30 @@
 		rr:predicate iasis:dbsnpID;
 		rr:objectMap [
 			rml:reference "dbsnp"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variant_chromosome;
+		rr:objectMap [
+			rml:reference "chr"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variant_site;
+		rr:objectMap [
+			rml:reference "site"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variant_origin;
+		rr:objectMap [
+			rml:reference "origin"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variant_genomicPosition;
+		rr:objectMap [
+			rml:reference "pos"
 		]
 	];
 	rr:predicateObjectMap [
@@ -138,6 +138,27 @@
 		rr:predicate iasis:variation_has_phenotype;
 		rr:objectMap [
 			rr:parentTriplesMap <#Phenotype>
+		]
+	].
+
+<#Transcript>	
+	rml:logicalSource [ rml:source "/data/data/genomic/clinvar_processed.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Transcript/{enst}";
+		rr:class iasis:Transcript
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcriptID;
+		rr:objectMap [
+			rml:reference "enst"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcript_isRelatedTo_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{symbol}"
 		]
 	].
 

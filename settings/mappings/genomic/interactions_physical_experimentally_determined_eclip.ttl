@@ -18,17 +18,43 @@
 		rr:class iasis:Protein
 	];
 	rr:predicateObjectMap [
+		rr:predicate iasis:proteinID;
+		rr:objectMap [
+			rml:reference "acc"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:constant "http://project-iasis.eu/SourceName/Uniprots";
+		]
+	];
+	rr:predicateObjectMap [
 		rr:predicate iasis:protein_isRelatedTo_physicalInteraction;
 		rr:objectMap [
 			rr:parentTriplesMap <#PhysicalInteraction>
 		]
-	].
+	].	
+
 <#Transcript>	
 	rml:logicalSource [ rml:source "/data/data/genomic/interactions_physical_experimentally_determined_eclip.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Transcript/{enst}";
+		rr:class iasis:Transcript
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcriptID;
+		rr:objectMap [
+			rml:reference "enst"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcript_isRelatedTo_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{symbol}"
+		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:transcript_isRelatedTo_physicalInteraction;
@@ -36,6 +62,7 @@
 			rr:parentTriplesMap <#PhysicalInteraction>
 		]
 	].
+
 <#PhysicalInteraction>	
 	rml:logicalSource [ rml:source "/data/data/genomic/interactions_physical_experimentally_determined_eclip.csv";
 						rml:referenceFormulation ql:CSV

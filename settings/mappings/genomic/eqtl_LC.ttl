@@ -10,8 +10,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#eqtl>
-	rml:logicalSource [ rml:source "/data/data/genomic/eqtl.csv";
+<#EQTL>
+	rml:logicalSource [ rml:source "/data/data/genomic/eqtls_lung_unique.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -25,15 +25,15 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:variation_isLocatedIn_gene;
+		rr:predicate iasis:variation_isLocatedIn_upstreamGene;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Gene/{upstream}"
+			rr:parentTriplesMap <#Gene>
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:gexpChanges_occuredIn_gene;
+		rr:predicate iasis:gexpChanges_occuredIn_downstreamTranscript;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Gene/{downstream}"
+			rr:parentTriplesMap <#Transcript>
 		]
 	];
 	rr:predicateObjectMap [
@@ -67,16 +67,52 @@
 		]
 	].
 
-<#link>
-	rml:logicalSource [ rml:source "/data/data/genomic/eqtl.csv";
+<#Variation>
+	rml:logicalSource [ rml:source "/data/data/genomic/eqtls_lung_unique.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{rsid}"
+		rr:template "http://project-iasis.eu/Variation/{rsid}";
+		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:sameAs;
 		rr:objectMap [
 			rr:template "http://bio2rdf.org/dbsnp:{rsid}"
+		]
+	].
+
+<#Gene>
+	rml:logicalSource [ rml:source "/data/data/genomic/eqtls_lung_unique.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Gene/{hgnc_symbol}"
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:geneENSG;
+		rr:objectMap [
+			rml:reference "upstream"
+		]
+	].
+
+<#Transcript>	
+	rml:logicalSource [ rml:source "/data/data/genomic/eqtls_lung_unique.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Transcript/{downstream}";
+		rr:class iasis:Transcript
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcriptID;
+		rr:objectMap [
+			rml:reference "downstream"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcript_isRelatedTo_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{hgnc_symbol}"
 		]
 	].

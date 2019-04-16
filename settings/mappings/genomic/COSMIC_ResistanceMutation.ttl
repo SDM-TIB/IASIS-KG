@@ -163,7 +163,28 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_isLocatedIn_transcript;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Transcript/{Transcript}";
+			rr:parentTriplesMap <#Transcript_ResistanceMu>
+		]
+	].
+
+<#Transcript_ResistanceMu>	
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_preprocessing_includingDrugBankIDs.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Transcript/{Transcript}";
+		rr:class iasis:Transcript
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcriptID;
+		rr:objectMap [
+			rml:reference "Transcript"
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:transcript_isRelatedTo_gene;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Gene/{Gene Name}"
 		]
 	].
 
