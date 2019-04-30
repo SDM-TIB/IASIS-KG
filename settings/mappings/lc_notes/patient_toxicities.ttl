@@ -34,7 +34,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasToxicity;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Toxicity/{toxicity_concept}"
+			rr:template "http://project-iasis.eu/Phenotype/{toxicity_concept}"
 		]
 	];
 	rr:predicateObjectMap [

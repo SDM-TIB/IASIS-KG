@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Toxicity/{}";
+		rr:template "http://project-iasis.eu/Phenotype/{ENG_CUI_Name}";
 		rr:class iasis:Drug;
 	];
 	rr:predicateObjectMap [
