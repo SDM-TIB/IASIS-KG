@@ -137,9 +137,33 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:variation_has_phenotype;
 		rr:objectMap [
-			rr:parentTriplesMap <#Phenotype>
+			rr:template "http://project-iasis.eu/Phenotype/{phenotype_label_1}"; 
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_has_phenotype;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Phenotype/{phenotype_label_2}"; 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_has_phenotype;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Phenotype/{phenotype_label_3}"; 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_has_phenotype;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Phenotype/{phenotype_label_4}"; 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_has_phenotype;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Phenotype/{phenotype_label_5}"; 
+		]
+	].				
 
 <#Transcript>	
 	rml:logicalSource [ rml:source "/data/data/genomic/clinvar.csv";
@@ -162,16 +186,3 @@
 		]
 	].
 
-<#Phenotype>
-	rml:logicalSource [ rml:source "/data/data/genomic/clinvar.csv";
-						rml:referenceFormulation ql:CSV
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Phenotype/{phenotype_label}"; 	
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:phenotypeLabel;
-		rr:objectMap [
-			rml:reference "phenotype_label"
-		]
-	].	

@@ -10,17 +10,17 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Phenotype>
-	rml:logicalSource [ rml:source "/data/data/genomic/phenotype_rows_hpo.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/phenotype.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Phenotype/{name}";
+		rr:template "http://project-iasis.eu/Phenotype/{Label}";
 		rr:class iasis:Phenotype 	
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:phenotypeLabel;
 		rr:objectMap [
-			rml:reference "name"
+			rml:reference "Label"
 		]
 	];
 	rr:predicateObjectMap [
@@ -34,32 +34,20 @@
 		rr:objectMap [
 			rr:parentTriplesMap <#Annotation2>
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasHPOAnnotation;
-		rr:objectMap [
-			rr:parentTriplesMap <#Annotation3>
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasHPOAnnotation;
-		rr:objectMap [
-			rr:parentTriplesMap <#Annotation4>
-		]
 	].
 
 <#Annotation1>
-	rml:logicalSource [ rml:source "/data/data/genomic/phenotype_rows_hpo.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/phenotype.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Annotation/{cui}";
+		rr:template "http://project-iasis.eu/Annotation/{CUI}";
 		rr:class iasis:Annotation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:annID;
 		rr:objectMap [ 
-			rml:reference "cui" 
+			rml:reference "CUI" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -70,17 +58,17 @@
 	].	
 
 <#Annotation2>
-	rml:logicalSource [ rml:source "/data/data/genomic/phenotype_rows_hpo.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/phenotype.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Annotation/{hpo_id_1}";
+		rr:template "http://project-iasis.eu/Annotation/{HPOid}";
 		rr:class iasis:Annotation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:annID;
 		rr:objectMap [ 
-			rml:reference "hpo_id_1" 
+			rml:reference "HPOid" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -89,45 +77,3 @@
 			rr:template "http://project-iasis.eu/SourceName/HPO"
 		]
 	].
-
-<#Annotation3>
-	rml:logicalSource [ rml:source "/data/data/genomic/phenotype_rows_hpo.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Annotation/{hpo_id_2}";
-		rr:class iasis:Annotation
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:annID;
-		rr:objectMap [ 
-			rml:reference "hpo_id_2" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:provenance;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/HPO"
-		]
-	].	
-
-<#Annotation4>
-	rml:logicalSource [ rml:source "/data/data/genomic/phenotype_rows_hpo.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Annotation/{hpo_id_3}";
-		rr:class iasis:Annotation
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:annID;
-		rr:objectMap [ 
-			rml:reference "hpo_id_3" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:provenance;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/HPO"
-		]
-	].		

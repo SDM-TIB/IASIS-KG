@@ -10,9 +10,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-
 <#Evidence>
-	rml:logicalSource [ rml:source "/data/data/genomic/Predictive_ws_separated.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -111,7 +110,7 @@
 	].		
 	
 <#Variation>
-	rml:logicalSource [ rml:source "/data/data/genomic/Predictive_ws_separated.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -199,7 +198,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:variation_has_phenotype;
 		rr:objectMap [
-			rr:parentTriplesMap <#Phenotype>
+			rr:template "http://project-iasis.eu/Phenotype/{phenotypes}";
 		]
 	];	
 	rr:predicateObjectMap [
@@ -210,7 +209,7 @@
 	].
 
 <#Disorder>
-	rml:logicalSource [ rml:source "/data/data/genomic/Predictive_ws_separated.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -225,7 +224,7 @@
 	].
 
 <#Transcript>	
-	rml:logicalSource [ rml:source "/data/data/genomic/Predictive_ws_separated.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -245,22 +244,8 @@
 		]
 	].
 
-<#Phenotype>
-	rml:logicalSource [ rml:source "/data/data/genomic/Predictive_ws_separated.csv";
-						rml:referenceFormulation ql:CSV
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Phenotype/{phenotypes}"; 	
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:phenotypeLabel;
-		rr:objectMap [
-			rml:reference "phenotypes"
-		]
-	].	
-
 <#Publication>
-	rml:logicalSource [ rml:source "/data/data/genomic/Predictive_ws_separated.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
