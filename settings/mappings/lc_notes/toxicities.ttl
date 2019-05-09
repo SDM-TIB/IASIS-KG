@@ -16,7 +16,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Phenotype/{ENG_CUI_Name}";
-		rr:class iasis:Drug;
+		rr:class iasis:Phenotype;
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:toxicityLabel_ENG;
