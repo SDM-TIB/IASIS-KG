@@ -76,6 +76,12 @@
 		rr:objectMap [ 
 			rml:reference "Affiliations" 
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:publication_isRelatedTo_Disease;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Disorder/LungCancer"; 
+		]
+	].	
 
 
