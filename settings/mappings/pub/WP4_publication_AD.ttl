@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Publication>
-	rml:logicalSource [ rml:source "/data/data/pub/query_publication.csv";
+	rml:logicalSource [ rml:source "/data/data/pub/publication_AD.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -46,4 +46,36 @@
 		rr:objectMap [ 
 			rml:reference "authors" 
 		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:authorList;
+		rr:objectMap [ 
+			rml:reference "authorList" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:rankingScore_SJR;
+		rr:objectMap [ 
+			rml:reference "journal_SJR" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:rankingScore_hIndex;
+		rr:objectMap [ 
+			rml:reference "journal_hIndex" 
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:publicationType;
+		rr:objectMap [ 
+			rml:reference "PublicationTypes" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:authorAffiliation;
+		rr:objectMap [ 
+			rml:reference "Affiliations" 
+		]
 	].
+
+
