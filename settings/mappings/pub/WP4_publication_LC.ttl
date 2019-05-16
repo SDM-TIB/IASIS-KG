@@ -42,18 +42,6 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:author;
-		rr:objectMap [ 
-			rml:reference "authors" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:authorList;
-		rr:objectMap [ 
-			rml:reference "authorList" 
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:rankingScore_SJR;
 		rr:objectMap [ 
 			rml:reference "journal_SJR" 
