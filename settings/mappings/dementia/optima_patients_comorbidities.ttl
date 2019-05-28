@@ -16,6 +16,7 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/ADPatient/{patient_id}";
+		rr:class iasis:ADPatient
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasComorbidity;
