@@ -79,15 +79,33 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{variant.clinical}";
+		rr:template "http://project-iasis.eu/Variation/{mFormat}";
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:variantLabel;
 		rr:objectMap [ 
-			rml:reference "variant.clinical" 
+			rml:reference "mFormat" 
 		]
 	];
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Variation/{cFormat}";
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Variation/{pFormat}";
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Variation/{gFormat}";
+		]
+	];			
 	rr:predicateObjectMap [
 		rr:predicate iasis:variant_chromosome;
 		rr:objectMap [

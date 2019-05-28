@@ -7,6 +7,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix base: <http://tib.de/ontario/mapping#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_Mu>
@@ -146,11 +147,43 @@
 		]
 	].
 
+<#Variation_Mu>
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
+						rml:referenceFormulation ql:CSV ];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{mFormat}";
+		rr:class iasis:Variation;
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variationLabel;
+		rr:objectMap [ 
+			rml:reference "mFormat"
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Variation/{cFormat}"; 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Variation/{pFormat}"; 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Mutation/{mFormat}"; 
+		]
+	].
+
 <#Mutation_Mu>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Mutation/{Gene name}_{Mutation PepSeq}";
+		rr:template "http://project-iasis.eu/Mutation/{mFormat}";
 		rr:class iasis:Mutation;
 	];
 	rr:predicateObjectMap [
@@ -162,7 +195,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutationLabel;
 		rr:objectMap [ 
-			rml:reference "Mutation PepSeq" 
+			rml:reference "mFormat" 
 		]
 	];
 	rr:predicateObjectMap [

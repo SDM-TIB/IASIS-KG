@@ -46,7 +46,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasMutation;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Mutation/{mutation}"
+			rr:template "http://project-iasis.eu/Variation/{mutation}"
 		]
 	];
 	rr:predicateObjectMap [
