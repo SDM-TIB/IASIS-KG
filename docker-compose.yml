@@ -89,6 +89,23 @@ services:
     networks:
       - iasiskg
       
+  iasis_dementia_kgstore:
+    image: kemele/virtuoso:7-stable
+    hostname: iasis_dementia_kgstore
+    container_name: iasis_dementia_kgstore
+    domainname: iasiskg
+    volumes:
+      - ./rdf/drug_pub:/data
+      - ./rdf/output/dementia:/data/output/dementia
+    ports:
+      - "11385:8890"
+      - "1116:1111"
+    environment:
+      - RABBITMQ_IP=10.114.113.14
+      - RABBITMQ_PORT=5672
+    networks:
+      - iasiskg
+      
   ontario:
     image: iasistest.atc.gr:444/ontario:latest
     hostname: ontario
