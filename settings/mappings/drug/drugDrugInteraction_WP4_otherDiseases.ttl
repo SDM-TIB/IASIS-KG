@@ -1,4 +1,4 @@
- @prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#EffectInteraction>
-	rml:logicalSource [ rml:source "/data/data/drug/wp4_drugs_drugs_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/wp4_drug_drug_interactions_otherDiseases.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -21,31 +21,24 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:affects;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{Drug1}" 
+			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_1}" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:isAffected;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{Drug2}" 
+			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_2}" 
 		]
 	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:confidence;
+		rr:objectMap [ 
+			rml:reference "Probability" 
+		]
+	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/SourceName/PubMed"
 		]
-	].
-<#DDI>
-	rml:logicalSource [ rml:source "/data/data/drug/wp4_drugs_drugs_interactions.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{Drug1}";
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:drugDrugInteraction_pubMed;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Drug/{Drug2}";
-		]
-	].
+	].	

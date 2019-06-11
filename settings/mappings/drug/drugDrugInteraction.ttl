@@ -71,23 +71,10 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Impact/{property}"
 		]
-	];
+	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/SourceName/DrugBank"
 		]
 	].	
-<#DDI>
-	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
-						rml:referenceFormulation ql:CSV 
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{Drug1}";
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:drugDrugInteraction_drugBank;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Drug/{Drug2}";
-		]
-	].
