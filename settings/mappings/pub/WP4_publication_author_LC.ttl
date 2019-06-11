@@ -17,7 +17,7 @@
 		rr:template "http://project-iasis.eu/Publication/{pmid}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:author;
+		rr:predicate iasis:hasAuthor;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Author/{author}" 
 		]

@@ -155,7 +155,7 @@
 		rr:class iasis:Variation;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:variationLabel;
+		rr:predicate iasis:variantLabel;
 		rr:objectMap [ 
 			rml:reference "mFormat"
 		]
