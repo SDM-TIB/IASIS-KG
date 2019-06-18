@@ -23,15 +23,9 @@
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Drug/{Medication_label}"
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasDiagnosisAge;
-		rr:objectMap [ 
-			rml:reference "Age_At_Episode" 
-		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasDiagnosisDate;
+		rr:predicate iasis:hasEpisodeDate;
 		rr:objectMap [ 
 			rml:reference "EPISODE_DATE" 
 		]
