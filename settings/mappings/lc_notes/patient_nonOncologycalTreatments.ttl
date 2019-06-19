@@ -17,7 +17,7 @@
 		rr:template "http://project-iasis.eu/LCPatient/{patient_id}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasDrug;
+		rr:predicate iasis:hasNonOncologicalDrug;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Drug/{drugName}"
 		]
