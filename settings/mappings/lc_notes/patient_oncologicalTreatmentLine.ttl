@@ -62,73 +62,73 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxicity;
+		rr:predicate iasis:existenceOf_toxicity;
 		rr:objectMap [
 			rml:reference "toxicities";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxGeneral;
+		rr:predicate iasis:existenceOf_generalToxicity;
 		rr:objectMap [
 			rml:reference "toxGeneral";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxGastro;
+		rr:predicate iasis:existenceOf_gastrointestinalToxicity;
 		rr:objectMap [
 			rml:reference "toxGastro";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxEndo;
+		rr:predicate iasis:existenceOf_endocrinaToxicity;
 		rr:objectMap [
 			rml:reference "toxEndo";
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxCut;
+		rr:predicate iasis:existenceOf_cutaneaToxicity;
 		rr:objectMap [
 			rml:reference "toxCut";
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxNeumo;
+		rr:predicate iasis:existenceOf_neumologicalToxicity;
 		rr:objectMap [
 			rml:reference "toxNeumo";
 		]
 	];		
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxAnaly;
+		rr:predicate iasis:existenceOf_analyticalToxicity;
 		rr:objectMap [
 			rml:reference "toxAnaly";
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxNeuro;
+		rr:predicate iasis:existenceOf_neurologicalToxicity;
 		rr:objectMap [
 			rml:reference "toxNeuro";
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:toxOther;
+		rr:predicate iasis:existenceOf_otherToxicity;
 		rr:objectMap [
 			rml:reference "toxOther";
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:localProgression;
+		rr:predicate iasis:existenceOf_localProgression;
 		rr:objectMap [
 			rml:reference "localProgression";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:systemicProgression;
+		rr:predicate iasis:existenceOf_systemicProgression;
 		rr:objectMap [
 			rml:reference "systemicProgression";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:brainMetastasis;
+		rr:predicate iasis:existenceOf_brainMetastasis;
 		rr:objectMap [
 			rml:reference "brainMetastasis";
 		]

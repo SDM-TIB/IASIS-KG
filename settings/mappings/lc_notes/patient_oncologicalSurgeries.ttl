@@ -32,7 +32,7 @@
 		rr:class iasis:OncologicalSurgeryObservation;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:complication;
+		rr:predicate iasis:existenceOf_complication;
 		rr:objectMap [ 
 			rml:reference "complication" 
 		]
