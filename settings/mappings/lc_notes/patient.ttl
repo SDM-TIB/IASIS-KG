@@ -24,6 +24,48 @@
 		]
 	];
 	rr:predicateObjectMap [
+		rr:predicate iasis:beingIn_hospitalHealthArea;
+		rr:objectMap [
+			rml:reference "hospitalHealthArea";
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:distanceToHospital;
+		rr:objectMap [
+			rml:reference "distanceToHospital";
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:radonRiskLevel;
+		rr:objectMap [
+			rml:reference "radonRisk";
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:numberOfCigarettesPerYear;
+		rr:objectMap [
+			rml:reference "smokingCigarettesPerYear";
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:isDead;
+		rr:objectMap [
+			rml:reference "dead";
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:ageAtDeath;
+		rr:objectMap [
+			rml:reference "ageOfDeath";
+		]
+	];		
+	rr:predicateObjectMap [
+		rr:predicate iasis:placeOfDeath;
+		rr:objectMap [
+			rml:reference "deadLocation";
+		]
+	];							
+	rr:predicateObjectMap [
 		rr:predicate iasis:tumorType;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/TumorType/{tumorType}";
