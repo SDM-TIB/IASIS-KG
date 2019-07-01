@@ -10,41 +10,26 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#ADPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/optima_patients_comorbidities.csv";
-						rml:referenceFormulation ql:CSV;
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/ADPatient/{patient_id}";
-		rr:class iasis:ADPatient
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasComorbidity;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Disorder/{Comorbidity_label}"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasEpisodeDate;
-		rr:objectMap [ 
-			rml:reference "EPISODE_DATE" 
-		]
-	].	
-
 <#Disorder>
-	rml:logicalSource [ rml:source "/data/data/dementia/optima_patients_comorbidities.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/comorbidities.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Disorder/{Comorbidity_label}";
+		rr:template "http://project-iasis.eu/Disorder/{name}";
 		rr:class iasis:Disorder;
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:disorderLabel_ENG;
 		rr:objectMap [ 
-			rml:reference "Comorbidity_label" 
+			rml:reference "name" 
 		]
 	];
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:template "{DBpediaURL}";
+		]
+	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasCUIAnnotation;
 		rr:objectMap [
@@ -53,17 +38,17 @@
 	].	
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/data/data/dementia/optima_patients_comorbidities.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/comorbidities.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Annotation/{Comorbidity_cui}";
+		rr:template "http://project-iasis.eu/Annotation/{CUI_ID}";
 		rr:class iasis:Annotation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:annID;
 		rr:objectMap [ 
-			rml:reference "Comorbidity_cui" 
+			rml:reference "CUI_ID" 
 		]
 	];
 	rr:predicateObjectMap [

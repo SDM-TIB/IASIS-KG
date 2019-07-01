@@ -32,6 +32,12 @@
 		rr:class iasis:OncologicalSurgeryObservation;
 	];
 	rr:predicateObjectMap [
+		rr:predicate iasis:hasOncologicalSurgery;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/OncologicalSurgery/{oncologicalSurgery_concept}"
+		]
+	];	
+	rr:predicateObjectMap [
 		rr:predicate iasis:existenceOf_complication;
 		rr:objectMap [ 
 			rml:reference "complication" 

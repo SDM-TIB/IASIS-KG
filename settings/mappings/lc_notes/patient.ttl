@@ -72,7 +72,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:smoker;
+		rr:predicate iasis:smoking;
 		rr:objectMap [
 			rml:reference "smoker";
 		]
