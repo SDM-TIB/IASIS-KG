@@ -103,47 +103,47 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_ExAC;
+		rr:predicate iasis:africanAmerican_AF_ExAC;
 		rr:objectMap [
 			rml:reference "ExAC_AFR"
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_ExAC;
+		rr:predicate iasis:latino_AF_ExAC;
 		rr:objectMap [
 			rml:reference "ExAC_AMR"
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_ExAC;
+		rr:predicate iasis:eastAsian_AF_ExAC;
 		rr:objectMap [
 			rml:reference "ExAC_EAS"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_ExAC;
+		rr:predicate iasis:finnish_AF_ExAC;
 		rr:objectMap [
 			rml:reference "ExAC_FIN"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_ExAC;
+		rr:predicate iasis:nonFinnishEuropean_AF_ExAC;
 		rr:objectMap [
 			rml:reference "ExAC_NFE"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_ExAC;
+		rr:predicate iasis:other_AF_ExAC;
 		rr:objectMap [
 			rml:reference "ExAC_OTH"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_ExAC;
+		rr:predicate iasis:southAsian_AF_ExAC;
 		rr:objectMap [
 			rml:reference "ExAC_SAS"
 		]
-	];									
+	];			
 	rr:predicateObjectMap [
 		rr:predicate iasis:all_AF_gnomAD_genome;
 		rr:objectMap [
