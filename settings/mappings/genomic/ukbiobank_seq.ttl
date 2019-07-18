@@ -285,7 +285,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:sample_AF;
 		rr:objectMap [
-			rml:reference "AF"
+			rml:reference "MLEAF"
 		]
 	];	
 	rr:predicateObjectMap [
@@ -309,15 +309,9 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:variant_isObservedIn_patient;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/LCPatient/{patientID}";
+			rr:template "http://project-iasis.eu/ADPatient/{Sample}";
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:variant_isObservedIn_liquidBiopsy;
-		rr:objectMap [
-			rr:parentTriplesMap <#LiquidBiopsy>
-		]
-	];				
+	];		
 	rr:predicateObjectMap [
 		rr:predicate iasis:variant_dbsnpLink;
 		rr:objectMap [
@@ -375,19 +369,4 @@
 			rml:reference "pNull.refGene"
 		]
 	].
-
-<#LiquidBiopsy>	
-	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq.csv";
-						rml:referenceFormulation ql:CSV
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/LiquidBiopsy/{sampleID}";
-		rr:class iasis:LiquidBiopsy
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:sampleDate;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/LCPatient/Date/{sampleExtractionDate}"
-		]
-	].	
 
