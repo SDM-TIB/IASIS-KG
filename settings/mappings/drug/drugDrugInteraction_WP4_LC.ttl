@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/EffectInteraction/{Drug1}_interactsWith_{Drug2}";
+		rr:template "http://project-iasis.eu/EffectInteraction/{DRUGBANK_ID_1}_interactsWith_{DRUGBANK_ID_2}";
 		rr:class iasis:EffectInteraction
 	];
 	rr:predicateObjectMap [
@@ -39,12 +39,12 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/PubMed"
+			rr:template "http://project-iasis.eu/SourceName/Demokritos"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interaction_isRelatedTo_Disease;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Disorder/Alzheimer"; 
+			rr:template "http://project-iasis.eu/Disorder/LungCancer"; 
 		]
 	].		
