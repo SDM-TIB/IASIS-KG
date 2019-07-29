@@ -7,19 +7,39 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix base: <http://tib.de/ontario/mapping#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#DDI_NCRD>
-	rml:logicalSource [ rml:source "/data/data/drug/NCRD.csv";
+<#EffectInteraction>
+	rml:logicalSource [ rml:source "/data/data/drug/CRD.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{Drug1}";
+		rr:template "http://project-iasis.eu/EffectInteraction/{Drug1}_interactsWith_{Drug2}";
+		rr:class iasis:EffectInteraction
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drugDrugInteraction_noCYP;
+		rr:predicate iasis:affects;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{Drug1}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:isAffected;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{Drug2}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:type;
+		rr:objectMap [ 
+			rr:constant "noCYP" 
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Drug/{Drug2}";
+			rr:template "http://project-iasis.eu/SourceName/NCRD"
 		]
 	].
-
+		
