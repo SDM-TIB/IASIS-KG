@@ -10,18 +10,31 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#Drug_Disorder>
+<#Interaction>
 	rml:logicalSource [ rml:source "/data/data/drug/drugs_indications.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{DrugId}";
+		rr:template "http://project-iasis.eu/Interaction/{DrugId}_isPrescribedFor_{indication_name}";
+		rr:class iasis:DrugDisorder
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:isPrescribedFor;
+		rr:predicate iasis:interactor1;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{DrugId}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:interactor2;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Disorder/{indication_name}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Disorder/{indication_name}";
+			rr:template "http://project-iasis.eu/SourceName/DrugBank"
 		]
 	].
-
+		
 

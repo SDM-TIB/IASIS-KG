@@ -45,8 +45,8 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/EffectInteraction/{Drug1}_interactsWith_{Drug2}";
-		rr:class iasis:EffectInteraction
+		rr:template "http://project-iasis.eu/Interaction/{Drug1}_interactsWith_{Drug2}";
+		rr:class iasis:DDI
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:affects;

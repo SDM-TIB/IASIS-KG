@@ -11,40 +11,41 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#InteractionPrediction>
-	rml:logicalSource [ rml:source "/data/data/drug/wp4_drug_drug_interactions_LC.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/DrugTarget_prediction_LUH.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/InteractionPrediction/{DRUGBANK_ID_1}_interactsWith_{DRUGBANK_ID_2}";
-		rr:class iasis:DDI_Prediction
+		rr:template "http://project-iasis.eu/InteractionPrediction/{Drug}_interactsWith_{Target}";
+		rr:class iasis:DTI_Prediction
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor1;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_1}" 
+			rr:template "http://project-iasis.eu/Drug/{Drug}" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor2;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_2}" 
+			rr:template "http://project-iasis.eu/Target/{Target}" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:confidence;
 		rr:objectMap [ 
-			rml:reference "Probability" 
+			rr:constant "Prob" 
 		]
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/Demokritos"
+			rr:template "http://project-iasis.eu/SourceName/"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:interaction_isRelatedTo_Disease;
+		rr:predicate iasis:predictionMethod;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Disorder/LungCancer"; 
+			rr:constant "Method" 
 		]
-	].		
+	].	
+		

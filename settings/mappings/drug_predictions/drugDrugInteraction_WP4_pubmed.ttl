@@ -10,22 +10,22 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#EffectInteraction>
+<#InteractionPrediction>
 	rml:logicalSource [ rml:source "/data/data/drug/wp4_pubmed_drugs_drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/EffectInteraction/{Drug1}_interactsWith_{Drug2}";
-		rr:class iasis:EffectInteraction
+		rr:template "http://project-iasis.eu/InteractionPrediction/{Drug1}_interactsWith_{Drug2}";
+		rr:class iasis:DDI_Prediction
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:affects;
+		rr:predicate iasis:interactor1;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Drug/{Drug1}" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:isAffected;
+		rr:predicate iasis:interactor2;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Drug/{Drug2}" 
 		]

@@ -10,22 +10,22 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#InteractionPrediction>
-	rml:logicalSource [ rml:source "/data/data/drug/wp4_drug_drug_interactions_LC.csv";
+<#EffectInteraction>
+	rml:logicalSource [ rml:source "/data/data/drug/wp4_drug_drug_interactions_AD.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/InteractionPrediction/{DRUGBANK_ID_1}_interactsWith_{DRUGBANK_ID_2}";
-		rr:class iasis:DDI_Prediction
+		rr:template "http://project-iasis.eu/EffectInteraction/{DRUGBANK_ID_1}_interactsWith_{DRUGBANK_ID_2}";
+		rr:class iasis:EffectInteraction
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:interactor1;
+		rr:predicate iasis:affects;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_1}" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:interactor2;
+		rr:predicate iasis:isAffected;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_2}" 
 		]
@@ -45,6 +45,6 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:interaction_isRelatedTo_Disease;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Disorder/LungCancer"; 
+			rr:template "http://project-iasis.eu/Disorder/Alzheimer"; 
 		]
 	].		

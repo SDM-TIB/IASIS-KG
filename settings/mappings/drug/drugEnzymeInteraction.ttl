@@ -15,11 +15,24 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Drug/{Drug_ID}";
+		rr:template "http://project-iasis.eu/Interaction/{Drug_ID}_interactsWith_{Enzyme_name}";
+		rr:class iasis:DEI
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:drugEnzymeInteraction;
+		rr:predicate iasis:interactor1;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{Drug_ID}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:interactor2;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Enzyme/{Enzyme_name}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/"
 		]
 	].
