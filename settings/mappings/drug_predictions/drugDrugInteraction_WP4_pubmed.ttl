@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#InteractionPrediction>
-	rml:logicalSource [ rml:source "/data/data/drug/wp4_pubmed_drugs_drugs_interactions.csv";
+	rml:logicalSource [ rml:source "/data/data/drug_predictions/wp4_pubmed_drugs_drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
