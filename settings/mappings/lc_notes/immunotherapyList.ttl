@@ -19,6 +19,12 @@
 		rr:class iasis:Drug;
 	];
 	rr:predicateObjectMap [
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/ImmunotherapyDrug" 
+		]
+	];
+	rr:predicateObjectMap [
 		rr:predicate iasis:drugLabel_ENG;
 		rr:objectMap [ 
 			rml:reference "ENG_CUI_Name" 

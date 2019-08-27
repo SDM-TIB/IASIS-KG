@@ -86,19 +86,19 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:existenceOf_bioEgfr;
 		rr:objectMap [
-			rml:reference "bioEgfr";
+			rr:template "http://project-iasis.eu/Biomarker/{bioEgfr}";
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:existenceOf_bioAlk;
 		rr:objectMap [
-			rml:reference "bioAlk";
+			rr:template "http://project-iasis.eu/Biomarker/{bioAlk}";
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:existenceOf_bioRos1;
 		rr:objectMap [
-			rml:reference "bioRos1";
+			rr:template "http://project-iasis.eu/Biomarker/{bioRos1}";
 		]
 	]; 
 	rr:predicateObjectMap [
