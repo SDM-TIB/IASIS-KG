@@ -25,12 +25,6 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:biomarkerCuiID;
-		rr:objectMap [ 
-			rml:reference "biomarker_CUI" 
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:hasCUIAnnotation;
 		rr:objectMap [
 			rr:parentTriplesMap <#Annotation>
