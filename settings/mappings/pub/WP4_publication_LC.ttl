@@ -32,7 +32,8 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:year;
 		rr:objectMap [ 
-			rml:reference "year" 
+			rml:reference "year";
+			rr:datatype xsd:integer; 
 		]
 	];
 	rr:predicateObjectMap [
@@ -56,13 +57,15 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:rankingScore_SJR;
 		rr:objectMap [ 
-			rml:reference "journal_SJR" 
+			rml:reference "journal_SJR";
+			rr:datatype xsd:float; 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:rankingScore_hIndex;
 		rr:objectMap [ 
-			rml:reference "journal_hIndex" 
+			rml:reference "journal_hIndex";
+			rr:datatype xsd:integer; 
 		]
 	];	
 	rr:predicateObjectMap [
