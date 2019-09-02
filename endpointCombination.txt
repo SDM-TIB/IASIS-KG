@@ -50,4 +50,5 @@ civic_Predictive.nt
 civic_Diagnostic.nt
 COSMIC_mutation.nt
 COSMIC_resistanceMutation.nt
+CUI_HUGO.nt
 
