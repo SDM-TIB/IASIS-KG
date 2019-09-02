@@ -2,6 +2,7 @@
 ############ .nt files to be included in the endpoint ############
 ##################################################################
 
+
 drug_prub/toLoad:
 
 biomarkers.nt
@@ -35,3 +36,18 @@ mentioned_in.nt
 has_topic.nt
 authors.nt
 annotation.nt
+
+
+dementia/toLoad:
+Treatments.nt
+
+
+genomic/toLoad:
+phenotype.nt
+civic_Prognostic.nt
+civic_Predisposing.nt
+civic_Predictive.nt
+civic_Diagnostic.nt
+COSMIC_mutation.nt
+COSMIC_resistanceMutation.nt
+
