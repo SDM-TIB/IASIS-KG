@@ -31,6 +31,8 @@ relationships.nt
 publication_LC.nt
 publication_LC_authors.nt
 publication_AD_authors.nt
+publication_AD_journal_types.nt
+publication_LC_journal_types.nt
 publication_AD.nt
 mentioned_in.nt
 has_topic.nt
