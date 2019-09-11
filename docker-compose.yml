@@ -22,7 +22,7 @@ services:
       - iasiskg
 
   iasis_genomic_kgstore:
-    image: asakor/virtuoso:7-stable
+    image: asakor/virtuoso:7-max
     hostname: iasis_genomic_kgstore
     container_name: iasis_genomic_kgstore
     domainname: iasiskg
@@ -39,7 +39,7 @@ services:
       - iasiskg
       
   iasis_lc_images_kgstore:
-    image: asakor/virtuoso:7-stable
+    image: asakor/virtuoso:7-max
     hostname: iasis_lc_images_kgstore
     container_name: iasis_lc_images_kgstore
     domainname: iasiskg
@@ -56,7 +56,7 @@ services:
       - iasiskg
       
   iasis_lc_notes_kgstore:
-    image: asakor/virtuoso:7-stable
+    image: asakor/virtuoso:7-max
     hostname: iasis_lc_notes_kgstore
     container_name: iasis_lc_notes_kgstore
     domainname: iasiskg
@@ -73,7 +73,7 @@ services:
       - iasiskg
       
   iasis_drug_pub_kgstore:
-    image: asakor/virtuoso:7-stable
+    image: asakor/virtuoso:7-max
     hostname: iasis_drug_pub_kgstore
     container_name: iasis_drug_pub_kgstore
     domainname: iasiskg
@@ -90,7 +90,7 @@ services:
       - iasiskg
       
   iasis_dementia_kgstore:
-    image: asakor/virtuoso:7-stable
+    image: asakor/virtuoso:7-max
     hostname: iasis_dementia_kgstore
     container_name: iasis_dementia_kgstore
     domainname: iasiskg
