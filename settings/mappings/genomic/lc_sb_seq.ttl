@@ -285,7 +285,8 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:sample_AF;
 		rr:objectMap [
-			rml:reference "AF"
+			rml:reference "AF";
+			rr:datatype xsd:float;
 		]
 	];	
 	rr:predicateObjectMap [
