@@ -313,7 +313,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:variant_isObservedIn_liquidBiopsy;
+		rr:predicate iasis:variant_isObservedIn;
 		rr:objectMap [
 			rr:parentTriplesMap <#LiquidBiopsy>
 		]
