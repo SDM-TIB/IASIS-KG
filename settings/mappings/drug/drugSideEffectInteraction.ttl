@@ -20,7 +20,8 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:dse_AvgFrequency;
 		rr:objectMap [
-			rml:reference "AvgFrequency"
+			rml:reference "AvgFrequency";
+			rr:datatype xsd:float;
 		]
 	];
 	rr:predicateObjectMap [
