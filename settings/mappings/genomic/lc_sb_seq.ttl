@@ -310,7 +310,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:variant_isObservedIn_patient;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/LCPatient/{patientID}";
+			rr:parentTriplesMap <#LCPatient>
 		]
 	];
 	rr:predicateObjectMap [
@@ -376,6 +376,21 @@
 			rml:reference "pNull.refGene"
 		]
 	].
+
+<#LCPatient>	
+	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq.csv";
+						rml:referenceFormulation ql:CSV
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/LCPatient/{patientID}";
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasSolidBiopsySeqSample;
+		rr:objectMap [
+			rr:parentTriplesMap <#SolidBiopsy>
+		]
+	].
+
 <#SolidBiopsy>	
 	rml:logicalSource [ rml:source "/data/data/genomic/LC_SB_Seq.csv";
 						rml:referenceFormulation ql:CSV
