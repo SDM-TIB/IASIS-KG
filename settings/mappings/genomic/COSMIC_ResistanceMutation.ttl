@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_ResistanceMu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -26,7 +26,7 @@
 	].
 
 <#Sample_ResistanceMu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -76,16 +76,16 @@
 	].
 
 <#Variation_ResistanceMu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "ttp://project-iasis.eu/Variation/{mFormat}";
+		rr:template "ttp://project-iasis.eu/Variation/{pFormat}";
 		rr:class iasis:Variation;
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:variantLabel;
 		rr:objectMap [ 
-			rml:reference "mFormat" 
+			rml:reference "pFormat" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -95,43 +95,11 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{pFormat}";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{mFormat}";
-		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Mutation/{mFormat}";
-		]
-	].	
-
-<#Mutation_ResistanceMu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation.csv";
-						rml:referenceFormulation ql:CSV ];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Mutation/{mFormat}";
-		rr:class iasis:Mutation;
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:mutationID;
 		rr:objectMap [ 
 			rml:reference "ID Mutation";
 		]
 	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:mutationLabel;
-		rr:objectMap [ 
-			rml:reference "mFormat"; 
-		]
-	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_aa;
 		rr:objectMap [ 
@@ -206,7 +174,7 @@
 	].
 
 <#Transcript_ResistanceMu>	
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -227,7 +195,7 @@
 	].
 
 <#Publication_ResistanceMu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
