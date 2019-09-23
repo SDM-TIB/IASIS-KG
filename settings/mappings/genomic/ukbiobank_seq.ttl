@@ -15,13 +15,13 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{Gene.refGene}_{Chr}_{Start}-{End}_{Ref}~{Alt}";
+		rr:template "http://project-iasis.eu/Variation/{gFormat}";
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{mFormat}";
+			rr:template "http://project-iasis.eu/Variation/{snp138}";
 		]
 	];
 	rr:predicateObjectMap [
@@ -34,12 +34,6 @@
 		rr:predicate owl:sameAs;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Variation/{pFormat}";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{gFormat}";
 		]
 	];			
 	rr:predicateObjectMap [
@@ -311,12 +305,6 @@
 		rr:predicate iasis:variant_isObservedIn_patient;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/ADPatient/{Sample}";
-		]
-	];		
-	rr:predicateObjectMap [
-		rr:predicate iasis:variant_dbsnpLink;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{snp138}";
 		]
 	].
 
