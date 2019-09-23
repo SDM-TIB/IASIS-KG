@@ -53,7 +53,19 @@
 		rr:objectMap [ 
 			rr:parentTriplesMap <#Variation> 
 		]
-	].		
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:evidenceConfidenceScore;
+		rr:objectMap [ 
+			rml:reference "score" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:evidenceConfidenceCuration;
+		rr:objectMap [ 
+			rml:reference "Confidence" 
+		]
+	].				
 	
 <#Variation>
 	rml:logicalSource [ rml:source "/data/data/genomic/all_variant_disease_pmid_associations_curationAdded.csv";
