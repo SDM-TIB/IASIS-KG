@@ -378,7 +378,7 @@
 	].
 
 <#LCPatient>	
-	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/LC_SB_Seq.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [

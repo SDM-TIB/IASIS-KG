@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Gene_Mu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -44,7 +44,7 @@
 	].
 
 <#Sample_Mu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -107,7 +107,7 @@
 	].
 
 <#Tumor_Mu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Tumor/{ID_tumour}";
@@ -127,7 +127,7 @@
 	].
 
 <#Transcript_Mu>	
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -148,7 +148,7 @@
 	].
 
 <#Variation_Mu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/Variation/{cFormat}";
@@ -294,7 +294,7 @@
 	].
 
 <#Publication_Mu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
