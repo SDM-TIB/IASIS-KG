@@ -151,20 +151,8 @@
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{mFormat}";
+		rr:template "http://project-iasis.eu/Variation/{cFormat}";
 		rr:class iasis:Variation;
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:variantLabel;
-		rr:objectMap [ 
-			rml:reference "mFormat"
-		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Variation/{cFormat}"; 
-		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
@@ -173,37 +161,23 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{mFormat}";
-		]
-	];		
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Mutation/{mFormat}"; 
-		]
-	].
-
-<#Mutation_Mu>
-	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation.csv";
-						rml:referenceFormulation ql:CSV ];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Mutation/{mFormat}";
-		rr:class iasis:Mutation;
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:mutationID;
 		rr:objectMap [ 
 			rml:reference "Mutation ID"
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutationLabel;
+		rr:predicate iasis:genomic_mutationID;
 		rr:objectMap [ 
-			rml:reference "mFormat" 
+			rml:reference "GENOMIC_MUTATION_ID"
 		]
-	];
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:legacy_mutationID;
+		rr:objectMap [ 
+			rml:reference "LEGACY_MUTATION_ID"
+		]
+	];			
 	rr:predicateObjectMap [
 		rr:predicate iasis:zygosity;
 		rr:objectMap [ 
