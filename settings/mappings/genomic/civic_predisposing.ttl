@@ -207,7 +207,13 @@
 		rr:objectMap [
 			rml:reference "variant_civic_url.clinical"
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variant_mentionedIn_publication;
+		rr:objectMap [ 
+			rr:parentTriplesMap <#Publication>
+		]
+	].		
 
 <#Disorder>
 	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predisposing.csv";
