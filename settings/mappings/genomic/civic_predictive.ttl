@@ -59,42 +59,6 @@
 		rr:objectMap [
 			rml:reference "evidence_civic_url"
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:evidence_isRelatedTo_drug;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{drug1}" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:evidence_isRelatedTo_drug;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{drug2}" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:evidence_isRelatedTo_drug;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{drug3}" 
-		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:evidence_isRelatedTo_drug;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{drug4}" 
-		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:evidence_isRelatedTo_drug;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{drug5}" 
-		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:drugInteractionType;
-		rr:objectMap [ 
-			rml:reference "drug_interaction_type" 
-		]
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:evidence_mentionedIn_publication;
@@ -139,6 +103,42 @@
 		rr:predicate owl:sameAs;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Variation/{gFormat}";
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_isRelatedTo_drug;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{drug1}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_isRelatedTo_drug;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{drug2}" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_isRelatedTo_drug;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{drug3}" 
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_isRelatedTo_drug;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{drug4}" 
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:variation_isRelatedTo_drug;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Drug/{drug5}" 
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:drugInteractionType;
+		rr:objectMap [ 
+			rml:reference "drug_interaction_type" 
 		]
 	];
 	rr:predicateObjectMap [
