@@ -18,6 +18,7 @@ services:
       - iasis_lc_notes_kgstore
       - iasis_drug_pub_kgstore
       - iasis_lc_images_kgstore
+      - iasis_dementia_kgstore
     networks:
       - iasiskg
 
@@ -121,6 +122,124 @@ services:
     networks:
       - iasiskg
 
+  semepnode:
+      image: iasistest.atc.gr:444/semep:latest
+      hostname: semepnode
+      container_name: iasis_semepnode
+      domainname: iasiskg
+      ports:
+        - "5001:5000"
+      environment:
+        - IASISKG_ENDPOINT=http://iasis_lc_notes_kgstore:11383/sparql
+      depends_on:
+        - iasis_lc_notes_kgstore
+      network_mode: bridge
+
+    drugexploration:
+      image: iasistest.atc.gr/drug_exploration:latest
+      hostname: drugexploration
+      container_name: iasis_drugexploration
+      ports:
+        - "5002:5002"
+      environment:
+        - IASISKG_ENDPOINT=http://46.4.68.229:11384/sparql
+      depends_on:
+        - iasis_drug_pub_kgstore
+      network_mode: bridge
+
+    kg_lc_exploration:
+      image: iasistest.atc.gr:444/iasis_kg_exp:latest
+      hostname: kg_lc_exploration
+      container_name: iasis_kg_lc_exploration
+      ports:
+        - "5004:5000"
+      environment:
+        - IASISKG_ENDPOINT=http://46.4.68.229:11384/sparql
+      depends_on:
+        - iasis_drug_pub_kgstore
+      network_mode: bridge
+
+    kg_lc_policy_exploration:
+      image: iasistest.atc.gr:444/iasis_kg_exp_policy:latest
+      hostname: kg_lc_policy_exploration
+      container_name: iasis_kg_lc_policy_exploration
+      ports:
+        - "5005:5000"
+      environment:
+        - IASISKG_ENDPOINT=http://46.4.68.229:11384/sparql
+      depends_on:
+        - iasis_drug_pub_kgstore
+      network_mode: bridge
+
+    kg_dementia_exploration:
+      image: iasistest.atc.gr:444/iasis_dementia_exp:latest
+      hostname: kg_dementia_exploration
+      container_name: iasis_kg_dementia_exploration
+      ports:
+        - "5006:5000"
+      environment:
+        - IASISKG_ENDPOINT=http://46.4.68.229:11384/sparql
+      depends_on:
+        - iasis_drug_pub_kgstore
+      network_mode: bridge
+
+    kg_pub_api:
+      image: iasistest.atc.gr:444/iasis_kg_pub_api:latest
+      hostname: kg_pub_api
+      container_name: iasis_kg_pub_api
+      ports:
+        - "5009:5000"
+      environment:
+        - IASISKG_ENDPOINT=http://46.4.68.229:11384/sparql
+      depends_on:
+        - iasis_drug_pub_kgstore
+      network_mode: bridge
+
+    kg_interactions_sideffect_api:
+      image: iasistest.atc.gr:444/iasis_interactions_sideffect_api:latest
+      hostname: kg_interactions_sideffect_api
+      container_name: iasis_interactions_sideffect_api
+      ports:
+        - "5010:5000"
+      environment:
+        - IASISKG_ENDPOINT=http://46.4.68.229:11584/sparql
+      depends_on:
+        - iasis_all
+      network_mode: bridge
+
+    kg_lookup_api:
+      image: iasistest.atc.gr:444/iasis_lookup_api:latest
+      hostname: kg_lookup_api
+      container_name: iasis_lookup_api
+      ports:
+        - "5011:5000"
+      environment:
+        - KG_lc_notes=http://46.4.68.229:11383/sparql
+        - KG_drug_pub=http://46.4.68.229:11384/sparql
+      depends_on:
+        - iasis_drug_pub_kgstore
+        - iasis_lc_notes_kgstore
+      network_mode: bridge
+
+    kg_iasis_qa_api:
+      image: iasistest.atc.gr:444/iasis_qa_api:latest
+      hostname: kg_iasis_qa_api
+      container_name: iasis_qa_api
+      ports:
+        - "5012:5000"
+      environment:
+        - IASISKG_ENDPOINT=http://46.4.68.229:11584/sparql
+      depends_on:
+        - kg_nt_all
+      network_mode: bridge
+
+    kg_nt_all:
+      image: asakor/iasiskgnt:latest
+      hostname: kg_nt_all
+      container_name: iasis_all
+      ports:
+        - "11584:8890"
+      network_mode: bridge
 
 
 networks:
