@@ -11,29 +11,82 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Interaction>
-	rml:logicalSource [ rml:source "/data/data/drug/drug_target_interaction.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/drugTargetInteraction.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Interaction/{Drug_ID}_interactsWith_{Target_name}";
+		rr:template "http://project-iasis.eu/Interaction/{Drug}_interactsWith_{Protein ID}";
 		rr:class iasis:DTI
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor1;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{Drug_ID}" 
+			rr:template "http://project-iasis.eu/Drug/{Drug}" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor2;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Target/{Target_name}" 
+			rr:parentTriplesMap <#Target> 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/"
+			rr:template "http://project-iasis.eu/SourceName/DrugBank"
 		]
 	].
 		
+<#Target>
+	rml:logicalSource [ rml:source "/data/data/drug/drugTargetInteraction.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Target/{Protein ID}"
+		rr:class iasis:Target
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:targetID;
+		rr:objectMap [
+			rml:reference "Protein ID"
+		]
+	];		
+	rr:predicateObjectMap [
+		rr:predicate iasis:targetName;
+		rr:objectMap [
+			rml:reference "Protein Name"
+		]
+	];		
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [ 
+			rr:parentTriplesMap <#Target>
+		]
+	].
+
+<#Protein>
+	rml:logicalSource [ rml:source "/data/data/drug/drugTargetInteraction.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Protein/{Protein ID}"
+		rr:class iasis:Protein
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:proteinID;
+		rr:objectMap [
+			rml:reference "Protein ID"
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:proteinName;
+		rr:objectMap [
+			rml:reference "Protein Name"
+		]
+	];		
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Protein/{Protein ID}"; 
+		]
+	].	
