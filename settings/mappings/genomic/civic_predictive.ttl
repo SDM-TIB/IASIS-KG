@@ -78,7 +78,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{variant.clinical}";
+		rr:template "http://project-iasis.eu/Variation/{evidence_id}_{variant.clinical}";
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
