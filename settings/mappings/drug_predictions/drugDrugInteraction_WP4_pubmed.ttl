@@ -35,4 +35,10 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/SourceName/PubMed"
 		]
-	].		
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:predictionMethod;
+		rr:objectMap [ 
+			rr:constant "Literature Predictions" 
+		]
+	].				

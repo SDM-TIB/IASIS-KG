@@ -33,19 +33,19 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:confidence;
 		rr:objectMap [ 
-			rr:constant "Prob" 
+			rml:reference "Prob" 
 		]
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/"
+			rr:template "http://project-iasis.eu/SourceName/DrugBank"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:predictionMethod;
 		rr:objectMap [ 
-			rr:constant "Method" 
+			rml:reference "Method" 
 		]
 	].	
 		

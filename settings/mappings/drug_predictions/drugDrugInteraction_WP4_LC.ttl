@@ -39,9 +39,15 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/Demokritos"
+			rr:template "http://project-iasis.eu/SourceName/PubMed"
 		]
 	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:predictionMethod;
+		rr:objectMap [ 
+			rr:constant "Literature Predictions" 
+		]
+	];		
 	rr:predicateObjectMap [
 		rr:predicate iasis:interaction_isRelatedTo_Disease;
 		rr:objectMap [ 
