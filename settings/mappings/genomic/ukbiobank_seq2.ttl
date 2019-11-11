@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{gFormat}";
+		rr:template "http://project-iasis.eu/Variation/{variantID}";
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
@@ -24,6 +24,12 @@
 			rr:template "http://project-iasis.eu/Variation/{snp138}";
 		]
 	];
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/Variation/{gFormat}";
+		]
+	];		
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
