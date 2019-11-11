@@ -40,6 +40,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasDate;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Date/{date}"
+			rml:reference "date";
+			rr:datatype xsd:date;
 		]
 	].

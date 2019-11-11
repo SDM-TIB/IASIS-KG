@@ -46,13 +46,15 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:treatmentInitDate;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Date/{initDate}";
+			rml:reference "initDate";
+			rr:datatype xsd:date;			
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:treatmentFinishDate;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Date/{finishDate}";
+			rml:reference "finishDate";
+			rr:datatype xsd:date;
 		]
 	];	
 	rr:predicateObjectMap [

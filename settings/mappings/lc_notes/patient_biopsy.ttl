@@ -34,13 +34,15 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:sampleDate;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/LCPatient/Date/{sampleDate}" 
+			rml:reference "sampleDate";
+			rr:datatype xsd:date;		
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:resultDate;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/LCPatient/Date/{resultsDate}" 
+			rml:reference "resultsDate";
+			rr:datatype xsd:date;		 
 		]
 	];
 	rr:predicateObjectMap [

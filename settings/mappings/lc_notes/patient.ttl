@@ -196,7 +196,8 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasDiagnosisDate;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Date/{diagnosisDate}";
+			rml:reference "diagnosisDate";
+			rr:datatype xsd:date;		
 		]
 	];
 	rr:predicateObjectMap [
