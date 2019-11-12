@@ -402,7 +402,8 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:sampleDate;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/LCPatient/Date/{sampleExtractionDate}"
+			rml:reference "sampleExtractionDate";
+			rr:datatype xsd:date;
 		]
 	].		
 	
