@@ -139,89 +139,75 @@
 		]
 	];													
 	rr:predicateObjectMap [
-		rr:predicate iasis:s;
+		rr:predicate iasis:stemiDate;
 		rr:objectMap [ 
-			rml:reference "apoe" 
+			rml:reference "42002" 
 		]
 	];		
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasFirstEpisodeDate;
+		rr:predicate iasis:stemiReportSource;
 		rr:objectMap [ 
-			rml:reference "epDateInicial" 
+			rml:reference "42003" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasFirst_MMSEscore;
+		rr:predicate iasis:nstemiDate;
 		rr:objectMap [ 
-			rml:reference "mmseInicial" 
+			rml:reference "42004" 
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasFirst_discretized_MMSEscore;
+		rr:predicate iasis:nstemiReportSource;
 		rr:objectMap [ 
-			rml:reference "mmseInicialDiscretized" 
+			rml:reference "42005" 
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasLastEpisodeDate;
+		rr:predicate iasis:strokeDate;
 		rr:objectMap [ 
-			rml:reference "epDateFinal" 
+			rml:reference "42006" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasLast_MMSEscore;
+		rr:predicate iasis:strokeReportSource;
 		rr:objectMap [ 
-			rml:reference "mmseFinal" 
+			rml:reference "42007" 
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasLast_discretized_MMSEscore;
+		rr:predicate iasis:ischaemicStrokeDate;
 		rr:objectMap [ 
-			rml:reference "mmseFinalDiscretized" 
+			rml:reference "42008" 
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:firstEpisodeDateOf_severe_MMSEscore;
+		rr:predicate iasis:ischaemicStrokeReportSource;
 		rr:objectMap [ 
-			rml:reference "epDateToSevereData" 
+			rml:reference "42009" 
 		]
 	];		
 	rr:predicateObjectMap [
-		rr:predicate iasis:firstEpisodeDateOf_mild_MMSEscore;
+		rr:predicate iasis:intracerebralHaemorrhageDate;
 		rr:objectMap [ 
-			rml:reference "epDateToMildData" 
+			rml:reference "42010" 
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:firstEpisodeDateOf_moderate_MMSEscore;
+		rr:predicate iasis:intracerebralHaemorrhageReportSource;
 		rr:objectMap [ 
-			rml:reference "epDateToModerateData" 
-		]
-	].
-
-<#Phenotype>
-	rml:logicalSource [ rml:source "/data/data/genomic/.csv";
-						rml:referenceFormulation ql:CSV
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Phenotype/{Label}";
-		rr:class iasis:Phenotype 	
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:phenotypeLabel;
-		rr:objectMap [
-			rml:reference "Label"
+			rml:reference "42011" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasCUIAnnotation;
-		rr:objectMap [
-			rr:parentTriplesMap <#Annotation1>
+		rr:predicate iasis:subarachnoidHaemorrhageDate;
+		rr:objectMap [ 
+			rml:reference "42012" 
 		]
-	];
+	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasHPOAnnotation;
-		rr:objectMap [
-			rr:parentTriplesMap <#Annotation2>
+		rr:predicate iasis:subarachnoidHaemorrhageReportSource;
+		rr:objectMap [ 
+			rml:reference "42013" 
 		]
 	].	
+	
