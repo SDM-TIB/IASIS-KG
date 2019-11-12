@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Variation>
-	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq2_variantPatient.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq_1729_variantPatient.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
