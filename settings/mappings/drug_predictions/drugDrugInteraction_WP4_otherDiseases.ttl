@@ -47,10 +47,4 @@
 		rr:objectMap [ 
 			rr:constant "Literature Predictions" 
 		]
-	];		
-	rr:predicateObjectMap [
-		rr:predicate iasis:interaction_isRelatedTo_Disease;
-		rr:objectMap [ 
-			rr:constant "other than AD or LC" 
-		]
 	].			
