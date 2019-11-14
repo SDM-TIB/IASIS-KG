@@ -15,19 +15,19 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/InteractionPrediction/{DRUGBANK_ID_1}_interactsWith_{DRUGBANK_ID_2}";
+		rr:template "http://project-iasis.eu/InteractionPrediction/{Drug1}_interactsWith_{Drug2}";
 		rr:class iasis:DDI_Prediction
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor1;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_1}" 
+			rr:template "http://project-iasis.eu/Drug/{Drug1}" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor2;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{DRUGBANK_ID_2}" 
+			rr:template "http://project-iasis.eu/Drug/{Drug2}" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -47,4 +47,5 @@
 		rr:objectMap [ 
 			rr:constant "Literature Predictions" 
 		]
-	].			
+	].	
+
