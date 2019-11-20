@@ -9,13 +9,13 @@
 @prefix base: <http://tib.de/ontario/mapping#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#DrugSideEffect_DSE>
+<#DrugSideEffectInteraction>
 	rml:logicalSource [ rml:source "/data/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/DrugSideEffect/{DrugID}_{name}";
-		rr:class iasis:DrugSideEffect
+		rr:template "http://project-iasis.eu/DrugSideEffectInteraction/{DrugID}_{name}";
+		rr:class iasis:DrugSideEffectInteraction
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:dse_AvgFrequency;
@@ -31,7 +31,7 @@
 		]
 	].	
 
-<#Drug_DSE>
+<#Drug>
 	rml:logicalSource [ rml:source "/data/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
@@ -41,11 +41,11 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:drug_isRelatedTo_dse;
 		rr:objectMap [
-			rr:parentTriplesMap <#DrugSideEffect_DSE>
+			rr:parentTriplesMap <#DrugSideEffectInteraction>
 		]
 	].
 
-<#SideEffect_DSE>
+<#Phenotype>
 	rml:logicalSource [ rml:source "/data/data/drug/drugs_side_effects.csv";
 						rml:referenceFormulation ql:CSV 
 						];
@@ -55,6 +55,6 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:sideEffect_isRelatedTo_dse;
 		rr:objectMap [
-			rr:parentTriplesMap <#DrugSideEffect_DSE>
+			rr:parentTriplesMap <#DrugSideEffectInteraction>
 		]
 	].	

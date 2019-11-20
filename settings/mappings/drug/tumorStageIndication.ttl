@@ -10,7 +10,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#DrugTumorStage>
+<#TumorStage>
 	rml:logicalSource [ rml:source "/data/data/drug/stages_drugs.csv";
 						rml:referenceFormulation ql:CSV 
 						];

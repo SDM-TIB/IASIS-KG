@@ -10,13 +10,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#Interaction>
+<#DrugEnzymeInteraction>
 	rml:logicalSource [ rml:source "/data/data/drug/drug_enzyme_interaction.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Interaction/{Drug_ID}_interactsWith_{Enzyme_name}";
-		rr:class iasis:DEI
+		rr:template "http://project-iasis.eu/DrugEnzymeInteraction/{Drug_ID}_interactsWith_{Enzyme_name}";
+		rr:class iasis:DrugEnzymeInteraction
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor1;

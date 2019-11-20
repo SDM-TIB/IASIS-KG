@@ -10,7 +10,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#Gene_Mu>
+<#Gene>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
@@ -43,7 +43,7 @@
 		]
 	].
 
-<#Sample_Mu>
+<#Sample>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
@@ -106,7 +106,7 @@
 		]
 	].
 
-<#Tumor_Mu>
+<#Tumor>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
@@ -126,7 +126,7 @@
 		]
 	].
 
-<#Transcript_Mu>	
+<#Transcript>	
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV
 						];
@@ -147,7 +147,7 @@
 		]
 	].
 
-<#Variation_Mu>
+<#Variation>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
@@ -293,7 +293,7 @@
 		]
 	].
 
-<#Publication_Mu>
+<#Publication>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];

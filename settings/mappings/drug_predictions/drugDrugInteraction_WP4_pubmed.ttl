@@ -10,13 +10,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#InteractionPrediction>
+<#DrugDrugPrediction>
 	rml:logicalSource [ rml:source "/data/data/drug_predictions/wp4_pubmed_drugs_drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/InteractionPrediction/{Drug1}_interactsWith_{Drug2}";
-		rr:class iasis:DDI_Prediction
+		rr:template "http://project-iasis.eu/DrugDrugPrediction/{Drug1}_interactsWith_{Drug2}";
+		rr:class iasis:DrugDrugPrediction
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:interactor1;

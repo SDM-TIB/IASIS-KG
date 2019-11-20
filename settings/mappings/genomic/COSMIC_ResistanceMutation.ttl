@@ -10,7 +10,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#Gene_ResistanceMu>
+<#Gene>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
@@ -25,7 +25,7 @@
 		]
 	].
 
-<#Sample_ResistanceMu>
+<#Sample>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];
@@ -75,7 +75,7 @@
 		]
 	].
 
-<#Variation_ResistanceMu>
+<#Variation>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
@@ -173,7 +173,7 @@
 		]
 	].
 
-<#Transcript_ResistanceMu>	
+<#Transcript>	
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV
 						];
@@ -194,7 +194,7 @@
 		]
 	].
 
-<#Publication_ResistanceMu>
+<#Publication>
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV 
 						];

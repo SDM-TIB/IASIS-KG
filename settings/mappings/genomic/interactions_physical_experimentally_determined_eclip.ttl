@@ -63,7 +63,7 @@
 		]
 	].
 
-<#PhysicalInteraction>	
+<#RBP_RNA_PhysicalInteraction>	
 	rml:logicalSource [ rml:source "/data/data/genomic/interactions_physical_experimentally_determined_eclip.csv";
 						rml:referenceFormulation ql:CSV
 						];

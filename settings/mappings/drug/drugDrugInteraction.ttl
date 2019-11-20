@@ -40,13 +40,13 @@
 		]
 	].	
 
-<#EffectInteraction>
+<#DrugDrugInteraction>
 	rml:logicalSource [ rml:source "/data/data/drug/drugs_interactions.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Interaction/{Drug1}_interactsWith_{Drug2}";
-		rr:class iasis:DDI
+		rr:template "http://project-iasis.eu/DrugDrugInteraction/{Drug1}_interactsWith_{Drug2}";
+		rr:class iasis:DrugDrugInteraction
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:affects;
