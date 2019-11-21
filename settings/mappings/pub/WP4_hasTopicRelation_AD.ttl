@@ -34,4 +34,10 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Publication/{subject}"
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasTopicRelation_isRelatedTo_Disease;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Disorder/Alzheimer"; 
+		]
+	].	

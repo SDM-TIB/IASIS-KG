@@ -10,7 +10,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Relation>
-	rml:logicalSource [ rml:source "/data/data/pub/relation_publication.csv";
+	rml:logicalSource [ rml:source "/data/data/pub/semrep_resources_AD.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

@@ -45,4 +45,10 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/Annotation/{Second_id}"
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:relation_isRelatedTo_Disease;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Disorder/Alzheimer"; 
+		]
+	].		

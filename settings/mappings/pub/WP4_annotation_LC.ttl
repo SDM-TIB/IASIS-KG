@@ -40,4 +40,10 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/SourceName/UMLS"
 		]
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annotation_isRelatedTo_Disease;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Disorder/LungCancer"; 
+		]
+	].	
