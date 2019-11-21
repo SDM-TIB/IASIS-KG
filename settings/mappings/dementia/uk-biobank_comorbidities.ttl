@@ -11,44 +11,44 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Disorder>
-	rml:logicalSource [ rml:source "/data/data/dementia/icd10_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/icd10_UMLS_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Disorder/{meaning}";
+		rr:template "http://project-iasis.eu/Disorder/{ICD10_meaning}";
 		rr:class iasis:Disorder;
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:disorderLabel;
 		rr:objectMap [ 
-			rml:reference "meaning" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
-			rr:template "{DBpediaURL}";
+			rml:reference "ICD10_meaning" 
 		]
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasICD10Annotation;
 		rr:objectMap [
+			rr:parentTriplesMap <#Annotation1>
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasCUIAnnotation;
+		rr:objectMap [
 			rr:parentTriplesMap <#Annotation2>
 		]
-	].			
+	].					
 
-<#Annotation2>
-	rml:logicalSource [ rml:source "/data/data/dementia/icd10_processed.csv";
+<#Annotation1>
+	rml:logicalSource [ rml:source "/data/data/dementia/icd10_UMLS_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Annotation/{coding}";
+		rr:template "http://project-iasis.eu/Annotation/{ICD10_coding}";
 		rr:class iasis:Annotation
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:annID;
 		rr:objectMap [ 
-			rml:reference "coding" 
+			rml:reference "ICD10_coding" 
 		]
 	];
 	rr:predicateObjectMap [
@@ -57,3 +57,24 @@
 			rr:template "http://project-iasis.eu/SourceName/WorldHealthOrganization"
 		]
 	].	
+
+<#Annotation2>
+	rml:logicalSource [ rml:source "/data/data/drug/icd10_UMLS_processed.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Annotation/{UMLS_id}";
+		rr:class iasis:Annotation
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:annID;
+		rr:objectMap [ 
+			rml:reference "UMLS_id" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:provenance;
+		rr:objectMap [
+			rr:template "http://project-iasis.eu/SourceName/UMLS"
+		]
+	].
