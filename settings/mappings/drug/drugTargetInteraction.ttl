@@ -60,7 +60,7 @@
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [ 
-			rr:parentTriplesMap <#Target>
+			rr:parentTriplesMap <#Protein>
 		]
 	].
 
