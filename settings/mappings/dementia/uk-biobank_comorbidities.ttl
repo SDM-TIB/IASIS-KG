@@ -59,7 +59,7 @@
 	].	
 
 <#Annotation2>
-	rml:logicalSource [ rml:source "/data/data/drug/icd10_UMLS_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/icd10_UMLS_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
