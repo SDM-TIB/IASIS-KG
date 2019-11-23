@@ -21,7 +21,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:gene_isRelatedTo_sample;
 		rr:objectMap [ 
-			rr:parentTriplesMap <#Sample_ResistanceMu> 
+			rr:parentTriplesMap <#Sample> 
 		]
 	].
 
@@ -145,19 +145,19 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_mentionedIn_publication;
 		rr:objectMap [ 
-			rr:parentTriplesMap <#Publication_ResistanceMu> 
+			rr:parentTriplesMap <#Publication> 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_isLocatedIn_gene;
 		rr:objectMap [ 
-			rr:parentTriplesMap <#Gene_ResistanceMu> 
+			rr:parentTriplesMap <#Gene> 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_isLocatedIn_sample;
 		rr:objectMap [ 
-			rr:parentTriplesMap <#Sample_ResistanceMu> 
+			rr:parentTriplesMap <#Sample> 
 		]
 	];
 	rr:predicateObjectMap [
@@ -169,7 +169,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:mutation_isLocatedIn_transcript;
 		rr:objectMap [
-			rr:parentTriplesMap <#Transcript_ResistanceMu>
+			rr:parentTriplesMap <#Transcript>
 		]
 	].
 

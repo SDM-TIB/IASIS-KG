@@ -32,7 +32,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:protein_isRelatedTo_physicalInteraction;
 		rr:objectMap [
-			rr:parentTriplesMap <#PhysicalInteraction>
+			rr:parentTriplesMap <#RBP_RNA_PhysicalInteraction>
 		]
 	].	
 
@@ -59,7 +59,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:transcript_isRelatedTo_physicalInteraction;
 		rr:objectMap [
-			rr:parentTriplesMap <#PhysicalInteraction>
+			rr:parentTriplesMap <#RBP_RNA_PhysicalInteraction>
 		]
 	].
 
