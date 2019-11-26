@@ -161,19 +161,19 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutationID;
+		rr:predicate iasis:variationID;
 		rr:objectMap [ 
 			rml:reference "Mutation ID"
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:genomic_mutationID;
+		rr:predicate iasis:genomic_variationID;
 		rr:objectMap [ 
 			rml:reference "GENOMIC_MUTATION_ID"
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:legacy_mutationID;
+		rr:predicate iasis:legacy_variationID;
 		rr:objectMap [ 
 			rml:reference "LEGACY_MUTATION_ID"
 		]
@@ -197,13 +197,13 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_aa;
+		rr:predicate iasis:variation_aa;
 		rr:objectMap [ 
 			rml:reference "Mutation AA"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_cds;
+		rr:predicate iasis:variation_cds;
 		rr:objectMap [ 
 			rml:reference "Mutation CDS"
 		]
@@ -221,73 +221,73 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_somatic_status;
+		rr:predicate iasis:variation_somatic_status;
 		rr:objectMap [ 
 			rml:reference "Mutation somatic status" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_NucleotideSeq;
+		rr:predicate iasis:variation_NucleotideSeq;
 		rr:objectMap [ 
 			rml:reference "Mutation NucleotideSeq" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutationDescription;
+		rr:predicate iasis:variationDescription;
 		rr:objectMap [
 			rml:reference "Mutation Description"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_chromosome;
+		rr:predicate iasis:variation_chromosome;
 		rr:objectMap [ 
 			rml:reference "Chromosome" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_start;
+		rr:predicate iasis:variation_start;
 		rr:objectMap [ 
 			rml:reference "Start" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_end;
+		rr:predicate iasis:variation_end;
 		rr:objectMap [ 
 			rml:reference "End" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_strand;
+		rr:predicate iasis:variation_strand;
 		rr:objectMap [ 
 			rml:reference "Mutation strand" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_studyID;
+		rr:predicate iasis:variation_studyID;
 		rr:objectMap [ 
 			rml:reference "ID_STUDY" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_mentionedIn_publication;
+		rr:predicate iasis:variation_mentionedIn_publication;
 		rr:objectMap [ 
 			rr:parentTriplesMap <#Publication>
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_isLocatedIn_gene;
+		rr:predicate iasis:variation_isLocatedIn_gene;
 		rr:objectMap [ 
 			rr:parentTriplesMap <#Gene> 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_isLocatedIn_sample;
+		rr:predicate iasis:variation_isLocatedIn_sample;
 		rr:objectMap [ 
 			rr:parentTriplesMap <#Sample> 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:mutation_isLocatedIn_transcript;
+		rr:predicate iasis:variation_isLocatedIn_transcript;
 		rr:objectMap [
 			rr:parentTriplesMap <#Transcript>
 		]
