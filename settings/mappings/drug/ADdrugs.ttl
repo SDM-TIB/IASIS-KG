@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#LungCancerDrug>
-	rml:logicalSource [ rml:source "/data/data/drug/LCdrugList.csv";
+	rml:logicalSource [ rml:source "/data/data/drug/ADdrugList.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
