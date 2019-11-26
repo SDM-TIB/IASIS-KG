@@ -47,17 +47,17 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:generalPractitionerPracticeCode;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/generalPractitionerPracticeCode/{gpprpct}";
+			rr:template "http://project-iasis.eu/GeneralPractitionerPracticeCode/{gpprpct}";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:ConsultantMainSpeciality;
+		rr:predicate iasis:consultantMainSpeciality;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/ConsultantMainSpeciality/{mainspef}";
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:ConsultantTreatmentSpeciality;
+		rr:predicate iasis:consultantTreatmentSpeciality;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/ConsultantTreatmentSpeciality/{tretspef}";
 		]
