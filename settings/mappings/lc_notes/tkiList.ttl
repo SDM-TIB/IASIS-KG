@@ -23,7 +23,13 @@
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/vocab/TkiDrug" 
 		]
-	];		
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/LungCancerDrug" 
+		]
+	];			
 	rr:predicateObjectMap [
 		rr:predicate iasis:drugLabel_ENG;
 		rr:objectMap [ 
