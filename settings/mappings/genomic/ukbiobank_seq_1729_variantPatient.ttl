@@ -31,7 +31,7 @@
 		]
 	].
 <#ADPatient>	
-	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq_1729_variantPatient.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
