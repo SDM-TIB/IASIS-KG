@@ -37,5 +37,10 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/ADPatient/{patient}";
-		rr:class iasis:ADPatient
-	].
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/ADPatient" 
+		]
+	].		
