@@ -30,6 +30,7 @@
 			rr:parentTriplesMap <#ADPatient>
 		]
 	].
+
 <#ADPatient>	
 	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq_1729_variantPatient.csv";
 						rml:referenceFormulation ql:CSV
