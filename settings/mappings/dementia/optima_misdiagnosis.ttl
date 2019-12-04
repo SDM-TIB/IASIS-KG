@@ -11,17 +11,22 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/patient_Comorbidities.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/patient_misdiagnosed_totaltime.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/DementiaPatient/{patient_id}";
-		rr:class iasis:DementiaPatient
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasComorbidity;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Disorder/{disorderName}"
+		rr:predicate iasis:existenceOf_biomarker;
+		rr:objectMap [
+			rr:constant "True";
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasMisdiagnosisTotalTime;
+		rr:objectMap [
+			rml:reference "Total_Misdiagnosed_Time";
+			rr:datatype xsd:float;
 		]
 	].	
-

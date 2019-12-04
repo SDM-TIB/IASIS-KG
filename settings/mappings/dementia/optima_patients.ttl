@@ -10,13 +10,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#ADPatient>
+<#DementiaPatient>
 	rml:logicalSource [ rml:source "/data/data/dementia/patients.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/ADPatient/{globalPatientDbId}";
-		rr:class iasis:ADPatient
+		rr:template "http://project-iasis.eu/DementiaPatient/{globalPatientDbId}";
+		rr:class iasis:DementiaPatient
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:gender;
