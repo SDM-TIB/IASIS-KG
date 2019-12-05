@@ -11,19 +11,13 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/HES_88_data_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/HES_Patient_88_data_processed";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/DementiaPatient/{eid}";
 		rr:class iasis:DementiaPatient
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasComorbidity;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Disorder/{comorbidityName}"
-		]
-	];		
+	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasHospitalEpisodeObservation;
 		rr:objectMap [
@@ -31,7 +25,7 @@
 		]
 	].		
 <#HospitalEpisodeObservation>
-	rml:logicalSource [ rml:source "/data/data/dementia/HES_88_data_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/HES_Patient_88_data_processed";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -61,16 +55,4 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/ConsultantTreatmentSpeciality/{tretspef}";
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:arrayIndex;
-		rr:objectMap [ 
-			rml:reference "arr_index" 
-		]
-	];			
-	rr:predicateObjectMap [
-		rr:predicate iasis:diagnosisLevel;
-		rr:objectMap [ 
-			rml:reference "level" 
-		]
-	].			
+	].		
