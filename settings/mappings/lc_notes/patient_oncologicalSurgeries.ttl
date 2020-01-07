@@ -18,35 +18,9 @@
 		rr:template "http://project-iasis.eu/LCPatient/{patient_id}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasOncologicalSurgeryObservation;
-		rr:objectMap [ 
-			rr:parentTriplesMap <#OncologicalSurgeryObservation>
-		]
-	].	
-<#OncologicalSurgeryObservation>
-	rml:logicalSource [ rml:source "/data/data/lc_notes/patient_oncologicalSurgeries.csv";
-						rml:referenceFormulation ql:CSV;
-						];
-	rr:subjectMap [
-		rr:template "http://project-iasis.eu/OncologicalSurgeryObservation/{patient_id}_{date}";
-		rr:class iasis:OncologicalSurgeryObservation;
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:hasOncologicalSurgery;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/OncologicalSurgery/{oncologicalSurgery_concept}"
 		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:existenceOf_complication;
-		rr:objectMap [ 
-			rml:reference "complication" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:hasDate;
-		rr:objectMap [ 
-			rml:reference "date";
-			rr:datatype xsd:date;
-		]
-	].
+	].	
+
