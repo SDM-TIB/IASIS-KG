@@ -11,33 +11,16 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#AlzheimerPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/patient_ad.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/AD_eid_88.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/DementiaPatient/{patient_id}";
-	];
+		rr:template "http://project-iasis.eu/DementiaPatient/{eid}";
+		rr:class iasis:DementiaPatient
+	];	
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/vocab/AlzheimerPatient"
 		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:diagnosisEpisodeStartDate;
-		rr:objectMap [
-			rml:reference "EPISODE_DATE_PREV";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:diagnosisEpisodeEndDate;
-		rr:objectMap [
-			rml:reference "EPISODE_DATE";
-		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:diseaseConfidence;
-		rr:objectMap [
-			rml:reference "AD_STATUS";
-		]
-	].			
+	].

@@ -16,7 +16,6 @@
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/DementiaPatient/{eid}";
-		rr:class iasis:DementiaPatient
 	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasHospitalEpisodeObservation;
