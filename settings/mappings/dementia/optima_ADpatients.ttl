@@ -10,7 +10,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#AlzheimerPatient>
+<#ADPatient>
 	rml:logicalSource [ rml:source "/data/data/dementia/patient_ad.csv";
 						rml:referenceFormulation ql:CSV;
 						];
@@ -20,7 +20,7 @@
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/vocab/AlzheimerPatient"
+			rr:template "http://project-iasis.eu/vocab/ADPatient"
 		]
 	];	
 	rr:predicateObjectMap [
