@@ -1,0 +1,46 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix base: <http://tib.de/ontario/mapping#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix iasis: <http://project-iasis.eu/vocab/> .
+
+<#DementiaPatient>
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_diagnosis_main.csv";
+						rml:referenceFormulation ql:CSV;
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/DementiaPatient/{patient_id}";
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasMainDiagnosisObservation;
+		rr:objectMap [
+			rr:parentTriplesMap <#MainDiagnosisObservation>
+		]
+	].	
+			
+<#MainDiagnosisObservation>
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_diagnosis_main.csv";
+						rml:referenceFormulation ql:CSV;
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/MainDiagnosisObservation/{patient_id}_{peroid}_{diagnosis_main}";
+		rr:class iasis:MainDiagnosisObservation
+	];			
+	rr:predicateObjectMap [
+		rr:predicate iasis:mainDiagnosisPeriod;
+		rr:objectMap [ 
+			rml:reference "peroid" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:hasMainDiagnosis;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/Disorder/{diagnosis_main}"
+		]
+	].
