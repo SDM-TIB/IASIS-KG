@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#HospitalEpisodeObservation>
-	rml:logicalSource [ rml:source "/data/data/dementia/HES_PatientDiagnosis_1723_data_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_HES_PatientDiagnosis_88_data_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -25,12 +25,12 @@
 	].	
 			
 <#DiagnosisObservation>
-	rml:logicalSource [ rml:source "/data/data/dementia/HES_PatientDiagnosis_1723_data_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_HES_PatientDiagnosis_88_data_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/DiagnosisObservation/{eid}_{ins_index}_{arr_index}";
-		rr:class iasis:DementiaPatient
+		rr:class iasis:DiagnosisObservation
 	];			
 	rr:predicateObjectMap [
 		rr:predicate iasis:diagnosisLevel;
@@ -46,7 +46,7 @@
 	].	
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/HES_PatientDiagnosis_1723_data_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_HES_PatientDiagnosis_88_data_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

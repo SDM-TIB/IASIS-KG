@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#ConsultantTreatmentSpeciality>
-	rml:logicalSource [ rml:source "/data/data/dementia/tretspef_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_HES_tretspef_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

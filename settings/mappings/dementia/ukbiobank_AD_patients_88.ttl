@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#ADPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/AD_eid_88.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_AD_eid_88.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

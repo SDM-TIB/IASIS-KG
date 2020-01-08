@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/HES_Patient_1723_data_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_HES_Patient_88_data_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -22,10 +22,10 @@
 		rr:objectMap [
 			rr:parentTriplesMap <#HospitalEpisodeObservation>
 		]
-	].	
-	
+	].		
+
 <#HospitalEpisodeObservation>
-	rml:logicalSource [ rml:source "/data/data/dementia/HES_Patient_1723_data_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_HES_Patient_88_data_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -55,4 +55,4 @@
 		rr:objectMap [
 			rr:template "http://project-iasis.eu/ConsultantTreatmentSpeciality/{tretspef}";
 		]
-	].			
+	].		

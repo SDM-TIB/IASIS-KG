@@ -10,13 +10,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
-<#generalPractitionerPracticeCode>
-	rml:logicalSource [ rml:source "/data/data/dementia/gpprpct_processed.csv";
+<#ConsultantMainSpeciality>
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_HES_mainspef_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/GeneralPractitionerPracticeCode/{coding}";
-		rr:class iasis:GeneralPractitionerPracticeCode
+		rr:template "http://project-iasis.eu/ConsultantMainSpeciality/{coding}";
+		rr:class iasis:ConsultantMainSpeciality
 	];			
 	rr:predicateObjectMap [
 		rr:predicate iasis:represents;

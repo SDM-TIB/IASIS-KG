@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Disorder>
-	rml:logicalSource [ rml:source "/data/data/dementia/icd10_UMLS_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_icd10_UMLS_processed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -38,7 +38,7 @@
 	].					
 
 <#Annotation1>
-	rml:logicalSource [ rml:source "/data/data/dementia/icd10_UMLS_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_icd10_UMLS_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -59,7 +59,7 @@
 	].	
 
 <#Annotation2>
-	rml:logicalSource [ rml:source "/data/data/dementia/icd10_UMLS_processed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_icd10_UMLS_processed.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
