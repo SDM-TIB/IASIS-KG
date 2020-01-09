@@ -35,7 +35,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:secondaryCauseOfDeathPeriod;
 		rr:objectMap [ 
-			rml:reference "peroid" 
+			rr:template "http://project-iasis.eu/Period/{peroid}" 
 		]
 	];
 	rr:predicateObjectMap [

@@ -35,12 +35,12 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:treatmentPeriod;
 		rr:objectMap [ 
-			rml:reference "peroid" 
+			rr:template "http://project-iasis.eu/Period/{peroid}" 
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasTreatment;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{treatments}"
+			rr:template "http://project-iasis.eu/Treatment/{treatments}"
 		]
 	].

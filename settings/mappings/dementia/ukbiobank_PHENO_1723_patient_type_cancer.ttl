@@ -11,36 +11,36 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_non_cancer_illness_codes.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_1723_patient_type_cancer.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/DementiaPatient/{patient_id}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasNonCancerIllnessObservation;
+		rr:predicate iasis:hasCancerTypeObservation;
 		rr:objectMap [
-			rr:parentTriplesMap <#NonCancerIllnessObservation>
+			rr:parentTriplesMap <#CancerTypeObservation>
 		]
 	].	
 			
-<#NonCancerIllnessObservation>
-	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_non_cancer_illness_codes.csv";
+<#CancerTypeObservation>
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_1723_patient_type_cancer.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/NonCancerIllnessObservation/{patient_id}_{peroid}_{non_cancer_illness_codes}";
-		rr:class iasis:NonCancerIllnessObservation
+		rr:template "http://project-iasis.eu/CancerTypeObservation/{patient_id}_{peroid}_{type_cancer}";
+		rr:class iasis:CancerTypeObservation
 	];			
 	rr:predicateObjectMap [
-		rr:predicate iasis:nonCancerIllnessPeriod;
+		rr:predicate iasis:cancerTypePeriod;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Period/{peroid}" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasNonCancerIllness;
+		rr:predicate iasis:hasCancerType;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Disorder/{non_cancer_illness_codes}"
+			rml:reference "type_cancer"
 		]
 	].

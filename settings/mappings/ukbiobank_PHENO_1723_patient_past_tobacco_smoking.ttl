@@ -11,36 +11,36 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_non_cancer_illness_codes.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_past_tobacco_smoking.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
 		rr:template "http://project-iasis.eu/DementiaPatient/{patient_id}";
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasNonCancerIllnessObservation;
+		rr:predicate iasis:hasPastTobaccoSmokingObservation;
 		rr:objectMap [
-			rr:parentTriplesMap <#NonCancerIllnessObservation>
+			rr:parentTriplesMap <#PastTobaccoSmokingObservation>
 		]
 	].	
 			
-<#NonCancerIllnessObservation>
-	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_non_cancer_illness_codes.csv";
+<#PastTobaccoSmokingObservation>
+	rml:logicalSource [ rml:source "/data/data/dementia/ukbiobank_PHENO_88_patient_past_tobacco_smoking.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/NonCancerIllnessObservation/{patient_id}_{peroid}_{non_cancer_illness_codes}";
-		rr:class iasis:NonCancerIllnessObservation
+		rr:template "http://project-iasis.eu/PastTobaccoSmokingObservation/{patient_id}_{peroid}_{past_tobacco_smoking}";
+		rr:class iasis:PastTobaccoSmokingObservation
 	];			
 	rr:predicateObjectMap [
-		rr:predicate iasis:nonCancerIllnessPeriod;
+		rr:predicate iasis:pastTobaccoSmokingPeriod;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Period/{peroid}" 
+			rml:reference "peroid" 
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasNonCancerIllness;
+		rr:predicate iasis:hasPastTobaccoSmoking;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Disorder/{non_cancer_illness_codes}"
+			rml:reference "past_tobacco_smoking"
 		]
 	].
