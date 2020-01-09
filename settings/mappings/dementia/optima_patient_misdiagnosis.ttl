@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/patient_epst_epend_misdiagnosed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/optima_patient_epst_epend_misdiagnosed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -25,7 +25,7 @@
 	].
 
 <#MisdiagnosisObservation>
-	rml:logicalSource [ rml:source "/data/data/dementia/patient_epst_epend_misdiagnosed.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/optima_patient_epst_epend_misdiagnosed.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [

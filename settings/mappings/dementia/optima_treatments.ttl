@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaDrug>
-	rml:logicalSource [ rml:source "/data/data/dementia/Treatments.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/optima_Treatments.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -26,7 +26,7 @@
 	].
 
 <#Drug>
-	rml:logicalSource [ rml:source "/data/data/dementia/Treatments.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/optima_Treatments.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
@@ -53,7 +53,7 @@
 	].	
 
 <#Annotation>
-	rml:logicalSource [ rml:source "/data/data/dementia/Treatments.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/optima_Treatments.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [

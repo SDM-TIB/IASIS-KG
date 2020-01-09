@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#DementiaPatient>
-	rml:logicalSource [ rml:source "/data/data/dementia/patient_Comorbidities.csv";
+	rml:logicalSource [ rml:source "/data/data/dementia/optima_patient_Comorbidities.csv";
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
