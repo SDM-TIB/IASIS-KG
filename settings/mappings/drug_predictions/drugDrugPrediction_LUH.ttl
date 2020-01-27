@@ -47,5 +47,11 @@
 		rr:objectMap [ 
 			rml:reference "Method" 
 		]
-	].	
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:methodAbbreviation;
+		rr:objectMap [ 
+			rml:reference "MethodAbbreviation" 
+		]
+	].			
 		
