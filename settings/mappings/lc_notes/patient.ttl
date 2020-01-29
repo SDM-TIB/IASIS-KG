@@ -167,6 +167,12 @@
 			rml:reference "survivalMonths";
 		]
 	];
+		rr:predicateObjectMap [
+		rr:predicate iasis:patientCurrentStatus;
+		rr:objectMap [
+			rml:reference "patientStatus";
+		]
+	];	
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasDiagnosis;
 		rr:objectMap [ 
