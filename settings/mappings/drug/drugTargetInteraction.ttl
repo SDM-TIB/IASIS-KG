@@ -52,7 +52,7 @@
 		]
 	];		
 	rr:predicateObjectMap [
-		rr:predicate iasis:targetName;
+		rr:predicate iasis:targetLabel;
 		rr:objectMap [
 			rml:reference "Protein Name"
 		]
