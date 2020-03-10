@@ -39,6 +39,6 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:provenance;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/SourceName/NCRD"
+			rr:template "http://project-iasis.eu/SourceName/DrugBank/not_metabolized_by_the_same_CYP_enzyme"
 		]
 	].
