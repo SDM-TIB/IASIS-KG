@@ -118,19 +118,7 @@
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:existenceOf_localProgression;
-		rr:objectMap [
-			rml:reference "localProgression";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:existenceOf_systemicProgression;
-		rr:objectMap [
-			rml:reference "systemicProgression";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:existenceOf_brainMetastasis;
+		rr:predicate iasis:existenceOf_brainMetastasis_inOncologicalTreatmentLine;
 		rr:objectMap [
 			rml:reference "brainMetastasis";
 		]
