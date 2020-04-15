@@ -77,7 +77,8 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:citedBy;
 		rr:objectMap [ 
-			rml:reference "citedByCount" 
+			rml:reference "citedByCount";
+			rr:datatype xsd:float;
 		]
 	];
 	rr:predicateObjectMap [
