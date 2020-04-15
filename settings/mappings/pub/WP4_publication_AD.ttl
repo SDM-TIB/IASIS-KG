@@ -81,6 +81,19 @@
 		]
 	];
 	rr:predicateObjectMap [
+		rr:predicate iasis:citedBy;
+		rr:objectMap [ 
+			rml:reference "citedByCount" 
+		]
+	];
+	rr:predicateObjectMap [
+		rr:predicate iasis:citedByLink;
+		rr:objectMap [ 
+			rml:reference "citedByLink" ;
+			rr:termType rr:IRI; 
+		]
+	];		
+	rr:predicateObjectMap [
 		rr:predicate iasis:publication_isRelatedTo_Disease;
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/Disorder/Alzheimer"; 
