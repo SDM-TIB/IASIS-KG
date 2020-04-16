@@ -11,11 +11,11 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Variation>
-	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq_1729_variantPatient.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/variants_patients_1729_pr11.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{variant}";
+		rr:template "http://project-iasis.eu/Variation/{variation}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:sample_AF;
@@ -32,11 +32,11 @@
 	].
 
 <#ADPatient>	
-	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq_1729_variantPatient.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/variants_patients_1729_pr11.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/ADPatient/{patient}";
+		rr:template "http://project-iasis.eu/ADPatient/{patientid}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
