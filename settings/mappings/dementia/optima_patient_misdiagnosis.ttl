@@ -33,12 +33,6 @@
 		rr:class iasis:MisdiagnosisObservation;
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:hasPerformanceStatus;
-		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/PerformanceStatus/status{value}"
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:hasMisdiagnosisEpisodeStartDate;
 		rr:objectMap [ 
 			rml:reference "EPISODE_DATE_PREV";
