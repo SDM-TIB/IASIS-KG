@@ -14,12 +14,12 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/{Relationship_Type}/{First_id}_{Relationship_Type}_{Second_id}";
+		rr:template "http://project-iasis.eu/{Relationship_Types}/{First_id}_{Relationship_Types}_{Second_id}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/vocab/{Relationship_Type}"
+			rr:template "http://project-iasis.eu/vocab/{Relationship_Types}"
 		]
 	];
 	rr:predicateObjectMap [
