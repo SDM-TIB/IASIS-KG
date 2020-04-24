@@ -169,12 +169,6 @@
 		]
 	];		
 	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_SIFT;
-		rr:objectMap [
-			rml:reference "SIFT_converted_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:predictionScore_Polyphen2_HDIV;
 		rr:objectMap [
 			rml:reference "Polyphen2_HDIV_rankscore"

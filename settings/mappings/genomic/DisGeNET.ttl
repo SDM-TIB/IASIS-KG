@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Evidence/{evidence_id}";
+		rr:template "http://project-iasis.eu/Evidence/{snpId}_{diseaseId}";
 		rr:class iasis:Evidence
 	];
 	rr:predicateObjectMap [
@@ -59,13 +59,7 @@
 		rr:objectMap [ 
 			rml:reference "score" 
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:evidenceConfidenceCuration;
-		rr:objectMap [ 
-			rml:reference "Confidence" 
-		]
-	].				
+	].			
 	
 <#Variation>
 	rml:logicalSource [ rml:source "/data/data/genomic/DisGeNET_variantDisease.csv";

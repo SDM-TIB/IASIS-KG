@@ -14,14 +14,8 @@
 						rml:referenceFormulation ql:CSV;
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Diagnosis/{ENG_CUI_Name}";
+		rr:template "http://project-iasis.eu/Diagnosis/{concept}";
 		rr:class iasis:Diagnosis;
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:diagnosisLabel;
-		rr:objectMap [ 
-			rml:reference "ENG_CUI_Name" 
-		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:hasCUIAnnotation;
