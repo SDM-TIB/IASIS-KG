@@ -67,12 +67,6 @@
 		rr:objectMap [ 
 			rr:template "http://project-iasis.eu/TissueSubType/{Histology Subtype 1}"; 
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:sampleSource;
-		rr:objectMap [ 
-			rml:reference "Sample Source";
-		]
 	].
 
 <#Variation>
@@ -97,7 +91,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:variationID;
 		rr:objectMap [ 
-			rml:reference "ID Mutation";
+			rml:reference "MUTATION_ID";
 		]
 	];	
 	rr:predicateObjectMap [
@@ -163,7 +157,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:variation_isResistantTo_drug;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Drug/{Drugbank}"; 
+			rr:template "http://project-iasis.eu/Drug/{Drug Name}"; 
 		]
 	];
 	rr:predicateObjectMap [

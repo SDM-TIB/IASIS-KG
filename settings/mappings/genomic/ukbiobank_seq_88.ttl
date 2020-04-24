@@ -21,12 +21,6 @@
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{snp138}";
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
 			rr:template "http://project-iasis.eu/Variation/{cFormat}";
 		]
 	];
@@ -76,18 +70,6 @@
 		rr:predicate iasis:functionalConsequence;
 		rr:objectMap [
 			rml:reference "ExonicFunc.refGene"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:omim;
-		rr:objectMap [
-			rml:reference "OMIM.refGene"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_1000GP;
-		rr:objectMap [
-			rml:reference "1000g2015aug_all"
 		]
 	];
 	rr:predicateObjectMap [
@@ -145,21 +127,9 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_gnomAD_exome;
+		rr:predicate iasis:all_AC_Kaviar;
 		rr:objectMap [
-			rml:reference "gnomAD_exome_ALL"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:all_AF_Kaviar;
-		rr:objectMap [
-			rml:reference "Kaviar_AF"
-		]
-	];	
-	rr:predicateObjectMap [
-		rr:predicate iasis:clinicalSignificance;
-		rr:objectMap [
-			rml:reference "CLINSIG"
+			rml:reference "Kaviar_AC"
 		]
 	];	
 	rr:predicateObjectMap [
@@ -168,102 +138,6 @@
 			rml:reference "CLNDBN"
 		]
 	];		
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_Polyphen2_HDIV;
-		rr:objectMap [
-			rml:reference "Polyphen2_HDIV_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_Polyphen2_HVAR;
-		rr:objectMap [
-			rml:reference "Polyphen2_HVAR_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_LRT;
-		rr:objectMap [
-			rml:reference "LRT_converted_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_MutationTaster;
-		rr:objectMap [
-			rml:reference "MutationTaster_converted_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_MutationAssessor;
-		rr:objectMap [
-			rml:reference "MutationAssessor_score_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_FATHMM;
-		rr:objectMap [
-			rml:reference "FATHMM_converted_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:prediction_FATHMM;
-		rr:objectMap [
-			rml:reference "FATHMM_pred"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_CADD;
-		rr:objectMap [
-			rml:reference "CADD_raw_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_fathmm_MKL;
-		rr:objectMap [
-			rml:reference "fathmm-MKL_coding_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:prediction_fathmm_MKL;
-		rr:objectMap [
-			rml:reference "fathmm-MKL_coding_pred"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_GERP_RS;
-		rr:objectMap [
-			rml:reference "GERP++_RS_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_phyloP100way_vertebrate;
-		rr:objectMap [
-			rml:reference "phyloP100way_vertebrate_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_phyloP20way_mammalian;
-		rr:objectMap [
-			rml:reference "phyloP20way_mammalian_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_phastCons100way_vertebrate;
-		rr:objectMap [
-			rml:reference "phastCons100way_vertebrate_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_phastCons20way_mammalian;
-		rr:objectMap [
-			rml:reference "phastCons20way_mammalian_rankscore"
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:predictionScore_SiPhy;
-		rr:objectMap [
-			rml:reference "SiPhy_29way_logOdds_rankscore"
-		]
-	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:proteinDomain_Interpro;
 		rr:objectMap [

@@ -20,6 +20,6 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:cosmicID;
 		rr:objectMap [
-			rml:reference "cosmic_id"
+			rml:reference "cosmic_ID"
 		]
 	].
