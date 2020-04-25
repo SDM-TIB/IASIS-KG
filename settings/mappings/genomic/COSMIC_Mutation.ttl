@@ -64,12 +64,6 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:sampleSource;
-		rr:objectMap [
-			rml:reference "Sample source"
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:sampleAge;
 		rr:objectMap [ 
 			rml:reference "Age" 
@@ -118,12 +112,6 @@
 		rr:objectMap [
 			rml:reference "ID_tumour"
 		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:tumor_origin;
-		rr:objectMap [ 
-			rml:reference "Tumour origin"
-		]
 	].
 
 <#Transcript>	
@@ -163,7 +151,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:variationID;
 		rr:objectMap [ 
-			rml:reference "Mutation ID"
+			rml:reference "MUTATION_ID"
 		]
 	];	
 	rr:predicateObjectMap [
@@ -187,13 +175,13 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:loh;
 		rr:objectMap [ 
-			rml:reference "_LOH_"
+			rml:reference "LOH"
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:snp;
 		rr:objectMap [ 
-			rml:reference "_SNP_"
+			rml:reference "SNP"
 		]
 	];
 	rr:predicateObjectMap [
@@ -227,33 +215,15 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:variation_NucleotideSeq;
-		rr:objectMap [ 
-			rml:reference "Mutation NucleotideSeq" 
-		]
-	];
-	rr:predicateObjectMap [
 		rr:predicate iasis:variationDescription;
 		rr:objectMap [
 			rml:reference "Mutation Description"
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:variation_chromosome;
+		rr:predicate iasis:variation_genome_position;
 		rr:objectMap [ 
-			rml:reference "Chromosome" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:variation_start;
-		rr:objectMap [ 
-			rml:reference "Start" 
-		]
-	];
-	rr:predicateObjectMap [
-		rr:predicate iasis:variation_end;
-		rr:objectMap [ 
-			rml:reference "End" 
+			rml:reference "Mutation genome position" 
 		]
 	];
 	rr:predicateObjectMap [
