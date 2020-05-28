@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Variation>
-	rml:logicalSource [ rml:source "/data/data/genomic/liquid_and_solid_hotspot_withIDs.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/hotspot_withIDs.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
