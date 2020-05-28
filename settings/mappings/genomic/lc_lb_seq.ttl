@@ -11,7 +11,7 @@
 @prefix iasis: <http://project-iasis.eu/vocab/> .
 
 <#Variation>
-	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq_withHotspot.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -296,12 +296,6 @@
 		]
 	];	
 	rr:predicateObjectMap [
-		rr:predicate iasis:isHotspot;
-		rr:objectMap [
-			rml:reference "hotspot"
-		]
-	];	
-	rr:predicateObjectMap [
 		rr:predicate iasis:variation_isLocatedIn_gene;
 		rr:objectMap [
 			rr:parentTriplesMap <#Gene>
@@ -327,7 +321,7 @@
 	].
 
 <#Gene>	
-	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq_withHotspot.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -378,7 +372,7 @@
 	].
 
 <#LCPatient>	
-	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq_withHotspot.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
@@ -392,7 +386,7 @@
 	].
 
 <#LiquidBiopsy>	
-	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq_withHotspot.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/LC_LB_Seq.csv";
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
