@@ -73,7 +73,7 @@
 	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_resistanceMutation_grch37.csv";
 						rml:referenceFormulation ql:CSV ];
 	rr:subjectMap [
-		rr:template "ttp://project-iasis.eu/Variation/{pFormat}";
+		rr:template "http://project-iasis.eu/Variation/{pFormat}";
 		rr:class iasis:Variation;
 	];
 	rr:predicateObjectMap [
