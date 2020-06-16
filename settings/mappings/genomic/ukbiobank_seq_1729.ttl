@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{variantID}";
+		rr:template "http://project-iasis.eu/Variation/{dbsnpID}";
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
@@ -149,14 +149,13 @@
 		rr:objectMap [
 			rml:reference "variantScore_basedOnExonicFunc"
 		]
-	];	
+	];		
 	rr:predicateObjectMap [
 		rr:predicate iasis:variation_isLocatedIn_gene;
 		rr:objectMap [
 			rr:parentTriplesMap <#Gene>
 		]
 	].
-
 <#Gene>	
 	rml:logicalSource [ rml:source "/data/data/genomic/ukbiobank_seq_1729.csv";
 						rml:referenceFormulation ql:CSV
