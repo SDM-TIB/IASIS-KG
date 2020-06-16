@@ -43,7 +43,7 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:variant_end;
+		rr:predicate iasis:rankScore;
 		rr:objectMap [
 			rml:reference "RankScore";
 			rr:datatype xsd:double;
