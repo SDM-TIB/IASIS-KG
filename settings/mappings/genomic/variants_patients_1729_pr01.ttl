@@ -15,7 +15,7 @@
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/Variation/{variation}";
+		rr:template "http://project-iasis.eu/Variation/{variant}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:sample_AF;
@@ -36,7 +36,7 @@
 						rml:referenceFormulation ql:CSV
 						];
 	rr:subjectMap [
-		rr:template "http://project-iasis.eu/ADPatient/{patientid}";
+		rr:template "http://project-iasis.eu/ADPatient/{patient}";
 	];
 	rr:predicateObjectMap [
 		rr:predicate rdf:type;
