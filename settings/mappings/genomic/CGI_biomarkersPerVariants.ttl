@@ -19,9 +19,15 @@
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/CDNA-Variation"
+		]
+	];
+	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{gFormat}";
+			rr:parentTriplesMap <#GDNA-Variation>	
 		]
 	];	
 	rr:predicateObjectMap [
@@ -55,6 +61,15 @@
 		]
 	].
 
+<#GDNA-Variation>
+	rml:logicalSource [ rml:source "/data/data/genomic/CGI_biomarkersPerVariants.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{gFormat}";
+		rr:class iasis:GDNA-Variation
+	].
+	
 <#Transcript>	
 	rml:logicalSource [ rml:source "/data/data/genomic/CGI_biomarkersPerVariants.csv";
 						rml:referenceFormulation ql:CSV

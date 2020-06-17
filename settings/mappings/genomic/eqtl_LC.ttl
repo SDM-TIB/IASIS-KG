@@ -51,7 +51,7 @@
 	rr:predicateObjectMap [
 		rr:predicate iasis:eqtl_has_variation;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{rsid}"
+			rr:parentTriplesMap <#Variation>
 		]
 	];
 	rr:predicateObjectMap [
@@ -75,6 +75,12 @@
 		rr:template "http://project-iasis.eu/Variation/{rsid}";
 		rr:class iasis:Variation
 	];
+	rr:predicateObjectMap [
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/DBSNP-Variation"
+		]
+	];		
 	rr:predicateObjectMap [
 		rr:predicate iasis:sameAs;
 		rr:objectMap [

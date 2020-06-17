@@ -19,15 +19,39 @@
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
-		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{gFormat1}";
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/DBSNP-Variation"
 		]
-	];
+	];	
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{gFormat2}";
+			rr:parentTriplesMap <#GDNA-Variation1>
 		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:parentTriplesMap <#GDNA-Variation2>
+		]
+	].	
+
+<#GDNA-Variation1>
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{gFormat1}";
+		rr:class iasis:GDNA-Variation
 	].
+
+<#GDNA-Variation2>
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{gFormat2}";
+		rr:class iasis:GDNA-Variation
+	].	
 	

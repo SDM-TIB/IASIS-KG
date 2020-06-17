@@ -85,19 +85,19 @@
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{cFormat}";
+			rr:parentTriplesMap <#CDNA-Variation>
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{pFormat}";
+			rr:parentTriplesMap <#Peptide-Variation>
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate owl:sameAs;
 		rr:objectMap [
-			rr:template "http://project-iasis.eu/Variation/{gFormat}";
+			rr:parentTriplesMap <#GDNA-Variation>
 		]
 	];			
 	rr:predicateObjectMap [
@@ -183,6 +183,33 @@
 		rr:objectMap [ 
 			rr:parentTriplesMap <#Publication>
 		]
+	].	
+
+<#GDNA-Variation>
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Prognostic.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{gFormat}";
+		rr:class iasis:GDNA-Variation
+	].
+
+<#CDNA-Variation>
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Prognostic.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{cFormat}";
+		rr:class iasis:CDNA-Variation
+	].
+
+<#Peptide-Variation>
+	rml:logicalSource [ rml:source "/data/data/genomic/civic_Prognostic.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{pFormat}";
+		rr:class iasis:Peptide-Variation
 	].	
 
 <#Disorder>

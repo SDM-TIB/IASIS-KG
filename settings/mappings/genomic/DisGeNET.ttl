@@ -70,6 +70,12 @@
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/DBSNP-Variation"
+		]
+	];	
+	rr:predicateObjectMap [
 		rr:predicate iasis:variant_chromosome;
 		rr:objectMap [
 			rml:reference "chromosome"

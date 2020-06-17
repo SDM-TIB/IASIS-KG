@@ -143,9 +143,15 @@
 		rr:class iasis:Variation;
 	];
 	rr:predicateObjectMap [
-		rr:predicate owl:sameAs;
+		rr:predicate rdf:type;
 		rr:objectMap [ 
-			rr:template "http://project-iasis.eu/Variation/{pFormat}"; 
+			rr:template "http://project-iasis.eu/vocab/CDNA-Variation"
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate owl:sameAs;
+		rr:objectMap [
+			rr:parentTriplesMap <#Peptide-Variation>
 		]
 	];
 	rr:predicateObjectMap [
@@ -261,6 +267,15 @@
 		rr:objectMap [
 			rr:parentTriplesMap <#Transcript>
 		]
+	].
+
+<#Peptide-Variation>
+	rml:logicalSource [ rml:source "/data/data/genomic/COSMIC_mutation_grch37.csv";
+						rml:referenceFormulation ql:CSV 
+						];
+	rr:subjectMap [
+		rr:template "http://project-iasis.eu/Variation/{pFormat}";
+		rr:class iasis:Peptide-Variation
 	].
 
 <#Publication>

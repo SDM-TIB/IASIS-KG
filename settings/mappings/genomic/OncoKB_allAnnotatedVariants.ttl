@@ -19,6 +19,12 @@
 		rr:class iasis:Variation
 	];
 	rr:predicateObjectMap [
+		rr:predicate rdf:type;
+		rr:objectMap [ 
+			rr:template "http://project-iasis.eu/vocab/Peptide-Variation"
+		]
+	];	
+	rr:predicateObjectMap [
 		rr:predicate iasis:proteinChange;
 		rr:objectMap [
 			rml:reference "Protein Change"
