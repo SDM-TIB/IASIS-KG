@@ -38,7 +38,7 @@
 	].	
 
 <#GDNA-Variation1>
-	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/dbSNP.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
@@ -47,7 +47,7 @@
 	].
 
 <#GDNA-Variation2>
-	rml:logicalSource [ rml:source "/data/data/genomic/civic_Predictive.csv";
+	rml:logicalSource [ rml:source "/data/data/genomic/dbSNP.csv";
 						rml:referenceFormulation ql:CSV 
 						];
 	rr:subjectMap [
