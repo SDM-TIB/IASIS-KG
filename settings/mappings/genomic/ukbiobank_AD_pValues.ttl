@@ -22,28 +22,28 @@
 		rr:predicate iasis:homozygous_AF_healthyPopulation;
 		rr:objectMap [
 			rml:reference "AF11_Ctrl";
-			r:datatype xsd:float;
+			rr:datatype xsd:float;
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:heterozygous_AF_healthyPopulation;
 		rr:objectMap [
 			rml:reference "AF01_Ctrl";
-			r:datatype xsd:float;
+			rr:datatype xsd:float;
 		]
 	];			
 	rr:predicateObjectMap [
 		rr:predicate iasis:homozygous_AF_ADPopulation;
 		rr:objectMap [
 			rml:reference "AF_1";
-			r:datatype xsd:float;
+			rr:datatype xsd:float;
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:heterozygous_AF_ADPopulation;
 		rr:objectMap [
 			rml:reference "AF_0_5";
-			r:datatype xsd:float;
+			rr:datatype xsd:float;
 		]
 	];
 	rr:predicateObjectMap [
@@ -57,14 +57,14 @@
 		rr:predicate iasis:fisher_pValue;
 		rr:objectMap [
 			rml:reference "F_pVal";
-			r:datatype xsd:float;
+			rr:datatype xsd:float;
 		]
 	];
 	rr:predicateObjectMap [
 		rr:predicate iasis:fisher_pValue;
 		rr:objectMap [
 			rml:reference "q_Val";
-			r:datatype xsd:float;
+			rr:datatype xsd:float;
 		]
 	];	
 	rr:predicateObjectMap [
