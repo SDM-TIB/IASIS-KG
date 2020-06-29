@@ -61,10 +61,16 @@
 		]
 	];
 	rr:predicateObjectMap [
-		rr:predicate iasis:fisher_pValue;
+		rr:predicate iasis:adjusted_fisher_pValue;
 		rr:objectMap [
 			rml:reference "q_Val";
 			rr:datatype xsd:float;
+		]
+	];	
+	rr:predicateObjectMap [
+		rr:predicate iasis:rankScoreCategory;
+		rr:objectMap [
+			rml:reference "RankScoreCategory";
 		]
 	];	
 	rr:predicateObjectMap [
