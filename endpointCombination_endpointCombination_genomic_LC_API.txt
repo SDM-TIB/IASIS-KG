@@ -1,0 +1,9 @@
+##################################################################
+##### .nt files to be included in the genomic API endpoint #######
+##################################################################
+
+genomic/toLoad:
+all nt files
+
+lc_notes/toLoad:
+all nt files
