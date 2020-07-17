@@ -9,4 +9,14 @@ lc_notes/toLoad:
 all nt files
 
 dementia/toLoad:
-all nt files
+
+ukbiobank_AD_patients_1723.ttl
+ukbiobank_AD_patients_88.ttl
+ukbiobank_PHENO_1723_patient_longest_period_depression.ttl
+ukbiobank_PHENO_88_patient_longest_period_depression.ttl
+ukbiobank_PHENO_1723_patients.ttl
+ukbiobank_PHENO_88_patients.ttl
+ukbiobank_PHENO_periods.ttl
+
+ukbiobank_PHENO_1723_patient_treatments.ttl
+ukbiobank_PHENO_88_patient_treatments.ttl
