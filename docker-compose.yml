@@ -7,10 +7,17 @@ services:
     domainname: iasiskg
     volumes:
       - ./data:/data/data
+      - ./data_update/data:/data/data_update
       - ./rdf/output:/data/output
+      - ./rdf/data_update/output:/data/output/drug_pub/data_update
       - ./settings/configs:/data/configs
       - ./settings/mappings:/data/mappings
+      - ./data_update/settings/configs:/data_update/configs
+      - ./data_update/settings/mappings:/data_update/mappings
       - ./gdown.pl:/data/gdown.pl
+      - ./settings/predicate.txt:/data/predicate.txt
+      - ./settings/predicate.txt:/data_update/predicate.txt
+      - ./logs/semantic_enrichment.log:/data/semantic_enrichment.log
     env_file:
       - ./envfile.env
     depends_on:
@@ -95,6 +102,7 @@ services:
     volumes:
       - ./rdf/drug_pub:/data
       - ./rdf/output/drug_pub:/data/output/drug_pub
+      - ./rdf/data_update/output:/data/output/drug_pub/data_update
     ports:
       - "11384:8890"
       - "1115:1111"
