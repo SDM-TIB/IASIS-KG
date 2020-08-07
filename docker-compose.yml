@@ -21,7 +21,21 @@ services:
       - iasis_dementia_kgstore
     networks:
       - iasiskg
-
+  incremental-update:
+    image: iasistest.atc.gr:444/incremental:latest
+    hostname: incremental_update
+    container_name: incremental
+    domainname: iasiskg
+    volumes:
+      - ./data_update/data:/app/data
+      - ./logs/LC_query_update.log:/app/LC_query_update.log
+      - ./logs/AD_query_update.log:/app/AD_query_update.log
+    env_file:
+      - ./envfile.env
+    depends_on:
+      - semantic-enrichment
+    networks:
+      - iasiskg
   iasis_genomic_kgstore:
     image: asakor/virtuoso:7-stable
     hostname: iasis_genomic_kgstore
